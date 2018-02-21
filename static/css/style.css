@@ -33,13 +33,6 @@ a:link{
     height:100%;
     left: 120px;
 }
-.carousel-control.left{
-    background-image: none !important;
-}
-
-.carousel-control.right{
-    background-image: none !important;
-}
 
 a:focus {
     outline: thin dotted;

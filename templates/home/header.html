@@ -1,0 +1,145 @@
+<div class="container min visible-lg visible-md hidden-sm hidden-xs menu-safari">
+  <nav class="navbar">
+    <div class="container min">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar9">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      
+      <div class="brand-centered">
+      <a class="navbar-brand" href="">
+      </a>
+      </div>
+      
+      <div id="navbar9" class="navbar-collapse head-menu collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <div class="logo_wrapper navbar-brand" style="padding: 0px; position: relative;top: -31px;">
+            {% if is_admin %}
+            <div class="image-upload visible-movil">
+                <label for="img_logo">
+                   <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+               </label>
+                <input type="file" class="editableimage" image-id="{{ site.name }}_img_logo" name="image" id="img_logo" >
+            </div>
+            {% end %}
+            <a id="{{ site.name + '_logo' }}" href="#">
+              <div class="base-logo">
+                <img class="logo" id="{{ site.name }}_img_logo" src="{{ read_image(site.name + '_img_logo', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_img_logo',500) }}'" alt="item" style="margin-right: 10px; padding: 0;">
+                </div>
+            </a>
+        </div>
+
+          <div class="w3-dropdown-hover">
+            <button class="w3-btn w3-red" data-toggle="dropdown">option</button>
+            <div class="w3-dropdown-content w3-border">
+              <li class="dropdown-submenu">
+                <li><a tabindex="-1" href="{{ site_base }}">option 1</a></li>
+                <li><a tabindex="-1" href="{{ site_base }}">option 2</a></li>
+                <li><a tabindex="-1" href="{{ site_base }}">option 3</a></li>
+                <li><a tabindex="-1" href="{{ site_base }}">option 4</a></li>
+
+              </li>
+            </div>
+          </div>
+          <div class="w3-dropdown-hover">
+            <button class="w3-btn w3-red" data-toggle="dropdown">option</button>
+            <div class="w3-dropdown-content w3-border">
+             <li class="dropdown-submenu">
+                <li><a tabindex="-1" href="{{ site_base }}">option 1</a></li>
+                <li><a tabindex="-1" href="{{ site_base }}">option 2</a></li>
+              </li>
+            </div>
+          </div>
+          <div class="w3-dropdown-hover">
+            <button class="w3-btn w3-red" data-toggle="dropdown">option</button>
+            <div class="w3-dropdown-content w3-border">
+             <li class="dropdown-submenu">
+                <li><a tabindex="-1" href="{{ site_base }}">option 1</a></li>
+                <li><a tabindex="-1" href="{{ site_base }}">option 2</a></li>
+            </div>
+          </div>
+
+          <div class="w3-dropdown-hover">
+            <button class="w3-btn w3-red" data-toggle="dropdown">option</button>
+          </div>
+
+        </ul>
+      </div>
+
+    </div>
+  
+  </nav>
+</div>
+
+
+
+<!-- ******************MENU MOVIL*********************** -->
+
+ <!-- Navigation -->
+ <div class="container">
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top hidden-md hidden-lg visible-sm visible-xs">
+        <div class="container  header">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="">
+                  <div style="position:relative">
+                         <div class="base-logo">
+                             {% if is_admin %}
+                             <div class="image-upload lapiz visible-movil">
+                                <label for="img_logo">
+                                   <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                               </label>
+                               <input type="file" class="editableimage" image-id="{{ site.name }}_img_logo" name="image" id="img_logo">
+                           </div>
+                           {% end %}
+                           <img id="{{ site.name }}_img_logo" src="{{ read_image(site.name + '_img_logo', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_img_logo',) }}'" class="img-responsive logo" alt="item">
+                       </div>
+                  </div>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <ul class="nav navbar-nav navbar-left">
+                <li class="">
+                  <a href="#" class="text-header dropdown-toggle" data-toggle="dropdown">option<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="{{ site_base }}">option 1</a></li>
+                    <li><a tabindex="-1" href="{{ site_base }}">option 2</a></li>
+                    <li><a tabindex="-1" href="{{ site_base }}">option 3</a></li>
+                    <li><a tabindex="-1" href="{{ site_base }}">option 4</a></li>
+                  </ul>
+                </li>
+                <li class="">
+                  <a href="#" class="text-header dropdown-toggle" data-toggle="dropdown">option<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="{{ site_base }}">option 1</a></li>
+                    <li><a tabindex="-1" href="{{ site_base }}">option 2</a></li>
+                  </ul>
+                </li>
+                <li class="">
+                  <a href="#" class="text-header dropdown-toggle" data-toggle="dropdown">option<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="{{ site_base }}">option 1</a></li>
+                    <li><a tabindex="-1" href="{{ site_base }}">option 2</a></li>
+                </li>
+                <li><a tabindex="-1" class="text-header dropdown-toggle">option</a></li>
+              </li>
+            </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+</div>
+
+

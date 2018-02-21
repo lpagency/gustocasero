@@ -14,12 +14,21 @@
         <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css?1">
         <link rel="stylesheet" href="{{ site_base }}/static/css/header.css?5">
         <link rel="stylesheet" href="{{ site_base }}/static/css/footer.css?5">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/style.css?5">
         <link rel="stylesheet" href="{{ site_base }}/static/css/ligthbox-d.css">
         <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
         <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css">
 
         <!-- autocomplete -->
         {% block css %}{% end %}
+
+        {% if is_admin %}
+        {% set editabletext = 'editabletext' %}
+        {% else %}
+        {% set editabletext = '' %}
+        {% end %}
+
+        <img id="imgLOAD" width="50" height="50" src="{{ site_base }}/common/css/loading.gif" />
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -55,6 +64,7 @@
         <script type="text/javascript" src="{{ site_base }}/common/js/contentmanager.js"></script>
         <script type="text/javascript" src="{{ site_base }}/common/js/jquery.editable.js" ></script>
         <script type="text/javascript" src="{{ site_base }}/common/js/editabletext.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/editableimage.js"></script>
         {% end %}
 
         {% block scripts %}{% end %}

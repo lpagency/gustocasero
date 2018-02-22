@@ -99,7 +99,7 @@
         <div class="texto-one text-center {{editabletext}}" text-id="{{ site.name + '_one' }}"> {{ read_text(site.name +  '_one') }} </div>
 
         <div class="banners">
-            <div class="col-md-4">
+            <div class="col-md-4 container-banner">
                 {% if is_admin %}
                     <div class="image-upload lapiz visible-movil">
                         <label for="img_box_home_1">
@@ -116,7 +116,7 @@
                     <img class="change-image editablelink" link-id="{{ site.name + '_box_home_1' }}" content="{{ read_link(site.name + '_box_home_1') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
                 {% end %}
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 container-banner">
                 {% if is_admin %}
                     <div class="image-upload lapiz visible-movil">
                         <label for="img_box_home_2">
@@ -133,7 +133,7 @@
                     <img class="change-image editablelink" link-id="{{ site.name + '_box_home_2' }}" content="{{ read_link(site.name + '_box_home_2') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
                 {% end %}
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 container-banner">
                 {% if is_admin %}
                     <div class="image-upload lapiz visible-movil">
                         <label for="img_box_home_3">

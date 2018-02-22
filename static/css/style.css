@@ -34,6 +34,14 @@ a:link{
     left: 120px;
 }
 
+.container-banner:first-child{
+    padding-left: 0px;
+}
+
+.container-banner:last-child{
+    padding-right: 0px;
+}
+
 .banner-home{
     width: 100%;
     object-fit: cover;

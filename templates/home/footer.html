@@ -1,47 +1,51 @@
+<div class="container">
   <div id="footer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mar">
-    <div class="container-fluid">
-         <div align="center">
-             <hr class="linea-footer">
-         </div>
-   </div>
-
-<div class="container min">
-  <div class="col-md-3 col-sm-3 col-xs-12">
-            <div class="inform-comerc text-left">
-                <div class="clearfix"></div>
-                <ul class="no-dot">
-                </ul>
-            </div>
-              </div>
-            <div class="col-md-3 col-sm-3 col-xs-12">
-              <div class="inform text-left">
-                  <div class="clearfix"></div>
-              </div>
-            </div>
-
-
-            <div class="col-md-3 col-sm-3 col-xs-12">
-              <div class="inform-2 text-left">
-                  <div class="clearfix"></div>
-              </div>
-            </div>
-  
-            <div class="col-md-3 col-sm-3 col-xs-12">
-              <div class="inform-comerc text-left">
-                  <div class="clearfix"></div>
-                    <ul class="no-dot d-o">
-                    </ul>
-              </div>
-          </div>
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="col-md-3">
-              {% if user is None %}
-                <a href="{{ site_base }}/auth/login" class="a-footer" >Login</a>
-              {% else %}
-                <a href="{{ site_base }}/auth/logout" class="a-footer" >Logout</a>
-              {% end %}
-            </div> 
-          </div>
-          <div class="col-md-12 col-xs-12 firma"><a href="https://www.loadingplay.com">Sytes tech. Developed by LoadingPlay.</a></div>
+    <div>
+      <div align="center">
+        <hr class="linea-footer">
       </div>
+    </div>
+
+    <div class="container min">
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        <div class="inform-comerc text-left">
+          <div class="clearfix"></div>
+            <ul class="no-dot">
+            </ul>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        <div class="inform text-left">
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        <div class="inform-2 text-left">
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        <div class="inform-comerc text-left">
+          <div class="clearfix"></div>
+          <ul class="no-dot d-o">
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-3">
+          {% if user is None %}
+            <a href="{{ site_base }}/auth/login" class="a-footer" >Login</a>
+          {% else %}
+            <a href="{{ site_base }}/auth/logout" class="a-footer" >Logout</a>
+          {% end %}
+        </div> 
+      </div>
+
+      <div class="col-md-12 col-xs-12 firma"><a href="https://www.loadingplay.com">Sytes tech. Developed by LoadingPlay.</a></div>
+    </div>
   </div>
+</div>

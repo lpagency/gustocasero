@@ -34,6 +34,13 @@ a:link{
     left: 120px;
 }
 
+.banner-home{
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    height: 350px;
+}
+
 a:focus {
     outline: thin dotted;
     outline: 0px auto -webkit-focus-ring-color;

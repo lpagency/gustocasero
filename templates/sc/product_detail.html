@@ -4,187 +4,170 @@
 {{ site.name }}
 {% end %}
 
+{% block head %}
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+{% end %}
+
 {% block header %}
 {% include '../home/header.html' %}
 {% end %}
 
-{% block css %}
-<link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
-{% end %}
+{% block scripts %}
+<script type="text/javascript">
+var slideIndex = 1;
+showDivs(slideIndex);
 
-{% block javascript %}
-    <script>
-        $(document).ready(function(){
-          $('.dropdown-submenu a.test').on("click", function(e){
-            $(this).next('ul').toggle();
-            e.stopPropagation();
-            e.preventDefault();
-          });
-        });
-    </script>
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
 
-<script type="text/javascript" src="{{ site_base }}/static/js/product_detail.ec5.js?12"></script>
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if ($('#imgChica').hasClass('hidden')) {
+    $('#imgChica').style.display = "none";
+  }
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+  
+}
+</script>
 
 <script type="text/javascript">
+$(document).ready(function() {
 
-    $(document).ready(function()
+    /*** used by cart config **/
+    var slideIndex = 1;
+    var plusDivs = function(n) 
     {
-         var base_url = $.environmentVar(
-            'https://apibodegas.loadingplay.com/',
-            'https://apibodegas.ondev.today/',
-            'https://apibodegas.loadingplay.com/');
-        var checkout_url = $.environmentVar(
-            'https://pay.loadingplay.com/',
-            'https://lpcheckout.ondev.today/',
-            'https://pay.loadingplay.com');
-        var app_public = $.environmentVar(82,82,82);
-        var site_name = $.environmentVar('gustocasero', 'gustocasero', 'gustocasero');
-        var config = {
-            'app_public': app_public,
-            'base_url': base_url,
-            'products_per_page': 9,
-            'ignore_stock': false,
-            'infinite_scroll': true,
-            'product_id' : {{ product_id }},
-            // 'maxProducts': 100,
-            'checkout_url': checkout_url,
-            'operator': 'or',
-            'container': '.product-detail',
-            'onLoad': function(products) {
-            }
-        };
+        showDivs(slideIndex += n);
+    };
+    var showDivs = function(n) 
+    {
+        // define some vars
+        var i;
+        var x = $('.mySlides:not(.hidden)');
+        var next;
 
-        $('.product-detail').ecommerce("product_detail", config);
-    });
+        // set current index
+        if (n > x.length)
+        {
+            slideIndex = 1
+        }
 
+        // set limit conditions
+        if (n < 1)
+        {
+            slideIndex = x.length
+        }
+
+        // hide all images
+        x.css('display', 'none');
+
+        // show the current
+        next = $(x[slideIndex-1]);
+        next.css('display', 'block');
+    };
+
+    var base_url = $.environmentVar(
+        'https://apibodegas.loadingplay.com/',
+        'https://apibodegas.ondev.today/',
+        'https://apibodegas.loadingplay.com/');
+    var checkout_url = $.environmentVar(
+        'https://pay.loadingplay.com/',
+        'https://lpcheckout.ondev.today/',
+        'https://pay.loadingplay.com');
+    var app_public = $.environmentVar(82,82,82);
+    var site_name = $.environmentVar('gustocasero', 'gustocasero', 'gustocasero');
+    var config = {
+        'app_public': app_public,
+        'base_url': base_url,
+        'products_per_page': 9,
+        'ignore_stock': false,
+        'infinite_scroll': true,
+        'animation': 'ghost',
+        'product_id' : {{ product_id }},
+        // 'maxProducts': 100,
+        'checkout_url': checkout_url,
+        'operator': 'or',
+        'container': '.product-detail',
+        'onLoad': function(products) {
+        }
+    };
+
+    $('.product-detail').ecommerce("product_detail", config);
+});
 </script>
-
 <script type="text/template" id="product_detail">
-
-<section>
-
-      <div class="container min">
-        <div class="row">
-           <div class="offset-md-1  offset-sm-1 col-xs-12 col-md-6 col-sm-6 image_little">
-
-                        <div class="img-container">
-                            <img class="{{! images[1]['thumb_500']|hide_if_empty}} col-xs-3 img_prod_little" src="{{! images[1]['thumb_500'] }}" onload="this.onload='';this.src={{! images[1]['thumb_500']}}" />
-                         </div>
-                         <div class="img-container">
-                             <img class="{{! images[2]['thumb_500']|hide_if_empty }} col-xs-3 img_prod_little " src="{{! images[2]['thumb_500'] }}" onload="this.onload='';this.src={{! images[2]['thumb_500']}}" />
-                         </div>
-
-                          <div class="img-container">
-                            <img class="{{! images[3]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[3]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[3]['thumb_500']}}" />
-                          </div>
-
-                          <div class="img-container">
-                               <img class="{{! images[4]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[4]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[4]['thumb_500']}}" />
-                          </div>
-
-                          <div class="img-container">
-                             <img class="{{! images[5]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[5]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[5]['thumb_500']}}" />
-                         </div>
-
-                         <div class="img-container">
-                             <img class="{{! images[6]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[6]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[6]['thumb_500']}}" />
-                         </div>
-
-          </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off {{! images[0]['thumb_200']|hide_if_empty }}" src="{{! images [0]['thumb_200'] }}" id="imgChica" onclick="currentDiv(1)">
+      <img class="demo w3-opacity w3-hover-opacity-off imagenesChicas {{! images[1]['thumb_200']|hide_if_empty }}" src="{{! images [1]['thumb_200'] }}" id="imgChica" onclick="currentDiv(2)">
+      <img class="demo w3-opacity w3-hover-opacity-off imagenesChicas {{! images[2]['thumb_200']|hide_if_empty }}" src="{{! images [2]['thumb_200'] }}" id="imgChica" onclick="currentDiv(3)">
+      <img class="demo w3-opacity w3-hover-opacity-off imagenesChicas {{! images[3]['thumb_200']|hide_if_empty }}" src="{{! images [3]['thumb_200'] }}" id="imgChica" onclick="currentDiv(4)">
+      <img class="demo w3-opacity w3-hover-opacity-off imagenesChicas {{! images[4]['thumb_200']|hide_if_empty }}" src="{{! images [4]['thumb_200'] }}" id="imgChica" onclick="currentDiv(5)">
+    </div>
+    <div class="col-md-6 col-xs-12">
+        <div class="prod-name">{{! name }}</div>
+        <br>
+        <div>
+          <div>{{! main_price|money }}</div>
         </div>
-                <div align="center">
-            <div class="col-md-6 col-sm-6 col-xs-12 img-ppal-movil">
-                  <div id="mainDiv">
-                    <div class="main-img-container">
-                      <div class="letreros-detalle">
-                        <div class="letrero-sale-detail hidden {{! sku }}">OFERTA</div>
-                        <div class="letrero-new-detail hidden {{! sku }}">NUEVO</div>
-                      </div>
-                       <img id='mainImage' class="fondo-detalle" src="{{! images[1]['thumb_500'] }}"/>
-                    </div>
-                  </div>
-           </div>
-         </div>
-
-
-
-          <div class="col-md-5 col-sm-5 col-xs-12 text-prod-desk">
-             <h1 class="name name_prod_detail ellipsis multiline" class="line" href="#">{{! name }}</h1>
-              <h3 class="descr_prod_detail ellipsis multiline">
-             {{! description }}</h3>
-              <div class="title-stock">Stock por producto SKU:</div>
-             <div class="stock-product"></div>
-              <div class="product-price-2 main-price">{{! main_price|money }} </div>
-              <div class="product-price-2 promotion-price">{{! promotion_price|money }} </div>
-              <div class="col-md-12 mover variants-container">
-              </div>
-             <button
-             type="button"
-             class="btn add-to-cart btn-success comprar"
-             id="open-cart"
-             data-toggle="modal"
-             data-target="#myModal"
-             product-upp="{{! upp }}"
-             product-name="{{! name }}"
-             product-price="{{! main_price }}"
-             product-sku="{{! sku }}"
-             product-id="{{! id }}"
-             product-img="{{! images[0]['thumb_500'] }}"
-             product-weight="{{! weight }}"
-             disabled
-             lp-cart-add
-             >Comprar</button>
-          </div>
-
-    </section>
-
-
-        <div class="clearfix-fun-2"></div>
-        <div class="container">
-
+        <br>
+        <input 
+        type="button" 
+        product-id="{{! id }}" 
+        product-name="{{! name }}" 
+        product-img="{{! images[0]['thumb_200'] }}" 
+        product-price="{{! main_price }}" 
+        product-upp="{{! upp }}" 
+        id="busca" 
+        data-toggle="modal" 
+        class="add-to-cart comp boton-comprar-detalle" 
+        data-target="#myModal" 
+        value="COMPRAR" 
+        product-sku="{{! sku }}" 
+        product-weight="{{! weight }}" 
+        lp-cart-add">
+        <div>
+            <div>{! description}}</div>
         </div>
     </div>
-
+    <div class="clearfix"></div>
 </script>
 
+{% end %}
 
-<!--
-{% end %} -->
-
-
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
+<link rel="stylesheet" href="{{site_base}}/static/ocul.css" >
+{% end %}
 
 {% block body %}
+{% if is_admin %}
+{% set editabletext = 'editabletext' %}
+{% else %}
+{% set editabletext = '' %}
+{% end %}
 
-
-
-<div class="container-fluid">
-
-    <div class="container  product-page"></div>
-
+<div class="contenedor" id="fondo_detalle">
+    <div class="clearfix" style="padding-top:85px"></div>
+    <div class="product-detail container" style="padding-top: 100px;margin-left: 4%">
     </div>
-
-</div>
-
-
-<div class="product-detail" style="margin-bottom: 50px;"></div>
-<div class="container min">
-   <div align="center">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-       <!-- <hr class="detalle"> -->
-   </div>
-   </div>
-</div>
-
-
-<div class="container min">
-  <div class="col-md-12 col-sm-12 col-xs-12">
-     <div class="reli {{editabletext}}" text-id="{{ site.name + '_reli' }}"> {{ read_text(site.name +  '_reli') }}</div>
-  </div>
- <div class="product-related">
-
-    </div>
-</div>
-
-
+    <div class="clearfix" style="padding-bottom: 150px"></div></div>
 {% include '../home/footer.html' %}
+</div>
 {% end %}

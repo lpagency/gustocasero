@@ -34,6 +34,10 @@ a:link{
     left: 120px;
 }
 
+.prod-name{
+    font-size: 25px;
+}
+
 .container-banner:first-child{
     padding-left: 0px;
 }

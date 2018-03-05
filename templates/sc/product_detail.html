@@ -127,21 +127,7 @@ $(document).ready(function() {
           <div>{{! main_price|money }}</div>
         </div>
         <br>
-        <input 
-        type="button" 
-        product-id="{{! id }}" 
-        product-name="{{! name }}" 
-        product-img="{{! images[0]['thumb_200'] }}" 
-        product-price="{{! main_price }}" 
-        product-upp="{{! upp }}" 
-        id="busca" 
-        data-toggle="modal" 
-        class="add-to-cart comp boton-comprar-detalle" 
-        data-target="#myModal" 
-        value="COMPRAR" 
-        product-sku="{{! sku }}" 
-        product-weight="{{! weight }}" 
-        lp-cart-add">
+
         <div>
             <div>{! description}}</div>
         </div>
@@ -164,10 +150,8 @@ $(document).ready(function() {
 {% end %}
 
 <div class="contenedor" id="fondo_detalle">
-    <div class="clearfix" style="padding-top:85px"></div>
-    <div class="product-detail container" style="padding-top: 100px;margin-left: 4%">
+    <div class="product-detail container">
     </div>
-    <div class="clearfix" style="padding-bottom: 150px"></div></div>
 {% include '../home/footer.html' %}
 </div>
 {% end %}

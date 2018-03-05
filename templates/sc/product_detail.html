@@ -1,0 +1,190 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{{ site.name }}
+{% end %}
+
+{% block header %}
+{% include '../home/header.html' %}
+{% end %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
+{% end %}
+
+{% block javascript %}
+    <script>
+        $(document).ready(function(){
+          $('.dropdown-submenu a.test').on("click", function(e){
+            $(this).next('ul').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+          });
+        });
+    </script>
+
+<script type="text/javascript" src="{{ site_base }}/static/js/product_detail.ec5.js?12"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function()
+    {
+         var base_url = $.environmentVar(
+            'https://apibodegas.loadingplay.com/',
+            'https://apibodegas.ondev.today/',
+            'https://apibodegas.loadingplay.com/');
+        var checkout_url = $.environmentVar(
+            'https://pay.loadingplay.com/',
+            'https://lpcheckout.ondev.today/',
+            'https://pay.loadingplay.com');
+        var app_public = $.environmentVar(82,82,82);
+        var site_name = $.environmentVar('gustocasero', 'gustocasero', 'gustocasero');
+        var config = {
+            'app_public': app_public,
+            'base_url': base_url,
+            'products_per_page': 9,
+            'ignore_stock': false,
+            'infinite_scroll': true,
+            'product_id' : {{ product_id }},
+            // 'maxProducts': 100,
+            'checkout_url': checkout_url,
+            'operator': 'or',
+            'container': '.product-detail',
+            'onLoad': function(products) {
+            }
+        };
+
+        $('.product-detail').ecommerce("product_detail", config);
+    });
+
+</script>
+
+<script type="text/template" id="product_detail">
+
+<section>
+
+      <div class="container min">
+        <div class="row">
+           <div class="offset-md-1  offset-sm-1 col-xs-12 col-md-6 col-sm-6 image_little">
+
+                        <div class="img-container">
+                            <img class="{{! images[1]['thumb_500']|hide_if_empty}} col-xs-3 img_prod_little" src="{{! images[1]['thumb_500'] }}" onload="this.onload='';this.src={{! images[1]['thumb_500']}}" />
+                         </div>
+                         <div class="img-container">
+                             <img class="{{! images[2]['thumb_500']|hide_if_empty }} col-xs-3 img_prod_little " src="{{! images[2]['thumb_500'] }}" onload="this.onload='';this.src={{! images[2]['thumb_500']}}" />
+                         </div>
+
+                          <div class="img-container">
+                            <img class="{{! images[3]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[3]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[3]['thumb_500']}}" />
+                          </div>
+
+                          <div class="img-container">
+                               <img class="{{! images[4]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[4]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[4]['thumb_500']}}" />
+                          </div>
+
+                          <div class="img-container">
+                             <img class="{{! images[5]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[5]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[5]['thumb_500']}}" />
+                         </div>
+
+                         <div class="img-container">
+                             <img class="{{! images[6]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[6]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[6]['thumb_500']}}" />
+                         </div>
+
+          </div>
+        </div>
+                <div align="center">
+            <div class="col-md-6 col-sm-6 col-xs-12 img-ppal-movil">
+                  <div id="mainDiv">
+                    <div class="main-img-container">
+                      <div class="letreros-detalle">
+                        <div class="letrero-sale-detail hidden {{! sku }}">OFERTA</div>
+                        <div class="letrero-new-detail hidden {{! sku }}">NUEVO</div>
+                      </div>
+                       <img id='mainImage' class="fondo-detalle" src="{{! images[1]['thumb_500'] }}"/>
+                    </div>
+                  </div>
+           </div>
+         </div>
+
+
+
+          <div class="col-md-5 col-sm-5 col-xs-12 text-prod-desk">
+             <h1 class="name name_prod_detail ellipsis multiline" class="line" href="#">{{! name }}</h1>
+              <h3 class="descr_prod_detail ellipsis multiline">
+             {{! description }}</h3>
+              <div class="title-stock">Stock por producto SKU:</div>
+             <div class="stock-product"></div>
+              <div class="product-price-2 main-price">{{! main_price|money }} </div>
+              <div class="product-price-2 promotion-price">{{! promotion_price|money }} </div>
+              <div class="col-md-12 mover variants-container">
+              </div>
+             <button
+             type="button"
+             class="btn add-to-cart btn-success comprar"
+             id="open-cart"
+             data-toggle="modal"
+             data-target="#myModal"
+             product-upp="{{! upp }}"
+             product-name="{{! name }}"
+             product-price="{{! main_price }}"
+             product-sku="{{! sku }}"
+             product-id="{{! id }}"
+             product-img="{{! images[0]['thumb_500'] }}"
+             product-weight="{{! weight }}"
+             disabled
+             lp-cart-add
+             >Comprar</button>
+          </div>
+
+    </section>
+
+
+        <div class="clearfix-fun-2"></div>
+        <div class="container">
+
+        </div>
+    </div>
+
+</script>
+
+
+<!--
+{% end %} -->
+
+
+
+{% block body %}
+
+
+
+<div class="container-fluid">
+
+    <div class="container  product-page"></div>
+
+    </div>
+
+</div>
+
+
+<div class="product-detail" style="margin-bottom: 50px;"></div>
+<div class="container min">
+   <div align="center">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+       <!-- <hr class="detalle"> -->
+   </div>
+   </div>
+</div>
+
+
+<div class="container min">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+     <div class="reli {{editabletext}}" text-id="{{ site.name + '_reli' }}"> {{ read_text(site.name +  '_reli') }}</div>
+  </div>
+ <div class="product-related">
+
+    </div>
+</div>
+
+
+{% include '../home/footer.html' %}
+{% end %}

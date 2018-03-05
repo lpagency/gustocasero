@@ -1,1 +1,45 @@
-listado_productos.html
+{% extends "../base.html" %}
+
+{% block title %}
+{{ site.name }}
+{% end %}
+
+{% block header %}
+    {% include ../home/header.html %}
+{% end %}
+
+{% block scripts %}
+{% end %}
+
+{% block body %}
+    <div class="container">
+        <section id="slider-home" class="container-fluid">
+            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active" style="background:url('{{ read_image(site.name + '_img_slider_prod') }}'); height:100%; width:100%; background-repeat:no-repeat; background-size:cover; background-position:center;" data-img-width="1600" data-img-height="890" data-diff="100">
+                        <a class="link-banner" id="{{ site.name + '_img_slider_prod' }}" href="{{ read_link(site.name + '_img_slider_prod') }}">
+                            {% if is_admin %}
+                                <div class="image-upload visible-movil" style="right: 175px;">
+                                    <label for="img_slider_prod">
+                                        <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                                    </label>
+                                    <input type="file" class="editableimage" image-id="{{ site.name }}_img_slider_prod" name="image" id="img_slider_prod" >
+                                </div>
+                            {% end %}
+                        </a>
+                        {% if is_admin %}
+                            <img class="change-image editablelink" link-id="{{ site.name + '_img_slider_prod' }}" content="{{ read_link(site.name + '_img_slider_prod') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
+                        {% end %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="texto-one text-center {{editabletext}}" text-id="{{ site.name + '_one_prod' }}"> {{ read_text(site.name +  '_one_prod') }} </div>
+
+        <div class="products">
+        </div>
+    </div>
+    {% include ../home/footer.html %}
+{% end %}

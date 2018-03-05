@@ -42,6 +42,10 @@ a:link{
     padding-right: 0px;
 }
 
+.lista-item-img{
+    width: 100%;
+}
+
 .banner-home{
     width: 100%;
     object-fit: cover;

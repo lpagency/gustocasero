@@ -27,6 +27,11 @@ a:visited{
 a:link{
       color: black;
 }
+
+.logo_wrapper{
+    margin-left: -12px;
+}
+
 .link-banner{
     position: absolute;
     width: 80%;

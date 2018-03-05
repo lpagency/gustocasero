@@ -109,7 +109,10 @@
                     </div>
                 {% end %}
                 <a id="{{ site.name + '_box_home_1' }}" href="{{ read_link(site.name + '_box_home_1') }}">
-                    <img id="{{ site.name }}_box_home_1" src="{{ read_image(site.name + '_box_home_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_home_1',) }}'" class="banner-home" alt="item">
+                    <div class="overlay">
+                        <img id="{{ site.name }}_box_home_1" src="{{ read_image(site.name + '_box_home_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_home_1',) }}'" class="banner-home" alt="item">
+                    </div>
+                    <div class=" banner-titulo banner-titulo-alt {{editabletext}}" text-id="{{ site.name + 'text_main_slide' }}">{{ read_text(site.name +  'text_main_slide') }}</div>
                 </a>
 
                 {% if is_admin %}
@@ -126,7 +129,10 @@
                     </div>
                 {% end %}
                 <a id="{{ site.name + '_box_home_2' }}" href="{{ read_link(site.name + '_box_home_2') }}">
-                    <img id="{{ site.name }}_box_home_2" src="{{ read_image(site.name + '_box_home_2', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_home_2',) }}'" class="banner-home" alt="item">
+                    <div class="overlay">
+                        <img id="{{ site.name }}_box_home_2" src="{{ read_image(site.name + '_box_home_2', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_home_2',) }}'" class="banner-home" alt="item">
+                    </div>
+                    <div class=" banner-titulo banner-titulo-alt-2 {{editabletext}}" text-id="{{ site.name + 'text_main_slide_2' }}">{{ read_text(site.name +  'text_main_slide_2') }}</div>
                 </a>
 
                 {% if is_admin %}
@@ -143,7 +149,10 @@
                     </div>
                 {% end %}
                 <a id="{{ site.name + '_box_home_3' }}" href="{{ read_link(site.name + '_box_home_3') }}">
-                    <img id="{{ site.name }}_box_home_3" src="{{ read_image(site.name + '_box_home_3', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_home_3',) }}'" class="banner-home" alt="item">
+                    <div class="overlay">
+                        <img id="{{ site.name }}_box_home_3" src="{{ read_image(site.name + '_box_home_3', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_home_3',) }}'" class="banner-home" alt="item">
+                    </div>
+                    <div class=" banner-titulo banner-titulo-alt {{editabletext}}" text-id="{{ site.name + 'text_main_slide_3' }}">{{ read_text(site.name +  'text_main_slide_3') }}</div>
                 </a>
 
                 {% if is_admin %}
@@ -153,7 +162,7 @@
         </div>
         <div class="clearfix" style="padding-bottom: 25px"></div>
         <div class="banners">
-            <div class="col-md-6 container-banner">
+            <div class="col-md-6 col-xs-12 container-banner">
                 {% if is_admin %}
                     <div class="image-upload lapiz visible-movil">
                         <label for="img_box_home_4">
@@ -163,14 +172,17 @@
                     </div>
                 {% end %}
                 <a id="{{ site.name + '_box_home_4' }}" href="{{ read_link(site.name + '_box_home_4') }}">
-                    <img id="{{ site.name }}_box_home_4" src="{{ read_image(site.name + '_box_home_4', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_home_4',) }}'" class="banner-home" alt="item">
+                    <div class="overlay">
+                        <img id="{{ site.name }}_box_home_4" src="{{ read_image(site.name + '_box_home_4', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_home_4',) }}'" class="banner-home" alt="item">
+                    </div>
+                    <div class=" banner-titulo banner-titulo-alt {{editabletext}}" text-id="{{ site.name + 'text_main_slide_4' }}">{{ read_text(site.name +  'text_main_slide_4') }}</div>
                 </a>
 
                 {% if is_admin %}
                     <img class="change-image editablelink" link-id="{{ site.name + '_box_home_4' }}" content="{{ read_link(site.name + '_box_home_4') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
                 {% end %}
             </div>
-            <div class="col-md-6 container-banner">
+            <div class="col-md-6 col-xs-12 container-banner">
                 {% if is_admin %}
                     <div class="image-upload lapiz visible-movil">
                         <label for="img_box_home_5">
@@ -180,7 +192,10 @@
                     </div>
                 {% end %}
                 <a id="{{ site.name + '_box_home_5' }}" href="{{ read_link(site.name + '_box_home_5') }}">
-                    <img id="{{ site.name }}_box_home_5" src="{{ read_image(site.name + '_box_home_5', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_home_5',) }}'" class="banner-home" alt="item">
+                    <div class="overlay">
+                        <img id="{{ site.name }}_box_home_5" src="{{ read_image(site.name + '_box_home_5', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_home_5',) }}'" class="banner-home" alt="item">
+                    </div>
+                    <div class=" banner-titulo banner-titulo-alt {{editabletext}}" text-id="{{ site.name + 'text_main_slide_5' }}">{{ read_text(site.name +  'text_main_slide_5') }}</div>
                 </a>
 
                 {% if is_admin %}

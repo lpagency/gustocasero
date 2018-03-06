@@ -14,74 +14,12 @@
 {% end %}
 
 {% block scripts %}
-<script type="text/javascript">
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if ($('#imgChica').hasClass('hidden')) {
-    $('#imgChica').style.display = "none";
-  }
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-  }
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-opacity-off";
-  
-}
-</script>
 
 <script type="text/javascript">
 $(document).ready(function() {
-
-    /*** used by cart config **/
-    var slideIndex = 1;
-    var plusDivs = function(n) 
-    {
-        showDivs(slideIndex += n);
-    };
-    var showDivs = function(n) 
-    {
-        // define some vars
-        var i;
-        var x = $('.mySlides:not(.hidden)');
-        var next;
-
-        // set current index
-        if (n > x.length)
-        {
-            slideIndex = 1
-        }
-
-        // set limit conditions
-        if (n < 1)
-        {
-            slideIndex = x.length
-        }
-
-        // hide all images
-        x.css('display', 'none');
-
-        // show the current
-        next = $(x[slideIndex-1]);
-        next.css('display', 'block');
-    };
+  $(document).on("click", '.img_prod_little', function(){
+        $("#mainImage").attr("src", $(this).attr('src'));
+    });
 
     var base_url = $.environmentVar(
         'https://apibodegas.loadingplay.com/',
@@ -113,26 +51,57 @@ $(document).ready(function() {
 });
 </script>
 <script type="text/template" id="product_detail">
-    <div class="w3-col s4">
-      <img class="demo w3-opacity w3-hover-opacity-off {{! images[0]['thumb_200']|hide_if_empty }}" src="{{! images [0]['thumb_200'] }}" id="imgChica" onclick="currentDiv(1)">
-      <img class="demo w3-opacity w3-hover-opacity-off imagenesChicas {{! images[1]['thumb_200']|hide_if_empty }}" src="{{! images [1]['thumb_200'] }}" id="imgChica" onclick="currentDiv(2)">
-      <img class="demo w3-opacity w3-hover-opacity-off imagenesChicas {{! images[2]['thumb_200']|hide_if_empty }}" src="{{! images [2]['thumb_200'] }}" id="imgChica" onclick="currentDiv(3)">
-      <img class="demo w3-opacity w3-hover-opacity-off imagenesChicas {{! images[3]['thumb_200']|hide_if_empty }}" src="{{! images [3]['thumb_200'] }}" id="imgChica" onclick="currentDiv(4)">
-      <img class="demo w3-opacity w3-hover-opacity-off imagenesChicas {{! images[4]['thumb_200']|hide_if_empty }}" src="{{! images [4]['thumb_200'] }}" id="imgChica" onclick="currentDiv(5)">
-    </div>
-    <div class="col-md-6 col-xs-12">
-        <div class="prod-name">{{! name }}</div>
-        <br>
-        <div>
-          <div>{{! main_price|money }}</div>
-        </div>
-        <br>
+<section>
 
-        <div>
-            <div>{! description}}</div>
+      <div>
+        <div align="center">
+          <div class="col-md-6 col-sm-6 col-xs-12 img-ppal-movil">
+            <div id="mainDiv">
+              <div class="main-img-container">
+                <img id='mainImage' class="fondo-detalle" src="{{! images[1]['thumb_500'] }}"/>
+              </div>
+            </div>
+           </div>
+         </div>
+
+         <div class="col-md-12 row-img-little">
+           <div class="offset-md-1 offset-sm-1 col-xs-12 col-md-12 col-sm-6 image_little">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+              <div class="center-img">
+              <div class="img-container">
+                <img class="{{! images[1]['thumb_500']|hide_if_empty}} col-md-2 col-xs-3 img_prod_little" src="{{! images[1]['thumb_500'] }}" onload="this.onload='';this.src={{! images[1]['thumb_500']}}" />
+              </div>
+              <div class="img-container">
+                <img class="{{! images[2]['thumb_500']|hide_if_empty }} col-md-2 col-xs-3 img_prod_little " src="{{! images[2]['thumb_500'] }}" onload="this.onload='';this.src={{! images[2]['thumb_500']}}" />
+              </div>
+                <div class="img-container">
+                  <img class="{{! images[3]['thumb_500']|hide_if_empty }} col-md-2 col-xs-3 img_prod_little" src="{{! images[3]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[3]['thumb_500']}}" />
+                </div>
+                <div class="img-container">
+                  <img class="{{! images[4]['thumb_500']|hide_if_empty }} col-md-2 col-xs-3 img_prod_little" src="{{! images[4]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[4]['thumb_500']}}" />
+                </div>
+                <div class="img-container">
+                  <img class="{{! images[5]['thumb_500']|hide_if_empty }} col-md-2 col-xs-3 img_prod_little" src="{{! images[5]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[5]['thumb_500']}}" />
+                </div>
+                <div class="img-container">
+                  <img class="{{! images[6]['thumb_500']|hide_if_empty }} col-md-2 col-xs-3 img_prod_little" src="{{! images[6]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[6]['thumb_500']}}" />
+                </div>
+            </div>
+            </div>
+            <div class="col-md-2">
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="clearfix"></div>
+
+          <div class="col-md-12 col-sm-5 col-xs-12 text-prod-desk">
+             <h3 class="name name_prod_detail ellipsis multiline" class="line" href="#">{{! name }}</h1>
+              <h4 class="descr_prod_detail ellipsis multiline">
+             {{! description }}</h4>
+          </div>
+
+    </section>
 </script>
 
 {% end %}

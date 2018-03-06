@@ -86,6 +86,25 @@ a:link{
   opacity: 1;
 }
 
+.row-img-little{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.img_prod_little {
+    padding-left: 0;
+}
+
+.img-ppal-movil {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.text-prod-desk {
+    padding-left: 0;
+}
+
 .logo_wrapper{
     margin-left: -12px;
 }

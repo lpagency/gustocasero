@@ -84,15 +84,14 @@ outline-offset: -2px;
 }
 
 .logo {
-    width: 122px;
+    width: 90px;
     position: absolute;
     display: block;
     margin: 0 auto;
     z-index: 1;
     object-fit: contain;
-    top: 12px;
     left: 8px;
-    margin-top: 2px;
+    margin-top: 14px;
 }
 
 .navbar-brand {

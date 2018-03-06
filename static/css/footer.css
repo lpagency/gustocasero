@@ -132,7 +132,12 @@ img#vitrineate_img_logo_footer {
     margin-right: 40px;
 }
 }
-
+.l-footer-footer{
+     max-height: 200px;
+     width: 120px;
+     object-fit: scale-down;
+ }
+ 
 /*----------------Responsive---------------------*/
 
 

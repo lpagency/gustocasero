@@ -22,11 +22,11 @@ a:hover{
 }
 
 a:visited{
-      color: black;
+      color: #c1bfbf !important;
 }
 
 a:link{
-      color: black;
+      color: #c1bfbf !important;
 }
 
 .banner-titulo {

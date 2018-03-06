@@ -31,7 +31,7 @@ a:link{
 
 .banner-titulo {
   font-size: 2.5rem;
-  color: #c1bfbf;
+  color: #d0cdcd;
   padding: 1.0833rem 0 0 1.0833rem;
     padding: 0;
     position: absolute;
@@ -51,24 +51,27 @@ a:link{
     overflow: hidden;
   }
 
-    .banner-titulo-alt:last-child {
+.banner-titulo-alt:last-child {
     z-index: 10015;
     left: 15px;
     bottom: 0;
-    width: 96%;
-    height: 100%;
+    width: 90%;
+    text-align: center;
+    height: 60%;
     overflow: hidden;
   }
+
 .banner-titulo-alt-2 {
     z-index: 10015;
     left: 15px;
     bottom: 0;
-    width: 92%;
-    height: 100%;
+    text-align: center;
+    width: 90%;
+    height: 60%;
     overflow: hidden;
   }
 
-  .overlay {
+.overlay {
     background: rgba(0, 0, 0, 0.2);
     text-align: center;
     opacity: 0;
@@ -82,11 +85,6 @@ a:link{
 .box:hover .overlay {
   opacity: 1;
 }
-
-/*.overlay:hover{
-    opacity: 0.7;
-    background-color: black;
-}*/
 
 .logo_wrapper{
     margin-left: -12px;

@@ -6,7 +6,7 @@ html * {
 
 html, body {
 /*font-family: 'Open Sans', sans-serif;*/
-   font-family: 'Amiri', serif;
+   font-family: 'Amiri', serif !important;
    margin: 0 auto;
    overflow-x:hidden;
    color: #c1bfbf !important;
@@ -31,7 +31,7 @@ a:link{
 
 .banner-titulo {
   font-size: 2.5rem;
-  color: #373838;
+  color: #c1bfbf;
   padding: 1.0833rem 0 0 1.0833rem;
     padding: 0;
     position: absolute;
@@ -68,10 +68,25 @@ a:link{
     overflow: hidden;
   }
 
-.overlay{
+  .overlay {
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    opacity: 0;
+    height: 350px;
+    position: relative;
+    top: -350px;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+}
+
+.box:hover .overlay {
+  opacity: 1;
+}
+
+/*.overlay:hover{
     opacity: 0.7;
     background-color: black;
-}
+}*/
 
 .logo_wrapper{
     margin-left: -12px;
@@ -94,6 +109,10 @@ a:link{
 
 .container-banner:last-child{
     padding-right: 0px;
+}
+
+.container-banner{
+    height: 350px;
 }
 
 .lista-item-img{
@@ -130,7 +149,7 @@ img.editablelink {
     position: absolute;
     left: 20px;
     bottom: 20px;
-    z-index: 1030 !important;
+    z-index: 100000 !important;
 }
 
 div.image-upload {

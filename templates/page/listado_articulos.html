@@ -123,28 +123,28 @@ $(document).ready(function(){
 
 
 <div class="container min">
-  <section id="slider-home" class="container-fluid">
-            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active" style="background:url('{{ read_image(site.name + '_img_slider_article') }}'); height:100%; width:100%; background-repeat:no-repeat; background-size:cover; background-position:center;" data-img-width="1600" data-img-height="890" data-diff="100">
-                        <a class="link-banner" id="{{ site.name + '_img_slider_article' }}" href="{{ read_link(site.name + '_img_slider_article') }}">
-                            {% if is_admin %}
-                                <div class="image-upload visible-movil" style="right: 175px;">
-                                    <label for="img_slider_prod">
-                                        <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
-                                    </label>
-                                    <input type="file" class="editableimage" image-id="{{ site.name }}_img_slider_article" name="image" id="img_slider_prod" >
-                                </div>
-                            {% end %}
-                        </a>
-                        {% if is_admin %}
-                            <img class="change-image editablelink" link-id="{{ site.name + '_img_slider_article' }}" content="{{ read_link(site.name + '_img_slider_article') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
-                        {% end %}
-                    </div>
-                </div>
+<section>
+      <div class="mobile" style="background:url('{{ read_image(site.name + '_banner_cate_li',500) }}');  height:300px; background-size:cover; margin-top: 0px;  filter: grayscale(0%) brightness(65%);-webkit-filter: grayscale(0%) brightness(65%);
+    -moz-filter: grayscale(0%) brightness(65%);-ms-filter: grayscale(0%) brightness(65%);-o-filter: grayscale(0%) brightness(65%); background-position:center;" data-img-width="1600" data-img-height="860" data-diff="100">
+        {% if is_admin %}
+               <div class="image-upload part1 lapiz visible-movil">
+                   <label for="img_banner_cate_li">
+                       <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                   </label>
+                   <input type="file" class="editableimage" image-id="{{ site.name }}_banner_cate_li" name="image" id="img_banner_cate_li" >
+               </div>
+        {% end %}
+                <img id="{{ site.name }}_banner_cate_li" src="{{ read_image(site.name + '_banner_cate_li', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_cate_li',500) }}'" class="banner_uno_list hidden" alt="item">        
+       </div>
+       
+       <div class="col-md-12">
+            <div class="box-text-gal">
+                <h1 class="text-center titulo {{editabletext}}" text-id="{{ site.name + '_til_li' }}"> {{ read_text(site.name +  '_til_li') }}</h1>
             </div>
-        </section>
+
+        </div>
+    
+</section>
 </div>
 
 
@@ -167,10 +167,10 @@ $(document).ready(function(){
 
      <div class="container min">
       <!--   <div class="row"> -->
-          {{ getArticleList(limit=1, html="page/article_home.html", tag='posicion 1') }}
-          {{ getArticleList(limit=1, html="page/article_home.html", tag='posicion 2') }}
-          {{ getArticleList(limit=1, html="page/article_home.html", tag='posicion 3') }}
-          {{ getArticleList(limit=1, html="page/article_home.html", tag='posicion 4') }}
+          {{ getArticleList(limit=1, html="page/article_home.html", tag='lutty,posicion 1') }}
+          {{ getArticleList(limit=1, html="page/article_home.html", tag='lutty,posicion 2') }}
+          {{ getArticleList(limit=1, html="page/article_home.html", tag='lutty,posicion 3') }}
+          {{ getArticleList(limit=1, html="page/article_home.html", tag='lutty,posicion 4') }}
         <!-- </div> -->
     </div>
   

@@ -5,41 +5,427 @@
 {% end %}
 
 {% block header %}
-    {% include ../home/header.html %}
+{% include '../home/header.html' %}
+{% end %}
+{% block css %}
+
+{% if is_admin %}
+{% end %}
+<link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
+<style type="text/css">
+
+</style>
 {% end %}
 
-{% block scripts %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ site_base }}/static/js/cart.config.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/banners.js"></script>
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+    //   
+    $(document).on("click", ".subcateg", function(ev){
+        // ev.preventDefault();
+    $(".subcateg").removeClass('active');
+        $(this).addClass('active');
+    });
+
+    });
+</script>
+
 {% end %}
+
 
 {% block body %}
-    <div class="container">
-        <section id="slider-home" class="container-fluid">
-            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active" style="background:url('{{ read_image(site.name + '_img_slider_prod') }}'); height:100%; width:100%; background-repeat:no-repeat; background-size:cover; background-position:center;" data-img-width="1600" data-img-height="890" data-diff="100">
-                        <a class="link-banner" id="{{ site.name + '_img_slider_prod' }}" href="{{ read_link(site.name + '_img_slider_prod') }}">
-                            {% if is_admin %}
-                                <div class="image-upload visible-movil" style="right: 175px;">
-                                    <label for="img_slider_prod">
-                                        <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
-                                    </label>
-                                    <input type="file" class="editableimage" image-id="{{ site.name }}_img_slider_prod" name="image" id="img_slider_prod" >
-                                </div>
-                            {% end %}
-                        </a>
-                        {% if is_admin %}
-                            <img class="change-image editablelink" link-id="{{ site.name + '_img_slider_prod' }}" content="{{ read_link(site.name + '_img_slider_prod') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
-                        {% end %}
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <div class="texto-one text-center {{editabletext}}" text-id="{{ site.name + '_one_prod' }}"> {{ read_text(site.name +  '_one_prod') }} </div>
+{% if is_admin %}
+{% set editabletext = 'editabletext' %}
+{% else %}
+{% set editabletext = '' %}
+{% end %}
 
-        <div class="products">
+
+<!-- *contenido* -->
+<body id="lapimport">
+   <div class="container min"> 
+   <section>
+
+        <!--ROSARIO SCARINI-->
+    <div class="mobile banner-movil hidden listado_productos_marca1" style="background:url('{{ read_image(site.name + '_productos_marca1',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca1">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca1" name="image" id="img_productos_marca1" >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca1" src="{{ read_image(site.name + '_productos_marca1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca1',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca1">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca1' }}"> {{ read_text(site.name +  '_productos_marca1') }}</div>
         </div>
     </div>
-    {% include ../home/footer.html %}
+     <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca1 texto-one {{editabletext}}" text-id="{{ site.name + '_marca1' }}"> {{ read_text(site.name +  '_marca1') }}</div>
+    </div>
+
+
+    
+
+    <!--END ROSARIO SCARINI-->
+
+        <!--ANA BOLENA-->
+    <div class="mobile banner-movil hidden listado_productos_marca2" style="background:url('{{ read_image(site.name + '_productos_marca2',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca2">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca2" name="image" id="img_productos_marca2" >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca2" src="{{ read_image(site.name + '_productos_marca2', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca2',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca2">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca2' }}"> {{ read_text(site.name +  '_productos_marca2') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca2 texto-one {{editabletext}}" text-id="{{ site.name + '_marca2' }}"> {{ read_text(site.name +  '_marca2') }}</div>
+    </div>
+    
+    <!--END ANA BOLENA-->
+
+        <!--CORK DESIGN-->
+    <div class="mobile banner-movil hidden listado_productos_marca3" style="background:url('{{ read_image(site.name + '_productos_marca3',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca3">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca3" name="image" id="img_productos_marca3" >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca3" src="{{ read_image(site.name + '_productos_marca3', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca3',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca3">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca3' }}"> {{ read_text(site.name +  '_productos_marca3') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca3 texto-one {{editabletext}}" text-id="{{ site.name + '_marca3' }}"> {{ read_text(site.name +  '_marca3') }}</div>
+    </div>
+    <!--END CORK DESIGN-->
+
+        <!--LA PIJAMERIA-->
+    <div class="mobile banner-movil hidden listado_productos_marca4" style="background:url('{{ read_image(site.name + '_productos_marca4',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca4">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca4" name="image" id="img_productos_marca4" >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca4" src="{{ read_image(site.name + '_productos_marca4', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca4',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca4">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca4' }}"> {{ read_text(site.name +  '_productos_marca4') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca4 texto-one {{editabletext}}" text-id="{{ site.name + '_marca4' }}"> {{ read_text(site.name +  '_marca4') }}</div>
+    </div>
+    <!--END LA PIJAMERIA-->
+
+        <!--ANTONIMA-->
+    <div class="mobile banner-movil hidden listado_productos_marca5" style="background:url('{{ read_image(site.name + '_productos_marca5',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca5">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca5" name="image" id="img_productos_marca5" >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca5" src="{{ read_image(site.name + '_productos_marca5', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca5',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca5">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca5' }}"> {{ read_text(site.name +  '_productos_marca5') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca5 texto-one {{editabletext}}" text-id="{{ site.name + '_marca5' }}"> {{ read_text(site.name +  '_marca5') }}</div>
+    </div>
+    <!--END ANTONIMA-->
+
+        <!--PILI SAENZ JOYAS-->
+    <div class="mobile banner-movil hidden listado_productos_marca6" style="background:url('{{ read_image(site.name + '_productos_marca6',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca6 ">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca6" name="image" id="img_productos_marca6 " >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca6" src="{{ read_image(site.name + '_productos_marca6 ', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca6',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca6">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca6 ' }}"> {{ read_text(site.name +  '_productos_marca6') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca6 texto-one {{editabletext}}" text-id="{{ site.name + '_marca6' }}"> {{ read_text(site.name +  '_marca6') }}</div>
+    </div>
+    <!--END PILI SAENZ JOYAS-->
+
+    <!--ALOHA SW-->
+    <div class="mobile banner-movil hidden listado_productos_marca7" style="background:url('{{ read_image(site.name + '_productos_marca7',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca7 ">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca7" name="image" id="img_productos_marca7 " >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca7" src="{{ read_image(site.name + '_productos_marca7 ', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca7',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca7">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca7 ' }}"> {{ read_text(site.name +  '_productos_marca7') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca7 texto-one {{editabletext}}" text-id="{{ site.name + '_marca7' }}"> {{ read_text(site.name +  '_marca7') }}</div>
+    </div>
+    <!--END ALOHA SW-->
+
+    <!--LISANTINO-->
+    <div class="mobile banner-movil hidden listado_productos_marca8" style="background:url('{{ read_image(site.name + '_productos_marca8',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca8 ">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca8" name="image" id="img_productos_marca8 " >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca8" src="{{ read_image(site.name + '_productos_marca8 ', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca8',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca8">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca8 ' }}"> {{ read_text(site.name +  '_productos_marca8') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca8 texto-one {{editabletext}}" text-id="{{ site.name + '_marca8' }}"> {{ read_text(site.name +  '_marca8') }}</div>
+    </div>
+    <!--END LISANTINO-->
+
+    <!--KUYEN-->
+    <div class="mobile banner-movil hidden listado_productos_marca9" style="background:url('{{ read_image(site.name + '_productos_marca9',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca9 ">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca9" name="image" id="img_productos_marca9 " >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca9" src="{{ read_image(site.name + '_productos_marca9 ', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca9',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca9">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca9 ' }}"> {{ read_text(site.name +  '_productos_marca9') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca9 texto-one {{editabletext}}" text-id="{{ site.name + '_marca9' }}"> {{ read_text(site.name +  '_marca9') }}</div>
+    </div>
+    <!--END KUYEN-->
+
+    <!--A MI ME VISTE MI MAMI-->
+    <div class="mobile banner-movil hidden listado_productos_marca10" style="background:url('{{ read_image(site.name + '_productos_marca10',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca10 ">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca10" name="image" id="img_productos_marca10 " >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca10" src="{{ read_image(site.name + '_productos_marca10 ', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca10',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca10">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca10 ' }}"> {{ read_text(site.name +  '_productos_marca10') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca10 texto-one {{editabletext}}" text-id="{{ site.name + '_marca10' }}"> {{ read_text(site.name +  '_marca10') }}</div>
+    </div>
+    <!--END A MI ME VISTE MI MAMI-->
+
+    <!--MANDALA-->
+    <div class="mobile banner-movil hidden listado_productos_marca11" style="background:url('{{ read_image(site.name + '_productos_marca11',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca11 ">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca11" name="image" id="img_productos_marca11 " >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca11" src="{{ read_image(site.name + '_productos_marca11 ', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca11',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca11">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca11 ' }}"> {{ read_text(site.name +  '_productos_marca11') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca11 texto-one {{editabletext}}" text-id="{{ site.name + '_marca11' }}"> {{ read_text(site.name +  '_marca11') }}</div>
+    </div>
+    <!--END MANDALA-->
+
+    <!--STOFF-->
+    <div class="mobile banner-movil hidden listado_productos_marca12" style="background:url('{{ read_image(site.name + '_productos_marca12',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca12 ">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca12" name="image" id="img_productos_marca12 " >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca12" src="{{ read_image(site.name + '_productos_marca12 ', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca12',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca12">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca12 ' }}"> {{ read_text(site.name +  '_productos_marca12') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca12 texto-one {{editabletext}}" text-id="{{ site.name + '_marca12' }}"> {{ read_text(site.name +  '_marca12') }}</div>
+    </div>
+    <!--END STOFF-->
+
+    <!--YAMBO-->
+    <div class="mobile banner-movil hidden listado_productos_marca13" style="background:url('{{ read_image(site.name + '_productos_marca13',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca13 ">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca13" name="image" id="img_productos_marca13 " >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca13" src="{{ read_image(site.name + '_productos_marca13 ', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca13',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca13">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca13 ' }}"> {{ read_text(site.name +  '_productos_marca13') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca13 texto-one {{editabletext}}" text-id="{{ site.name + '_marca13' }}"> {{ read_text(site.name +  '_marca13') }}</div>
+    </div>
+    <!--END YAMBO-->
+    <!--MORA-->
+    <div class="mobile banner-movil hidden listado_productos_marca14" style="background:url('{{ read_image(site.name + '_productos_marca14',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca14 ">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca14" name="image" id="img_productos_marca14 " >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca14" src="{{ read_image(site.name + '_productos_marca14 ', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca14',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca14">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca14 ' }}"> {{ read_text(site.name +  '_productos_marca14') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca14 texto-one {{editabletext}}" text-id="{{ site.name + '_marca14' }}"> {{ read_text(site.name +  '_marca14') }}</div>
+    </div>
+    <!--END MORA-->
+    <!--PAULA MAR-->
+    <div class="mobile banner-movil hidden listado_productos_marca15" style="background:url('{{ read_image(site.name + '_productos_marca15',500) }}'); height:300px; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(90%); -webkit-filter: grayscale(0%) brightness(90%); -moz-filter: grayscale(0%) brightness(90%); -ms-filter: grayscale(0%) brightness(90%);-o-filter: grayscale(0%) brightness(90%); background-position:center; margin-bottom: 40px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_productos_marca15 ">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_productos_marca15" name="image" id="img_productos_marca15 " >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_productos_marca15" src="{{ read_image(site.name + '_productos_marca15 ', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_productos_marca15',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+
+    <div class="container hidden min listado_productos_marca15">
+        <div class="col-md-12">
+            <div class="text-center titulo-prou {{editabletext}}" text-id="{{ site.name + '_productos_marca15 ' }}"> {{ read_text(site.name +  '_productos_marca15') }}</div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div align="center" class=" hidden listado_productos_marca15 texto-one {{editabletext}}" text-id="{{ site.name + '_marca15' }}"> {{ read_text(site.name +  '_marca15') }}</div>
+    </div>
+    <!--END PAULA MAR-->
+    
+</div>
+</section>
+</div>
+
+
+<section>
+   <div class="container min">
+
+    <div class="products" style="min-height: 400px;"></div>
+
+
+    </div>
+    <div class="col-xs-12">
+      <div align="center">
+         
+         <button type="button" class="btn btn-default more-products" style="display: none">CARGAR MÁS PRODUCTOS</button>
+
+      </div>
+</section>
+
+
+
+
+</body>
+
+
+{% include '../home/footer.html' %}
 {% end %}
+
+

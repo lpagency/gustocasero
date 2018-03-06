@@ -3,6 +3,7 @@
 /* global unescape */
 /* global document */
 /* export config */
+'use strict';
 
 var getIncludeParameters = function()
 {
@@ -38,37 +39,122 @@ String.prototype.replaceAll = function(search, replacement) {
     return target.split(search).join(replacement);
 };
 
-$(document).ready(function()
+$(document).ready(function() 
 {
+    var params = getIncludeParameters();
+    var tag = '';
 
-    var base_url = $.environmentVar(
-        'https://apibodegas.loadingplay.com/',
-        'https://apibodegas.loadingplay.com/',
-        'https://apibodegas.loadingplay.com/');
-    var checkout_url = $.environmentVar(
-        'https://pay.loadingplay.com/',
-        'https://pay.loadingplay.com/',
-        'https://pay.loadingplay.com');
-    var app_public = $.environmentVar(82,82,82);
-    var site_name = $.environmentVar('gustocasero', 'gustocasero', 'gustocasero');
+    try
+    {
+        tag = Utils.getUrlParameter('tag');
+        tag = tag.replaceAll("%20", " ");
+    }
+    catch(ex)
+    {
+        tag = '';
+    }
+
+
+    $("#"+tag).addClass("active");
+    if (tag === undefined || tag === 'todos'){
+        $("#todos").addClass("active");
+    }
+        var base_url = $.environmentVar(
+          /*'https://apibodegas.ondev.today/',*    <- para poder probar en ondev*/ 
+          'https://apibodegas.loadingplay.com/',
+          'https://apibodegas.loadingplay.com/',
+          'https://apibodegas.loadingplay.com/');
+        var checkout_url = $.environmentVar(
+          /*'https://lpcheckout.ondev.today/',    <- para poder probar en ondev*/ 
+          'https://pay.loadingplay.com',
+          'https://pay.loadingplay.com',
+          'https://pay.loadingplay.com');
+        var app_public = $.environmentVar(82,82,82);
+        var site_name = $.environmentVar('gustocasero', 'gustocasero', 'gustocasero');
+
+    var random_seed = 'random('+ Math.random() +')';
 
     var config = {
+
+
+
         'app_public': app_public,
         'base_url': base_url,
-        'products_per_page' : 9, 
-        'tag': '',
-        'ignore_stock': false,
+        'products_per_page' : 8, 
+        'tag': tag,
+        'ignore_stock': true,
         'infinite_scroll': false,
-        'animation': 'ghost',
-        // 'maxProducts': 100,
-        'checkout_url': checkout_url,
-        'analytics' : true,
+        //'maxProducts': 150,
+        'checkout_url': checkout_url, 
         'operator' :'or',
+        'site_name': site_name,
+        'column': 'main_price',
+        'direction' : 'desc',
         'onLoad': function(products) 
         {
+            banners(tag);
+            for(var x=0; x<products.length; x++)
+            {
+                if(products[x].tags.indexOf("oferta") > -1)
+                {
+                    $(".letrero-sale."+products[x].promotion_price).removeClass("hidden");
+                    $(".overlay."+products[x].id).addClass("overlay-sale");
+                    $(".fufi."+products[x].id).addClass("fufi-sale");
+                }
+
+                if(products[x].tags.indexOf("nuevo") > -1)
+                {
+                    $(".letrero-new."+products[x].id).removeClass("hidden");
+                    $(".overlay."+products[x].id).addClass("overlay-new");
+                    $(".fufi."+products[x].id).addClass("fufi-new");
+                }
+
+                if(products[x].tags.indexOf("nuevo") > -1 && products[x].tags.indexOf("oferta") > -1)
+                {
+                    $(".fufi."+products[x].id).addClass("fufi-ambos");
+                    $(".fufi."+products[x].id).removeClass("fufi-sale");
+                    $(".overlay."+products[x].id).addClass("overlay-ambos");
+                    $(".overlay."+products[x].id).removeClass("overlay-sale");
+                    $(".letrero-sale."+products[x].promotion_price).removeClass("hidden");
+                    $(".letrero-new."+products[x].id).removeClass("hidden");
+                }
+
+                if(products[x].promotion_price == 0)
+                {
+                    $("."+products[x].sku).addClass("hidden");
+                }
+                else
+                {
+                    $(".producto."+products[x].id).css("font-size","12px");
+                    $(".producto."+products[x].id).css("text-decoration", "line-through");
+                }
+            }
         }
     };
 
     $(document).ecommerce(config);
 
+    $(document).on("click", ".subcateg", function(ev){
+        ev.preventDefault();
+        // $(".subcateg").css("border-bottom", "");
+        // $(this).css("border-bottom", "dashed 1px rgba(0, 0, 0, 0.33)");
+
+        // if (tag === $(this).attr('tag')){
+        //     config.tag=tag;
+        //     config.operator = "or";
+        // }else{
+        //     var multiple_tag = tag+", "+$(this).attr('tag');
+        //     config.tag=multiple_tag;
+        //     config.operator = "and";
+        // }
+        config.tag=$(this).attr('tag');
+        // console.log(config);
+        
+        // facade.page = 1; // o 1 no estoy seguro
+        $(".products").html("");
+        $(document).ecommerce('destroy');
+        $(document).ecommerce(config);
+
+            // alert($(this).attr("tag"));
+    });
 });

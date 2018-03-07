@@ -86,19 +86,15 @@
       $("#OpenAlert").click();
       // base_url 'http://localhost:8520/'
       // checkout_url 'http://localhost:8522/'
-        
-        var base_url = $.environmentVar(
-          /*'https://apibodegas.ondev.today/',*    <- para poder probar en ondev*/ 
-          'https://apibodegas.loadingplay.com/',
-          'https://apibodegas.loadingplay.com/',
-          'https://apibodegas.loadingplay.com/');
-        var checkout_url = $.environmentVar(
-          /*'https://lpcheckout.ondev.today/',    <- para poder probar en ondev*/ 
-          'https://pay.loadingplay.com',
-          'https://pay.loadingplay.com',
-          'https://pay.loadingplay.com');
-        var app_public = $.environmentVar(69,69,69);
-        var site_name = $.environmentVar('vitrineate', 'vitrineate', 'vitrineate');
+    var base_url = $.environmentVar(
+        'https://apibodegas.loadingplay.com/',
+        'https://apibodegas.loadingplay.com/',
+        'https://apibodegas.loadingplay.com/');
+    var checkout_url = $.environmentVar(
+        'https://pay.loadingplay.com',
+        'https://pay.loadingplay.com',
+        'https://pay.loadingplay.com');
+    var app_public = $.environmentVar(54,54,54);
         var config = {
             'app_public' : app_public,
             'base_url' : base_url,
@@ -150,30 +146,13 @@
     {% set editabletext = '' %}
 {% end %}
 
-
-
-<div class="container min">
-<section>
-    <div class="mobile" style="background:url('{{ read_image(site.name + '_con',500) }}'); height:400px; background-size:cover; margin-top: 0px;  filter: grayscale(0%) brightness(65%); -webkit-filter: grayscale(0%) brightness(65%); -moz-filter: grayscale(0%) brightness(65%); -ms-filter: grayscale(0%) brightness(65%);-o-filter: grayscale(0%) brightness(65%); background-position:center;" data-img-width="1600" data-img-height="1064" data-diff="100">
-        {% if is_admin %}
-        <div class="image-upload part1 lapiz visible-movil">
-            <label for="img_con">
-                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
-            </label>
-            <input type="file" class="editableimage" image-id="{{ site.name }}_con" name="image" id="img_con" >
-        </div>
-        {% end %}
-        <img id="{{ site.name }}_con" src="{{ read_image(site.name + '_con', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_con',500) }}'" class="banner_uno_list hidden" alt="item">
-    </div>
-</section>
-</div>
-
-<div class="container min">
+<div style="margin-top:-30px;"></div>
+<div class="container">
 
 <div class="img-mobilee" style="position: relative;">
-        <div class="container min">
+        <div class="container">
            <div class="col-md-12">
-               <h3 class="distrib-contact {{editabletext}}" text-id="{{ site.name + '_ti_con' }}"> {{ read_text(site.name +  '_ti_con') }}</h3>
+               <h3 class="description distrib contact {{editabletext}}" text-id="{{ site.name + '_ti_con' }}" style="text-align: left; text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;font-weight: 200;"> {{ read_text(site.name +  '_ti_con') }}</h3>
                <hr class="page-contact">
             </div>
         </div>
@@ -182,11 +161,11 @@
 
     <!-- fin editar imagen -->
             
-            <div class="container min contact product text-left  fondo-contact" style="display: inherit;">
+            <div class="container contact product text-left  fondo-contact" style="display: inherit;">
                 <div class="col-md-12 col-sm-12 col-xs-12" style="padding:0px;">
                 <div class="row">       
 
-                <div class="container min">
+                <div class="container">
 
                     <div class="col-xs-12 col-md-4 col-sm-12">
                         <div class="titulo-negrita {{editabletext}}" text-id="{{ site.name + '_h_contact' }}"> {{ read_text(site.name +  '_h_contact') }}
@@ -197,7 +176,7 @@
                     <div class="col-xs-12 col-md-8 col-sm-12 align-form-contact fondo-contact">
 
                         <div>
-                        <form action='https://forms.zohopublic.com/sytes/form/vitrineatecontacto/formperma/gd2n9Gq3QkFeLBi24n-oyiyKAA5wUx-uROmc7cxU1C0/htmlRecords/submit' name='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+                        <form action='https://forms.zohopublic.com/sytes/form/loakeformulariocontacto/formperma/k_dMM9814HghfK1_a380jbDgK/htmlRecords/submit' name='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
                             <div class="row clearfix">
                                 <div class="col-xs-12 col-sm-12">
                                 <div class="form-group">
@@ -233,9 +212,44 @@
                 </div>  
             </div>
     </div>
-</div>
 
-    <div style="margin-bottom:50px;"></div>
+    <div style="margin-bottom:20px;"></div>
+
+
+    <div class="container">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+             <hr class="tienda">
+        </div>
+
+        <!-- *****primera tienda****** -->
+       <div class="col-md-6 col-sm-6 col-xs-12"> 
+         <div class="texto-tienda {{editabletext}}" text-id="{{ site.name + '_tienda_1' }}"> {{ read_text(site.name +  '_tienda_1') }}</div>
+           <div style="position:relative;">
+              {% if is_admin %}
+              <div class="image-upload lapiz visible-movil">
+                 <label for="img_tienda_1">
+                   <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+               </label>
+               <input type="file" class="editableimage" image-id="{{ site.name }}_tienda_1" name="image" id="img_tienda_1" >
+           </div>
+           {% end %}
+
+           <a id="{{ site.name + '_tienda_1' }}" href="{{ read_link(site.name + '_tienda_1') }}">
+              <img id="{{ site.name }}_tienda_1" src="{{ read_image(site.name + '_tienda_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_tienda_1',) }}'" class="box-tienda" alt="item">
+         </a>
+     </div>
+     {% if is_admin %}
+     <img class="change-image editablelink" link-id="{{ site.name + '_tienda_1' }}" content="{{ read_link(site.name + '_tienda_1') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
+     {% end %}
+
+ </div>
+
+    <div class="col-md-6 col-sm-6 col-xs-12"> 
+
+        <iframe class="map-mo" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.585841992567!2d-70.5713066417047!3d-33.40796769062131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cedef2f1a7eb%3A0x25101fbc578d2bc1!2sRestaurante+Gusto+Casero!5e0!3m2!1ses!2scl!4v1520445936271"width="556" height="435" frameborder="0" style="border:0;height: 435px;bottom: 36px;position: relative;" allowfullscreen></iframe>
+    </div>
+
+</div>
 
 
 {% include '../home/footer.html' %}     

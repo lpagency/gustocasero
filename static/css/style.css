@@ -20,6 +20,12 @@ a:hover{
     text-decoration: none;
 }
 
+.l-footer-rrss {
+    max-height: 50px;
+    width: 120px;
+    object-fit: contain;
+}
+
 a:visited{
       color: black;
 }

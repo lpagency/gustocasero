@@ -1176,11 +1176,11 @@ hr.page-contact {
 }
 
 .box-gra{
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .box-gra-peq{
-    object-fit: contain;
+    object-fit: cover;
 }
 
 }

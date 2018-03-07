@@ -247,7 +247,7 @@ div.image-upload.part1 {
 .descr_prod_detail {
     position: relative;
     font-size: 15px;
-    width: 100%;
+    width: 88%;
     text-align: left;
     height: 100%;
     top: -16px;
@@ -299,8 +299,8 @@ hr.len {
     width: 100%;
     height: 400px;
     object-fit: scale-down;
-    top: 0px;
-    right: 73px;
+    top: -34px;
+    right: 16px;
     position: relative;
     -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;

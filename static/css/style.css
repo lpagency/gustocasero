@@ -1112,9 +1112,10 @@ hr.page-contact {
     top:120px;
     padding: 0 4%;
 }
-#slider-home{
-    top:90px;
-    margin-top: -126px;
+
+#slider-home {
+    top: 90px;
+    margin-top: -96px;
 }
 .pr-5{
     padding-right: 0;

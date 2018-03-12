@@ -10,6 +10,24 @@
 
 {% block css %}
 <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
+<style type="text/css">
+  @media (max-width: 436px)
+  {
+    .inf
+    {
+      height: 17px;
+      margin-top: -3px;
+    }
+  }
+
+  @media (max-width: 320px)
+  {
+    .inf {
+      height: 17px;
+      margin-top: 22px;
+    }
+  }
+</style>
 {% end %}
 
 {% block javascript %}
@@ -21,6 +39,76 @@
             e.preventDefault();
           });
         });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() 
+{
+
+        var base_url = $.environmentVar(
+          /*'https://apibodegas.ondev.today/',*    <- para poder probar en ondev*/ 
+          'https://apibodegas.loadingplay.com/',
+          'https://apibodegas.loadingplay.com/',
+          'https://apibodegas.loadingplay.com/');
+        var checkout_url = $.environmentVar(
+          /*'https://lpcheckout.ondev.today/',    <- para poder probar en ondev*/ 
+          'https://pay.loadingplay.com',
+          'https://pay.loadingplay.com',
+          'https://pay.loadingplay.com');
+        var app_public = $.environmentVar(82,82,82);
+        var site_name = $.environmentVar('gustocasero', 'gustocasero', 'gustocasero');
+
+    var random_seed = 'random('+ Math.random() +')';
+
+    var config = {
+
+
+
+        'app_public': app_public,
+        'base_url': base_url,
+        'products_per_page' : 8, 
+        'tag': 'menu_del_dia',
+        'ignore_stock': true,
+        'infinite_scroll': false,
+        //'maxProducts': 150,
+        'checkout_url': checkout_url, 
+        'operator' :'or',
+        'site_name': site_name,
+        'templateOrigin': '#product_template_index',
+        'onLoad': function(products) 
+        {
+          $(".art-hi").each(function()
+          {
+            $(this).removeClass("col-md-3");
+            $(this).addClass("col-md-4");
+            $(this).removeClass("col-sm-3");
+            $(this).addClass("col-sm-4");
+            $(this).removeClass("col-xs-6");
+            $(this).addClass("col-xs-12");
+          });
+
+          $(".img-pro").each(function()
+          {
+            $(this).addClass("img-pro-index");
+            $(this).removeClass("img-pro");
+          });
+
+          $(".fufi").each(function()
+          {
+            $(this).addClass("fufi-index");
+            $(this).removeClass("fufi");
+          });
+
+          $(".overlay").each(function()
+          {
+            $(this).addClass("overlay-index");
+            $(this).removeClass("overlay");
+          });
+        }
+    };
+
+    $(document).ecommerce(config);
+  });
     </script>
 
 {% end %}
@@ -42,13 +130,6 @@
 <div class="container min">
 <section id="slider-home" class="container-fluid">
   <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-    <!-- Indicators -->
-   <!--  <ol class="carousel-indicators hidden-xs">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol> -->
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
@@ -237,6 +318,13 @@
       <div class="texto-hu {{editabletext}}" text-id="{{ site.name + '_ti_4' }}"> {{ read_text(site.name +  '_ti_4') }}</div>
 </div>
 </div>
+</section>
+
+<section>
+  <div class="container min">
+    <div class="products">
+    </div>
+  </div>
 </section>
 
 

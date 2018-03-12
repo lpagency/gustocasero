@@ -81,7 +81,7 @@ $(document).ready(function()
         'app_public': app_public,
         'base_url': base_url,
         'products_per_page' : 8, 
-        'tag': tag,
+        'tag': 'menu_del_dia',
         'ignore_stock': true,
         'infinite_scroll': false,
         //'maxProducts': 150,
@@ -93,43 +93,7 @@ $(document).ready(function()
         'templateOrigin': '#product_template_index',
         'onLoad': function(products) 
         {
-            banners(tag);
-            for(var x=0; x<products.length; x++)
-            {
-                if(products[x].tags.indexOf("oferta") > -1)
-                {
-                    $(".letrero-sale."+products[x].promotion_price).removeClass("hidden");
-                    $(".overlay."+products[x].id).addClass("overlay-sale");
-                    $(".fufi."+products[x].id).addClass("fufi-sale");
-                }
 
-                if(products[x].tags.indexOf("nuevo") > -1)
-                {
-                    $(".letrero-new."+products[x].id).removeClass("hidden");
-                    $(".overlay."+products[x].id).addClass("overlay-new");
-                    $(".fufi."+products[x].id).addClass("fufi-new");
-                }
-
-                if(products[x].tags.indexOf("nuevo") > -1 && products[x].tags.indexOf("oferta") > -1)
-                {
-                    $(".fufi."+products[x].id).addClass("fufi-ambos");
-                    $(".fufi."+products[x].id).removeClass("fufi-sale");
-                    $(".overlay."+products[x].id).addClass("overlay-ambos");
-                    $(".overlay."+products[x].id).removeClass("overlay-sale");
-                    $(".letrero-sale."+products[x].promotion_price).removeClass("hidden");
-                    $(".letrero-new."+products[x].id).removeClass("hidden");
-                }
-
-                if(products[x].promotion_price == 0)
-                {
-                    $("."+products[x].sku).addClass("hidden");
-                }
-                else
-                {
-                    $(".producto."+products[x].id).css("font-size","12px");
-                    $(".producto."+products[x].id).css("text-decoration", "line-through");
-                }
-            }
         }
     };
 

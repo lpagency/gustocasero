@@ -844,9 +844,9 @@ hr.page-contact {
 
 @media screen and (min-width: 768px) {
   .logos-titulo {
+    text-align: center;
     font-size: 1.875rem;
-    margin: 0 auto 3.125rem auto;
-    width: 70%;
+    margin: 0 auto -4.875rem auto;
   }
 }
 
@@ -1173,6 +1173,11 @@ hr.page-contact {
 
 
 @media (max-width: 414px){
+    .logos-copy{
+        position: relative;
+        top: 50px;
+        text-align: center;
+    }
 .image-somos-cir {
     display: block;
     width: 317px;
@@ -1194,6 +1199,8 @@ hr.page-contact {
 
 
 @media (max-width: 412px){
+
+
 
 .img-hed-3 {
 

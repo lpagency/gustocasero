@@ -82,7 +82,7 @@ $(document).ready(function()
         'base_url': base_url,
         'products_per_page' : 8, 
         'tag': 'menu_del_dia',
-        'ignore_stock': true,
+        'ignore_stock': false,
         'infinite_scroll': false,
         //'maxProducts': 150,
         'checkout_url': checkout_url, 

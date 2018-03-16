@@ -51,38 +51,8 @@
             'site_name': site_name,
             onLoad: function(product)
             {
-
-              if(product.in_stock == false)
-                {
-                    $(".add-to-cart").html("AGOTADO");
-                    $(".main-price").addClass("hidden");
-                    $(".promotion-price").addClass("hidden");
-                    $(".add-to-cart").attr("disabled", true);
-                }
-
-              if(product.length == undefined)
-              {
-                for(var i=0; i<product.tags.length; i++)
-                {
-                  if(product.tags[i].name.indexOf("Cat3_") != -1 || product.tags[i].name.indexOf("cat3_") != -1)
-                  {
-                    related(product.tags[i].name);
-                  }
-                }
-
-              }
-
-            var mainImage = $("#mainImage");
-            $(".img-container img").hover(function(){
-             var src = $(this).attr("src");
-             $("#mainImage").attr("src",src);
-           });
-
-            mainImage.on("click",function(){
-              $(this).css("transform","scale(1.1)");
-            });
-
-          }
+              related("extras");
+            }
 
         };
 
@@ -98,7 +68,7 @@
                 'app_public' : app_public,
                 'base_url' : base_url,
                 'maxProducts' : 4,
-                'templateOrigin' : '#product_template_home',
+                'templateOrigin' : '#product_template_index',
                 'tag' : tag,
                 'ignore_stock' : true,
                 'column': random_seed
@@ -279,7 +249,9 @@
 <div class="container min">
    <div align="center">
     <div class="col-md-12 col-sm-12 col-xs-12">
-       <!-- <hr class="detalle"> -->
+        <div class="texto-one rel-texto {{editabletext}}" text-id="{{ site.name + '_realted_extra' }}"> {{ read_text(site.name +  '_realted_extra') }} </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 product-related">
    </div>
    </div>
 </div>

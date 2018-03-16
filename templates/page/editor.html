@@ -1,0 +1,93 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{{ site.name }}
+{% end %}
+
+{% block header %}
+{% include '../home/header.html' %}
+{% end %}
+{% block css %}
+
+{% if is_admin %}
+{% end %}
+<link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
+{% end %}
+
+
+{% block javascript %}
+<script type="text/javascript" src="{{ site_base }}/static/js/cart.config.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/banners.js"></script>
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+    //   
+    $(document).on("click", ".subcateg", function(ev){
+        // ev.preventDefault();
+    $(".subcateg").removeClass('active');
+        $(this).addClass('active');
+    });
+
+    });
+</script>
+
+{% end %}
+
+
+{% block body %}
+
+{% if is_admin %}
+{% set editabletext = 'editabletext' %}
+{% else %}
+{% set editabletext = '' %}
+{% end %}
+<div class="container min">
+    <div>
+        <h2>POSICION 1</h2>
+    </div>
+    {% if is_admin %}
+        <div style="border: solid 1px black" >
+            <div class="text-slogan {{editabletext}}" text-id="{{ site.name + '_menu_1' }}"> {{ read_text(site.name +  '_menu_1') }}</div>
+        </div>
+    {% end %}
+    <div>
+        <h2>LINK POSICION 1</h2>
+    </div>
+    {% if is_admin %}
+        <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_1' }}" content="{{ read_link(site.name + '_img_menu_1') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';" style="top: 211px;left: 367px;">
+    {% end %}
+    <br>
+    <div>
+        <h2>POSICION 2</h2>
+    </div>
+    {% if is_admin %}
+        <div style="border: solid 1px black" >
+            <div class="text-slogan {{editabletext}}" text-id="{{ site.name + '_menu_2' }}"> {{ read_text(site.name +  '_menu_2') }}</div>
+        </div>
+    {% end %}
+    <div>
+        <h2>LINK POSICION 2</h2>
+    </div>
+    {% if is_admin %}
+        <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_2' }}" content="{{ read_link(site.name + '_img_menu_2') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';" style="top: 380px;left: 367px;">
+    {% end %}
+    <br>
+    <div>
+        <h2>POSICION 3</h2>
+    </div>
+    {% if is_admin %}
+        <div style="border: solid 1px black" >
+            <div class="text-slogan {{editabletext}}" text-id="{{ site.name + '_menu_3' }}"> {{ read_text(site.name +  '_menu_3') }}</div>
+        </div>
+    {% end %}
+    <div>
+        <h2>LINK POSICION 3</h2>
+    </div>
+    {% if is_admin %}
+        <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_3' }}" content="{{ read_link(site.name + '_img_menu_3') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';" style=" top: 545px;left: 367px;">
+    {% end %}
+</div>
+{% include '../home/footer.html' %}
+{% end %}
+
+

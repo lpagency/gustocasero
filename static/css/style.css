@@ -26,6 +26,14 @@ a:hover{
     object-fit: contain;
 }
 
+.listado-texto{
+    margin-top: 30px;
+}
+
+.rel-texto{
+    text-align: left;
+}
+
 a:visited{
       color: black;
 }
@@ -306,7 +314,7 @@ div.image-upload.par1 {
 .box-gra{
     width: 100%;
     position: relative;
-    height: 410px;
+    height: 354px;
     object-fit: cover;
     filter: grayscale(0%) brightness(90%);
     -webkit-filter: grayscale(0%) brightness(90%);
@@ -591,6 +599,7 @@ div.image-upload.con {
 .pad0{
   padding: 0px 5px;
   overflow: hidden;
+  margin-bottom: 11px;
 }
 
 div.upload input, div.image-upload input {
@@ -845,7 +854,7 @@ hr.page-contact {
 @media screen and (min-width: 768px) {
   .logos-titulo {
     text-align: center;
-    font-size: 1.875rem;
+    font-size: 20px;
     margin: 0 auto -4.875rem auto;
   }
 }

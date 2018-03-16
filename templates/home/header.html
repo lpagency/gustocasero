@@ -39,8 +39,8 @@
             <!-- <div class="w3-dropdown-content w3-border">
               <li class="dropdown-submenu">
                 <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_menu_del_dia">Menú del día</a></li>
+                <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_menu_de_siempre">Menú de Siempre</a></li>
                 <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_menu_ensaladas">Solo ensaladas</a></li>
-                <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_postres">Solo postres</a></li>
               </li>
             </div> -->
           </div>
@@ -49,8 +49,10 @@
             <button class="w3-btn w3-red" id="{{ site.name + '_img_menu_2' }}" data-toggle="dropdown" tag="colecciones" onclick="window.location.href='{{ read_link(site.name + '_img_menu_2') }}'">{{ read_text(site.name +  '_menu_2') }}</button>
             <!-- <div class="w3-dropdown-content w3-border">
              <li class="dropdown-submenu">
-                <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_los_de_siempre">Los de Siempre</a></li>
                 <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_platos_del_dia">Platos del dia</a></li>
+                <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_los_de_siempre">Los de Siempre</a></li>
+                <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_ensaladas">Ensaladas</a></li>
+                <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_postres">Postres</a></li>
               </li>
             </div> -->
           </div>
@@ -130,16 +132,18 @@
                   <a href="#" class="text-header dropdown-toggle" data-toggle="dropdown">Opciones de menú<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                   <ul class="dropdown-menu">           
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_menu_del_dia">Menú del día</a></li>
-                    <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_menu_ensaladas">Solo Ensaladas</a></li>
-                    <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_postres">Solo Postres</a></li>
+                    <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_menu_de_siempre">Menú De Siempre</a></li>
+                    <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_solo_ensaladas">Solo Ensaladas</a></li>
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat1_menu">Todo</a></li>
                   </ul>
                 </li>
                 <li class="">
                   <a href="#" class="text-header dropdown-toggle" data-toggle="dropdown">Platos Preparados<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_los_de_siempre">De Siempre</a></li>
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_platos_del_dia">Platos del día</a></li>
+                    <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_los_de_siempre">Platos De Siempre</a></li>
+                    <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_ensaladas">Solo Ensaladas</a></li>
+                    <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_postres">Solo Postres</a></li>
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat1_platos_preparados">Todo</a></li>
                   </ul>
                 </li>

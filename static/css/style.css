@@ -30,6 +30,29 @@ a:hover{
     margin-top: 30px;
 }
 
+.bordes{
+    border: solid 1px black;
+    min-height: 150px;
+}
+
+.padd-editor{
+    padding-top: 20px;
+}
+
+.margen-editor{
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+.texto-menu-editor{
+    font-size: 20px;
+}
+
+.link-editor{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .rel-texto{
     text-align: left;
 }

@@ -129,33 +129,34 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
              <ul class="nav navbar-nav navbar-left">
                 <li class="">
-                  <a href="#" class="text-header dropdown-toggle" data-toggle="dropdown">Opciones de menú<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                  <ul class="dropdown-menu">           
+                  <a href="{{ read_link(site.name + '_img_menu_1') }}" class="text-header dropdown-toggle" id="{{ site.name + '_img_menu_1' }}" data-toggle="dropdown" tag="colecciones">{{ read_text(site.name +  '_menu_1') }}</a>
+                  <!-- <ul class="dropdown-menu">           
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_menu_del_dia">Menú del día</a></li>
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_menu_de_siempre">Menú De Siempre</a></li>
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_solo_ensaladas">Solo Ensaladas</a></li>
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat1_menu">Todo</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
                 <li class="">
-                  <a href="#" class="text-header dropdown-toggle" data-toggle="dropdown">Platos Preparados<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                  <ul class="dropdown-menu">
+                  <a href="{{ read_link(site.name + '_img_menu_2') }}" class="text-header dropdown-toggle" id="{{ site.name + '_img_menu_2' }}" data-toggle="dropdown" tag="colecciones">{{ read_text(site.name +  '_menu_2') }}</a>
+                  <!-- <ul class="dropdown-menu">
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_platos_del_dia">Platos del día</a></li>
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_los_de_siempre">Platos De Siempre</a></li>
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_ensaladas">Solo Ensaladas</a></li>
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_postres">Solo Postres</a></li>
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat1_platos_preparados">Todo</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
                 <li class="">
-                  <a href="#" class="text-header dropdown-toggle" data-toggle="dropdown">Bebestibles<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                  <ul class="dropdown-menu">
+                  <a href="{{ read_link(site.name + '_img_menu_3') }}" class="text-header dropdown-toggle" id="{{ site.name + '_img_menu_3' }}" data-toggle="dropdown" tag="colecciones">{{ read_text(site.name +  '_menu_3') }}</a>
+                  <!-- <ul class="dropdown-menu">
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_bebidas">Bebidas</a></li>
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_jugos">Jugos</a></li>
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat2_aguas">Aguas</a></li>
                     <li><a tabindex="-1" href="{{ site_base }}/listado_productos?tag=cat1_bebestibles">Todo</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
+                <li><a tabindex="-1" class="text-header dropdown-toggle"  href="{{ site_base }}/listado_productos?tag=extras">Quienes Somos</a></li>
                 <li><a tabindex="-1" class="text-header dropdown-toggle"  href="http://gustocasero.lpe.cl/article/detail/nuestra_historia/2138">Quienes Somos</a></li>
                 <li><a tabindex="-1" class="text-header dropdown-toggle"  href="{{ site_base }}/contact">Contacto</a></li>
               </li>

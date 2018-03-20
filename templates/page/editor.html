@@ -21,7 +21,7 @@
 <script type="text/javascript">
     $(document).ready(function()
     {
-    //   
+    
     $(document).on("click", ".subcateg", function(ev){
         // ev.preventDefault();
     $(".subcateg").removeClass('active');
@@ -31,81 +31,98 @@
     });
 </script>
 
+{% if is_admin %}
+{% else %}
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            window.location.replace("{{ site_base }}");
+        });
+    </script>
+{% end %}
+
 {% end %}
 
 
 {% block body %}
 
 {% if is_admin %}
-{% set editabletext = 'editabletext' %}
+    {% set editabletext = 'editabletext' %}
 {% else %}
-{% set editabletext = '' %}
+    {% set editabletext = '' %}
 {% end %}
-<div class="container min">
-    <div class="logos-titulo margen-editor">EDITOR DE MENÚS</div>
-    <div class="bordes">
-        <div class="col-md-3 padd-editor">
-            <div class="texto-menu-editor">POSICION 1</div>
-        </div>
-        <div class="col-md-9 padd-editor">
-            {% if is_admin %}
-                <div style="border-bottom: solid 1px black" >
-                    <div class="text-slogan {{editabletext}}" text-id="{{ site.name + '_menu_1' }}"> {{ read_text(site.name +  '_menu_1') }}</div>
-                </div>
-            {% end %}
-        </div>
-        <div class="col-md-12 link-editor">
-            <div>
-                <div class="texto-menu-editor">LINK POSICION 1</div>
+
+{% if is_admin %}
+    <div class="container min">
+        <div class="logos-titulo margen-editor">EDITOR DE MENÚS</div>
+        <div class="bordes">
+            <div class="col-md-3 padd-editor">
+                <div class="texto-menu-editor">POSICION 1</div>
             </div>
-            {% if is_admin %}
-                <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_1' }}" content="{{ read_link(site.name + '_img_menu_1') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';" style="top: 0px;left: 300px;">
-            {% end %}
+            <div class="col-md-9 padd-editor">
+                {% if is_admin %}
+                    <div style="border-bottom: solid 1px black" >
+                        <div class="text-slogan {{editabletext}}" text-id="{{ site.name + '_menu_1' }}"> {{ read_text(site.name +  '_menu_1') }}</div>
+                    </div>
+                {% end %}
+            </div>
+            <div class="col-md-12 link-editor">
+                <div>
+                    <div class="texto-menu-editor">LINK POSICION 1</div>
+                </div>
+                {% if is_admin %}
+                    <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_1' }}" content="{{ read_link(site.name + '_img_menu_1') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';" style="top: 0px;left: 300px;">
+                {% end %}
+            </div>
+        </div>
+        <br>
+        <div class="bordes">
+            <div class="col-md-3 padd-editor">
+                <div class="texto-menu-editor">POSICION 2</div>
+            </div>
+            <div class="col-md-9 padd-editor">
+                {% if is_admin %}
+                    <div style="border-bottom: solid 1px black" >
+                        <div class="text-slogan {{editabletext}}" text-id="{{ site.name + '_menu_2' }}"> {{ read_text(site.name +  '_menu_2') }}</div>
+                    </div>
+                {% end %}
+            </div>
+            <div class="col-md-12 link-editor">
+                <div>
+                    <div class="texto-menu-editor">LINK POSICION 2</div>
+                </div>
+                {% if is_admin %}
+                    <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_2' }}" content="{{ read_link(site.name + '_img_menu_2') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';" style="top: 0px;left: 300px;">
+                {% end %}
+            </div>
+        </div>
+        <br>
+        <div class="bordes">
+            <div class="col-md-3 padd-editor">
+                <div class="texto-menu-editor">POSICION 3</div>
+            </div>
+            <div class="col-md-9 padd-editor">
+                {% if is_admin %}
+                    <div style="border-bottom: solid 1px black" >
+                        <div class="text-slogan {{editabletext}}" text-id="{{ site.name + '_menu_3' }}"> {{ read_text(site.name +  '_menu_3') }}</div>
+                    </div>
+                {% end %}
+            </div>
+            <div class="col-md-12 link-editor">
+                <div>
+                    <div class="texto-menu-editor">LINK POSICION 3</div>
+                </div>
+                {% if is_admin %}
+                    <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_3' }}" content="{{ read_link(site.name + '_img_menu_3') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';" style="top: 0px;left: 300px;">
+                {% end %}
+            </div>
         </div>
     </div>
-    <br>
-    <div class="bordes">
-        <div class="col-md-3 padd-editor">
-            <div class="texto-menu-editor">POSICION 2</div>
-        </div>
-        <div class="col-md-9 padd-editor">
-            {% if is_admin %}
-                <div style="border-bottom: solid 1px black" >
-                    <div class="text-slogan {{editabletext}}" text-id="{{ site.name + '_menu_2' }}"> {{ read_text(site.name +  '_menu_2') }}</div>
-                </div>
-            {% end %}
-        </div>
-        <div class="col-md-12 link-editor">
-            <div>
-                <div class="texto-menu-editor">LINK POSICION 2</div>
-            </div>
-            {% if is_admin %}
-                <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_2' }}" content="{{ read_link(site.name + '_img_menu_2') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';" style="top: 0px;left: 300px;">
-            {% end %}
-        </div>
+{% else %}
+    <div class="container min">
+        <div class="logos-titulo margen-editor">REDIRIGIENDO...</div>
     </div>
-    <br>
-    <div class="bordes">
-        <div class="col-md-3 padd-editor">
-            <div class="texto-menu-editor">POSICION 3</div>
-        </div>
-        <div class="col-md-9 padd-editor">
-            {% if is_admin %}
-                <div style="border-bottom: solid 1px black" >
-                    <div class="text-slogan {{editabletext}}" text-id="{{ site.name + '_menu_3' }}"> {{ read_text(site.name +  '_menu_3') }}</div>
-                </div>
-            {% end %}
-        </div>
-        <div class="col-md-12 link-editor">
-            <div>
-                <div class="texto-menu-editor">LINK POSICION 3</div>
-            </div>
-            {% if is_admin %}
-                <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_3' }}" content="{{ read_link(site.name + '_img_menu_3') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';" style="top: 0px;left: 300px;">
-            {% end %}
-        </div>
-    </div>
-</div>
+{% end %}
 {% include '../home/footer.html' %}
 {% end %}
 

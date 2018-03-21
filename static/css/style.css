@@ -20,6 +20,10 @@ a:hover{
     text-decoration: none;
 }
 
+.logos-copy{
+    margin-bottom: 70px;
+}
+
 .l-footer-rrss {
     max-height: 50px;
     width: 120px;

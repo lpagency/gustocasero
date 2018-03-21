@@ -644,8 +644,9 @@ hr.detalle {
     width: 50%;
     margin-top: 58px;
 }
-#mainImage {
-    right: 0px;
+    #mainImage {
+        right: 0px;
+        height: 235px;
     }
 
 .name_prod_detail {

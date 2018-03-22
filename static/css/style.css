@@ -24,6 +24,16 @@ a:hover{
     margin-bottom: 70px;
 }
 
+.reparto-text{
+    position: relative;
+    top: 53px;
+    text-align: justify;
+}
+
+.reparto-img{
+    top: 73px;
+}
+
 .l-footer-rrss {
     max-height: 50px;
     width: 120px;
@@ -1213,6 +1223,10 @@ hr.page-contact {
         position: relative;
         top: 50px;
         text-align: center;
+    }
+
+    .reparto-div{
+        margin-top: 100px;
     }
 .image-somos-cir {
     display: block;

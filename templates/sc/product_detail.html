@@ -52,11 +52,16 @@
             onLoad: function(product)
             {
               related("extras");
+              console.log(product.in_stock);
               if(product.in_stock == false)
               {
                 $(".main-price").html("AGOTADO");
                 $(".add-to-cart").html("AGOTADO");
                 $(".add-to-cart").attr("disabled",true);
+              }
+              else
+              {
+                $(".add-to-cart").attr("disabled",false);
               }
             }
 

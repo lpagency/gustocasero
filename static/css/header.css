@@ -606,21 +606,25 @@ input.busca.search {
 
 @media (max-width: 414px){
 
+  .insta-rrss{
+    float: inherit !important;
+  }
+
   #footer{
-    max-height: inherit;
+    max-height: inherit !important;
   }
 
   .footer-container {
-    min-height: inherit;
-    width: inherit;
+    min-height: inherit !important;
+    width: inherit !important;
   }
 
   .right-div {
-    padding-right: 15px;
+    padding-right: 15px !important;
   }
 
   .left-div {
-    padding-left: 15px;
+    padding-left: 15px !important;
   }
 
   .base-logo {

@@ -605,6 +605,24 @@ input.busca.search {
 
 
 @media (max-width: 414px){
+
+  #footer{
+    max-height: inherit;
+  }
+
+  .footer-container {
+    min-height: inherit;
+    width: inherit;
+  }
+
+  .right-div {
+    padding-right: 15px;
+  }
+
+  .left-div {
+    padding-left: 15px;
+  }
+
   .base-logo {
     width: 200px;
     height: 53px;
@@ -620,7 +638,7 @@ input.busca.search {
 }
 
 .logo {
-    width: 68px;
+    width: 64%;
     position: absolute;
     display: block;
     margin: 0 auto;

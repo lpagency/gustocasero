@@ -88,46 +88,18 @@ $(document).ready(function()
         'checkout_url': checkout_url, 
         'operator' :'or',
         'site_name': site_name,
-        'column': 'main_price',
+        'column': 'position',
         'direction' : 'desc',
         'templateOrigin': '#product_template_index',
         'onLoad': function(products) 
         {
             banners(tag);
-            for(var x=0; x<products.length; x++)
+
+            for(x in products)
             {
-                if(products[x].tags.indexOf("oferta") > -1)
+                if(products[x].in_stock == false)
                 {
-                    $(".letrero-sale."+products[x].promotion_price).removeClass("hidden");
-                    $(".overlay."+products[x].id).addClass("overlay-sale");
-                    $(".fufi."+products[x].id).addClass("fufi-sale");
-                }
-
-                if(products[x].tags.indexOf("nuevo") > -1)
-                {
-                    $(".letrero-new."+products[x].id).removeClass("hidden");
-                    $(".overlay."+products[x].id).addClass("overlay-new");
-                    $(".fufi."+products[x].id).addClass("fufi-new");
-                }
-
-                if(products[x].tags.indexOf("nuevo") > -1 && products[x].tags.indexOf("oferta") > -1)
-                {
-                    $(".fufi."+products[x].id).addClass("fufi-ambos");
-                    $(".fufi."+products[x].id).removeClass("fufi-sale");
-                    $(".overlay."+products[x].id).addClass("overlay-ambos");
-                    $(".overlay."+products[x].id).removeClass("overlay-sale");
-                    $(".letrero-sale."+products[x].promotion_price).removeClass("hidden");
-                    $(".letrero-new."+products[x].id).removeClass("hidden");
-                }
-
-                if(products[x].promotion_price == 0)
-                {
-                    $("."+products[x].sku).addClass("hidden");
-                }
-                else
-                {
-                    $(".producto."+products[x].id).css("font-size","12px");
-                    $(".producto."+products[x].id).css("text-decoration", "line-through");
+                    $("."+products[x].sku).html("AGOTADO");
                 }
             }
         }

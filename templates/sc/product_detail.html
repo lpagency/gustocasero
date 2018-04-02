@@ -52,6 +52,12 @@
             onLoad: function(product)
             {
               related("extras");
+              if(product.in_stock == false)
+              {
+                $(".main-price").html("AGOTADO");
+                $(".add-to-cart").html("AGOTADO");
+                $(".add-to-cart").attr("disabled",true);
+              }
             }
 
         };
@@ -116,30 +122,6 @@
           },1);
         });
     });
-</script>
-
-<script type="text/javascript">
-  $(document).ready(function()
-  {
-    setTimeout(function(){
-      if($(".load-v").html() == "")
-      {
-        $(".add-to-cart").attr("disabled", false);
-      }
-      if($(".load-v").html() == undefined)
-      {
-        $(".add-to-cart").attr("disabled", false);
-      }
-    },2000);
-
-    $(document).on("click", ".tallas", function()
-    {
-      if(!$(".tallas").hasClass("btn-disabled"))
-      {
-        $(".add-to-cart").attr("disabled",false);
-      }
-    });
-  });
 </script>
 
 <script type="text/template" id="product_detail">

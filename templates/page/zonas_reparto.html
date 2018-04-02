@@ -11,58 +11,6 @@
 
 {% block javascript %}
 <script type="text/javascript" src="{{ site_base }}/static/js/dermatologia.js"></script>
-<script type="text/javascript">
-  $(window).scroll(function(){
-
-  // Add parallax scrolling to all images in .paralax-image container
-
-  // $('.parallax-image-2').each(function(){
-
-  //   // only put top value if the window scroll has gone beyond the top of the image
-  //   if ($(this).offset().top < $(window).scrollTop()) {
-  //     // Get ammount of pixels the image is above the top of the window
-  //     var difference = $(window).scrollTop() - $(this).offset().top;
-  //     // Top value of image is set to half the amount scrolled
-  //     // (this gives the illusion of the image scrolling slower than the rest of the page)
-  //     var half = (difference / 2) + 'px';
-
- 
-  //     $(this).find('img').css('top', half);
-
-  //   } else {
-
-  //     // if image is below the top of the window set top to 0
-
-  //     $(this).find('img').css('top', '0');
-
-  //   }
-
-  // });
-
-
-});
-
-$(document).ready(function(){
-  // var page=0;
-  // $(window).scroll(function() {
-  //  if($(window).scrollTop() + $(window).height() == $(document).height()) {
-  //       page += 1;
-  //       $.post(site_base + "/article/list", { 
-  //                   "tag" : "dermatologia", 
-  //                   "limit" : 2,
-  //                   "page" : page
-  //               }, function(result)
-  //               {
-  //                 $(".article_list").append(result)
-  //               });
-  //  }
-  // });
-
-
-  // infinit_scroll(tag="dermatologia", limit="2");
-});
-
-</script>
 
 {% end %}
 
@@ -79,10 +27,19 @@ $(document).ready(function(){
 <section>
   <div class="container min reparto-div">
     <div class=" logos-titulo {{editabletext}}" text-id="{{ site.name + 'text_main_reparto' }}">{{ read_text(site.name +  'text_main_reparto') }}</div>
-
-    <div class="reparto-text {{editabletext}}" text-id="{{ site.name + 'text_main_reparto_2' }}">{{ read_text(site.name +  'text_main_reparto_2') }}</div>
-
-    <div class="col-md-12 reparto-img">
+    <div class="col-md-12" style="padding-top: 50px"></div>
+    <div class="col-md-6">
+      <div class="{{editabletext}}" text-id="{{ site.name + 'text_1_reparto' }}">{{ read_text(site.name +  'text_1_reparto') }}</div>
+    </div>
+    <div class="col-md-6">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.5858423696595!2d-70.57196618501821!3d-33.4079676807861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cedef2f1a7eb%3A0x25101fbc578d2bc1!2sRestaurante+Gusto+Casero!5e0!3m2!1ses!2scl!4v1522682752323" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class=" logos-titulo {{editabletext}}" text-id="{{ site.name + 'text_main_reparto_2' }}">{{ read_text(site.name +  'text_main_reparto_2') }}</div>
+    <div class="col-md-12" style="padding-top: 50px"></div>
+    <div class="col-md-6">
+      <div class="{{editabletext}}" text-id="{{ site.name + 'text_2_reparto' }}">{{ read_text(site.name +  'text_2_reparto') }}</div>
+    </div>
+    <div class="col-md-6">
       <div style="position:relative;">
         {% if is_admin %}
           <div class="image-upload lapiz visible-movil">
@@ -92,10 +49,10 @@ $(document).ready(function(){
             <input type="file" class="editableimage" image-id="{{ site.name }}_box_reparto" name="image" id="img_box_reparto" >
           </div>
         {% end %}
-        <img id="{{ site.name }}_box_reparto" src="{{ read_image(site.name + '_box_reparto', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_reparto',) }}'" class="box-gra" alt="item">
+        <img id="{{ site.name }}_box_reparto" src="{{ read_image(site.name + '_box_reparto', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_reparto',) }}'" class="box-gra fit-reparto" alt="item">
       </div>
     </div>
-  </div>
+    </div>
 </section>
 
 

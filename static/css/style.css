@@ -24,6 +24,10 @@ a:hover{
     margin-bottom: 70px;
 }
 
+.fit-reparto{
+    object-fit: scale-down !important;
+}
+
 .reparto-text{
     position: relative;
     top: 53px;
@@ -36,7 +40,6 @@ a:hover{
 
 .l-footer-rrss {
     max-height: 50px;
-    width: 120px;
     object-fit: contain;
 }
 
@@ -724,7 +727,6 @@ div.upload input, div.image-upload input {
 }
 
 .mar {
-    margin-bottom: 23px;
     position: relative;
     bottom: 0px;
     left: 0%;

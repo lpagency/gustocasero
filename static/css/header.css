@@ -16,6 +16,14 @@
     cursor: pointer;
 }
 
+.reparto-header{
+    position: relative;
+    top: -2px;
+    height: 64px !important;
+    padding-top: 12px !important;
+    padding-bottom: 1px !important;
+}
+
 .texto-b {
     position: relative;
     right: 60px;

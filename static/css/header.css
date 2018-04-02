@@ -615,6 +615,10 @@ input.busca.search {
     margin-right: 0;
 }
 
+.img-pide-online{
+    width: 40%;
+}
+
 .logo {
     width: 68px;
     position: absolute;

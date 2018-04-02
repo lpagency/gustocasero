@@ -198,8 +198,15 @@ img#vitrineate_img_logo_footer {
 
 
 @media (max-width: 838px){
+
+    #footer{
+        max-height: inherit !important;
+    }
+    .footer-container {
+        min-height: 311px;
+    }
 .d-o {
-    left:60px;
+    left: 10px;
     position:relative;
     width: 100%;
 }

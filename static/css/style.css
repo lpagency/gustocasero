@@ -39,7 +39,8 @@ a:hover{
 }
 
 .l-footer-rrss {
-    max-height: 50px;
+    max-height: 94%;
+    width: 52%;
     object-fit: contain;
 }
 

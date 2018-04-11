@@ -355,6 +355,12 @@ img#vitrineate_img_logo_footer {
 
 }
 
+.l-footer-rrss {
+    height: 50px;
+    width: 15%;
+    object-fit: contain;
+}
+
 .ul-2{
         left: 0px;
     }

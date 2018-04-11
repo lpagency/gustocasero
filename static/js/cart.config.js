@@ -97,11 +97,23 @@ $(document).ready(function()
 
             for(var x = 0; x < products.length; x++)
             {
-                console.log(products[x]);
-                if(products[x].in_stock == false)
+                var prod = products[x].sku;
+                $.get( config.base_url+"v1/variant/"+prod+"/combination?site_name=vitrineate&sku="+prod, function(data)
                 {
-                    $("."+products[x].sku).html("AGOTADO");
-                }
+                    console.log(data.combinations);
+                    // var aux = data.combinations[0].sku.split("-");
+                    // if(data.combinations[0].sku.indexOf("-") == -1)
+                    // {
+                    //     if(data.combinations.length == 1)
+                    //     {
+                    //         $("."+aux[0].toString()+".comprar-btn").removeClass("hidden");
+                    //     }
+                    // }
+                });
+                // if(products[x].in_stock == false)
+                // {
+                //     $("."+products[x].sku).html("AGOTADO");
+                // }
             }
         }
     };

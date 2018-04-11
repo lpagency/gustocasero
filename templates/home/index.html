@@ -137,10 +137,8 @@ $(document).ready(function()
 <div class="container min">
     <section id="slider-home" class="container-fluid">
         <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-
                 <div class="item active" style="background:url('{{ read_image(site.name + '_img_slider_1') }}'); height:100%; width:100%; background-repeat:no-repeat; background-size:cover; background-position:center;" data-img-width="1600" data-img-height="890" data-diff="100">
                     <a class="link-banner" id="{{ site.name + '_img_slider_1' }}" href="{{ read_link(site.name + '_img_slider_1') }}">
                         {% if is_admin %}
@@ -156,9 +154,6 @@ $(document).ready(function()
                     <img class="change-image editablelink" link-id="{{ site.name + '_img_slider_1' }}" content="{{ read_link(site.name + '_img_slider_1') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
                     {% end %}
                 </div>
-
-
-
                 <!-- ** SLIDER 2 ** -->
                 <div class="mov item " style="background:url('{{ read_image(site.name + '_img_slider_2') }}'); height:100%; width:100%; background-repeat:no-repeat; background-size:cover; background-position:center;" data-img-width="1600" data-img-height="890" data-diff="100">
                     <a class="link-banner" id="{{ site.name + '_img_slider_2' }}" href="{{ read_link(site.name + '_img_slider_2') }}">
@@ -207,17 +202,14 @@ $(document).ready(function()
 <!-- ***FIN DE SLIDER*** -->
 
 <!--PRODUCTOS-->
-
 <section>
     <div class="container min">
         <div class="logos-copy">
             <div class=" logos-titulo {{editabletext}}" text-id="{{ site.name + 'text_main_banner' }}">{{ read_text(site.name +  'text_main_banner') }}</div>
         </div>
-        <div class="products">
-        </div>
+        <div class="products"></div>
     </div>
 </section>
-
 
 <section id="first-page-scroll">
     <div class="container min">
@@ -244,7 +236,6 @@ $(document).ready(function()
                     <img id="{{ site.name }}_box_home_1" src="{{ read_image(site.name + '_box_home_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_home_1',) }}'" class="box-gra" alt="item">
                 </a>
             </div>
-
             {% if is_admin %}
             <img class="change-image editablelink" link-id="{{ site.name + '_box_home_1' }}" content="{{ read_link(site.name + '_box_home_1') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
             {% end %}
@@ -264,15 +255,12 @@ $(document).ready(function()
                     <img id="{{ site.name }}_box_home_2" src="{{ read_image(site.name + '_box_home_2', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_home_2',500) }}'" class="box-gra" alt="item">
                 </a>
             </div>
-
             {% if is_admin %}
             <img class="change-image editablelink" link-id="{{ site.name + '_box_home_2' }}" content="{{ read_link(site.name + '_box_home_2') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
             {% end %}
             <div class="texto-hu-2 {{editabletext}}" text-id="{{ site.name + '_ti_2' }}"> {{ read_text(site.name +  '_ti_2') }}</div>
         </div>
     </div>
-</section>
-
 </section>
 
 {% include '../home/footer.html' %}

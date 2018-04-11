@@ -89,7 +89,7 @@ $(document).ready(function()
         'operator' :'or',
         'site_name': site_name,
         'column': 'position',
-        'direction' : 'desc',
+        'direction' : 'asc',
         'templateOrigin': '#product_template_index',
         'onLoad': function(products) 
         {
@@ -109,25 +109,9 @@ $(document).ready(function()
 
     $(document).on("click", ".subcateg", function(ev){
         ev.preventDefault();
-        // $(".subcateg").css("border-bottom", "");
-        // $(this).css("border-bottom", "dashed 1px rgba(0, 0, 0, 0.33)");
-
-        // if (tag === $(this).attr('tag')){
-        //     config.tag=tag;
-        //     config.operator = "or";
-        // }else{
-        //     var multiple_tag = tag+", "+$(this).attr('tag');
-        //     config.tag=multiple_tag;
-        //     config.operator = "and";
-        // }
         config.tag=$(this).attr('tag');
-        // console.log(config);
-        
-        // facade.page = 1; // o 1 no estoy seguro
         $(".products").html("");
         $(document).ecommerce('destroy');
         $(document).ecommerce(config);
-
-            // alert($(this).attr("tag"));
     });
 });

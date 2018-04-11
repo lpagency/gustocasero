@@ -349,34 +349,47 @@ img#vitrineate_img_logo_footer {
 
 }
 
-@media (max-width: 414px){
-.caja-fo {
-    margin-top: 33px;
+@media (max-width: 414px)
+{
+    .caja-fo
+    {
+        margin-top: 33px;
+    }
 
-}
+    .l-footer-rrss
+    {
+        height: 50px;
+        width: 15%;
+        object-fit: contain;
+    }
 
-.ul-2{
+    .ul-2
+    {
         left: 0px;
     }
 
-.ul-{
-    left: inherit;
-}
+    .ul-
+    {
+        left: inherit;
+    }
 
-.img-foot {
-    left: -183px;
-    position: relative;
-    text-align: center;
-}
+    .img-foot
+    {
+        left: -183px;
+        position: relative;
+        text-align: center;
+    }
 
-.l-footer{
-    position: relative;
-    left: 0px;
-}
+    .l-footer
+    {
+        position: relative;
+        left: 0px;
+    }
 
-.firma{
-    margin-top: 58px;
-}
+    .firma
+    {
+        margin-top: 58px;
+    }
 
 }
 

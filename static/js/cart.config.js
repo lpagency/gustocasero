@@ -97,7 +97,6 @@ $(document).ready(function()
 
             for(var x = 0; x < products.length; x++)
             {
-                console.log(products[x]);
                 if(products[x].in_stock == false)
                 {
                     $("."+products[x].sku).html("AGOTADO");

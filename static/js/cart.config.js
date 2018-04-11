@@ -89,7 +89,7 @@ $(document).ready(function()
         'operator' :'or',
         'site_name': site_name,
         'column': 'position',
-        'direction' : 'desc',
+        'direction' : 'asc',
         'templateOrigin': '#product_template_index',
         'onLoad': function(products) 
         {
@@ -97,6 +97,28 @@ $(document).ready(function()
 
             for(var x = 0; x < products.length; x++)
             {
+
+
+                //FUNCIONALIDAD DE STOCK!! FUNCIONARÁ CUANDO SE ARREGLE LA API
+
+                // var aux = products[x].sku;
+
+                // $.get( config.base_url+"v1/cellar/124/stock/"+aux, {access_token: 'ttzE0wzwLJ3HrHwYgOA1tHauKyPsu9ATyxc99e9g'}, function(data)
+                // {
+                //     console.log(data);
+                // });
+
+                // $.ajax({
+                //     url: config.base_url+"v1/cellar/124/stock/"+aux,
+                //     type: 'GET',
+                //     dataType: 'json',
+                //     headers: {
+                //         'access_token': 'ttzE0wzwLJ3HrHwYgOA1tHauKyPsu9ATyxc99e9g'
+                //     },
+                //     success: function (result) {
+                //        console.log(result);
+                //     }
+                // });
                 if(products[x].in_stock == false)
                 {
                     $("."+products[x].sku).html("AGOTADO");

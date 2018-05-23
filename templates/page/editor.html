@@ -16,8 +16,8 @@
 
 
 {% block javascript %}
-<script type="text/javascript" src="{{ site_base }}/static/js/cart.config.js"></script>
-<script type="text/javascript" src="{{ site_base }}/static/js/banners.js"></script>
+<script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/cart.config.js"></script>
+<script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/banners.js"></script>
 <script type="text/javascript">
     $(document).ready(function()
     {
@@ -71,7 +71,7 @@
                     <div class="texto-menu-editor">LINK POSICION 1</div>
                 </div>
                 {% if is_admin %}
-                    <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_1' }}" content="{{ read_link(site.name + '_img_menu_1') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';" style="top: 0px;left: 300px;">
+                    <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_1' }}" content="{{ read_link(site.name + '_img_menu_1') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" style="top: 0px;left: 300px;">
                 {% end %}
             </div>
         </div>
@@ -92,7 +92,7 @@
                     <div class="texto-menu-editor">LINK POSICION 2</div>
                 </div>
                 {% if is_admin %}
-                    <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_2' }}" content="{{ read_link(site.name + '_img_menu_2') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';" style="top: 0px;left: 300px;">
+                    <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_2' }}" content="{{ read_link(site.name + '_img_menu_2') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" style="top: 0px;left: 300px;">
                 {% end %}
             </div>
         </div>
@@ -113,7 +113,7 @@
                     <div class="texto-menu-editor">LINK POSICION 3</div>
                 </div>
                 {% if is_admin %}
-                    <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_3' }}" content="{{ read_link(site.name + '_img_menu_3') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';" style="top: 0px;left: 300px;">
+                    <img class="change-image editablelink" link-id="{{ site.name + '_img_menu_3' }}" content="{{ read_link(site.name + '_img_menu_3') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" style="top: 0px;left: 300px;">
                 {% end %}
             </div>
         </div>

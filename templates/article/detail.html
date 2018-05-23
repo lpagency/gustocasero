@@ -12,9 +12,9 @@
 {% block css %}
 <link href="https://fonts.googleapis.com/css?family=Lato" type="text/css"/>
 {% if is_admin %}
-<link rel="stylesheet" href="{{ site_base }}/static/css/textbox_io.css" type="text/css">
-<link rel="stylesheet" href="{{ site_base }}/static/css/detalle_articulos.css">
-<script type="text/javascript" src="{{ site_base }}/static/js/article/detail.js"></script>
+<link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/textbox_io.css" type="text/css">
+<link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/detalle_articulos.css">
+<script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/article/detail.js"></script>
 {% end %}
 <style type="text/css">
 
@@ -33,7 +33,7 @@
 {% end %}
 
 {% block javascript %}
-<script type="text/javascript" src="{{ site_base }}/static/js/dermatologia.js"></script>
+<script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/dermatologia.js"></script>
 <script type="text/javascript">
     $(document).ready(function()
     {
@@ -122,9 +122,6 @@
                             
                             <div align="center">
                                 <div class="col-md-12 content-picture">
-                                    <!-- <div>
-                                        <img class="medium" src="{{ site_base }}/static/img/0013.png" class="lazy" data-original="{{ article["thumb_500"] }}" offsetx="{{ article["offset_x"] }}" offsety="{{ article["offset_y"] }}" alt="item">
-                                    </div> -->
                                 </div>
                             </div>
                             

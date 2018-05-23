@@ -78,7 +78,7 @@
             });//click
         });//ready
 </script>
-<script type="text/javascript" src="{{ site_base }}/static/js/frubik.js"></script>
+<script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/frubik.js"></script>
 <script type="text/javascript">
     $(document).ready(function()
     {
@@ -129,7 +129,7 @@
 
 
 {% block css %}
-<link type="text/css" rel='stylesheet' href="{{ site_base }}/static/css/page.edit.css" />
+<link type="text/css" rel='stylesheet' href="{{ site_base }}/{{ nocache_static }}/css/page.edit.css" />
 <style type="text/css">
     .controls input, .controls textarea
     {
@@ -239,7 +239,7 @@
          </a>
      </div>
      {% if is_admin %}
-     <img class="change-image editablelink" link-id="{{ site.name + '_tienda_1' }}" content="{{ read_link(site.name + '_tienda_1') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
+     <img class="change-image editablelink" link-id="{{ site.name + '_tienda_1' }}" content="{{ read_link(site.name + '_tienda_1') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
      {% end %}
 
  </div>

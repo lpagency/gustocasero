@@ -31,13 +31,11 @@
         $(document).ready(function()
         {
             var base_url = $.environmentVar(
-                /*'https://apibodegas.ondev.today/',*    <- para poder probar en ondev*/
-                'https://apibodegas.loadingplay.com/',
+                'http://localhost:8520/',
                 'https://apibodegas.ondev.today/',
                 'https://apibodegas.loadingplay.com/');
             var checkout_url = $.environmentVar(
-                /*'https://lpcheckout.ondev.today/',    <- para poder probar en ondev*/
-                'https://pay.loadingplay.com',
+                'http://localhost:8522',
                 'https://lpcheckout.ondev.today',
                 'https://pay.loadingplay.com');
             var app_public = $.environmentVar(82, 82, 82);
@@ -169,7 +167,7 @@
     <div class="container-fluid">
         <div class="container  product-page"></div>
     </div>
-    <div class="product-detail" style="margin-bottom: 50px;"></div>
+    <div class="product-detail margin-product"></div>
     <div class="container min">
         <div align="center">
             <div class="col-md-12 col-sm-12 col-xs-12">

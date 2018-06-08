@@ -3,7 +3,7 @@ function getCookie(cname)
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++)
+    for(var i = 0; i < ca.length; i++)
     {
         var c = ca[i];
         while (c.charAt(0) == ' ')
@@ -21,7 +21,7 @@ function getCookie(cname)
 function createDateCookie()
 {
     var datetime = new Date(new Date().setHours(0, 0, 0, 0));
-    document.cookie = "Date= "+datetime;
+    document.cookie = "Date= " + datetime;
 }
 
 function deleteShoppingCart()

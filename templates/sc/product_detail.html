@@ -60,20 +60,6 @@
 
             };
 
-            var datetime = new Date(new Date().setHours(0, 0, 0, 0));
-            var today = getCookie("Date");
-
-            if (today == '')
-            {
-                createDateCookie();
-            }
-
-            if (datetime != today)
-            {
-                deleteShoppingCart();
-                createDateCookie();
-            }
-
             $('.product-detail').ecommerce('product_detail', options);
 
             // productos relacionados

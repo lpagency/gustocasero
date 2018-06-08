@@ -21,7 +21,7 @@ function getCookie(cname)
 function createDateCookie()
 {
     var datetime = new Date(new Date().setHours(0, 0, 0, 0));
-    document.cookie = "Date= " + datetime;
+    document.cookie = "Date= " + datetime + ";path=/";
 }
 
 function deleteShoppingCart()

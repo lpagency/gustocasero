@@ -78,7 +78,6 @@ $(document).ready(function()
         {
             for(x in products)
             {
-                console.log(products[x].in_stock);
                 if(products[x].in_stock == false)
                 {
                     $("."+products[x].sku).html("AGOTADO");

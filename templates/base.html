@@ -1,79 +1,81 @@
 <!doctype html>
-<html class="no-js" lang="en">
-    <head>
-        <!-- head bt inicio -->
-        <title>Gusto Casero</title>
-        <base href="{{ site_base }}/">
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="author" content="loadingplay.com">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content="jquery, vertical, scrolling, scroll, smooth"/>
+    <html class="no-js" lang="en">
+        <head>
+            <!-- head bt inicio -->
+            <title>Gusto Casero</title>
+            <base href="{{ site_base }}/">
+            <meta charset="utf-8">
+            <meta name="description" content="">
+            <meta name="author" content="loadingplay.com">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="keywords" content="jquery, vertical, scrolling, scroll, smooth"/>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css?1">
-        <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/style.css?45">
-        <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/header.css?45">
-        <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/footer.css?45">
-        <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/gallery.ho.css?45">
-        <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/listado_articulos.css?45">
-        <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/listado_productos.css?45">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css?1">
+            <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/style.css?45">
+            <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/header.css?45">
+            <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/footer.css?45">
+            <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/gallery.ho.css?45">
+            <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/listado_articulos.css?45">
+            <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/listado_productos.css?45">
 
-        <link rel="stylesheet" type="text/css" href="{{ site_base }}/{{ nocache_static }}/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+            <link rel="stylesheet" type="text/css" href="{{ site_base }}/{{ nocache_static }}/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
 
-        <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css">
-        <link rel="stylesheet" href="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.css?1">
-        <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/ligthbox-d.css">
-        <link rel="stylesheet" href="{{ site_base }}/common/css/ellipsis.css">
+            <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css">
+            <link rel="stylesheet" href="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.css?1">
+            <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/ligthbox-d.css">
+            <link rel="stylesheet" href="{{ site_base }}/common/css/ellipsis.css">
 
-        {% block css %}{% end %}
+            {% block css %}
+            {% end %}
 
-        {% include 'product/product_box.html' %}
-        {% include 'product/product_home.html' %}
+            {% include 'product/product_box.html' %}
+            {% include 'product/product_home.html' %}
 
-        {% if is_admin %}
-        {% set editabletext = 'editabletext' %}
-        {% else %}
-        {% set editabletext = '' %}
-        {% end %}
+            {% if is_admin %}
+                {% set editabletext = 'editabletext' %}
+            {% else %}
+                {% set editabletext = '' %}
+            {% end %}
 
-    </head>
+        </head>
 
-    <body style="overflow: hidden;">
-        {% block header %}{% end %}
-        {% block body %}{% end %}
+        <body style="overflow: hidden;">
+            {% block header %}{% end %}
+            {% block body %}{% end %}
 
-         <!-- Modal -->
-    <div align="center">
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title ">Resumen de tu compra</h4>
-                    </div>
-                    <div class="modal-body mlb-btn">
-                        <div class="container-fluid cart-list" ng-controller="">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                            <th>Nombre</th>
-                                            <th>Precio</th>
-                                            <th class="">Cant</th>
-                                            <th class="">Eliminar</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody class="shopping-cart">
-                                        </tbody>
-                                    </table>
-                                    <div class="checkout-form"></div>
+             <!-- Modal -->
+        <div align="center">
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title ">Resumen de tu compra</h4>
+                        </div>
+                        <div class="modal-body mlb-btn">
+                            <div class="container-fluid cart-list" ng-controller="">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th class="">Cant</th>
+                                                <th class="">Eliminar</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="shopping-cart">
+                                            </tbody>
+                                        </table>
+                                        <div class="checkout-form"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +83,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
         <img id="imgLOAD" width="50" height="50" src="{{ site_base }}/common/css/loading.gif" />
         <script type="text/javascript">
@@ -120,82 +121,98 @@
             });
         </script>
 
-<script type="text/x-template" id="shopping-cart-product">
-    <tr>
-        <td class="vert-align text-left">{{! name }}</td>
-        <td class="text-center2 vert-align">{{! price|money }}</td>
-        <td class="vert-align fri" style="border-bottom: 1px solid #ddd;">
-            <a href="#!" class="remove-one" lp-cart-remove-one="{{! id }}">-</a>
-            {{! quantity }}
-            <a href="#!" class="add-one" lp-cart-add-one="{{! id }}" >+</a>
-        </td>
-        <td class="remove-from-cart fri" lp-cart-remove="{{! id }}" aria-hidden="true"> X  </td>
-        <td class="vert-align fri">
-            <a class="borrarproducto" cart-id="">
-                <i class="icon-close"></i>
-            </a>
-        </td>
-    </tr>
-</script>
+        <script type="text/x-template" id="shopping-cart-product">
+            <tr>
+                <td class="vert-align text-left">{{! name }}</td>
+                <td class="text-center2 vert-align">{{! price|money }}</td>
+                <td class="vert-align fri" style="border-bottom: 1px solid #ddd;">
+                    <a href="#!" class="remove-one" lp-cart-remove-one="{{! id }}">-</a>
+                    {{! quantity }}
+                    <a href="#!" class="add-one" lp-cart-add-one="{{! id }}" >+</a>
+                </td>
+                <td class="remove-from-cart fri" lp-cart-remove="{{! id }}" aria-hidden="true"> X  </td>
+                <td class="vert-align fri">
+                    <a class="borrarproducto" cart-id="">
+                        <i class="icon-close"></i>
+                    </a>
+                </td>
+            </tr>
+        </script>
 
-<script type="text/x-template" id="shopping-cart-total" >
-    <tr>
-    </tr>
-    <tr>
-        <td>Total:</td>
-        <td id="total" colspan="3" class="text-left total-modal lib">{{! total|money }}</td>
-        <td></td>
-    </tr>
-</script>
+        <script type="text/x-template" id="shopping-cart-total" >
+            <tr>
+            </tr>
+            <tr>
+                <td>Total:</td>
+                <td id="total" colspan="3" class="text-left total-modal lib">{{! total|money }}</td>
+                <td></td>
+            </tr>
+        </script>
 
-<script type="text/x-template" id="shopping-cart-units-total" >
-    <span> {{! units_total }}</span>
-</script>
+        <script type="text/x-template" id="shopping-cart-units-total" >
+            <span> {{! units_total }}</span>
+        </script>
 
-<script type="text/x-template" id="shopping-cart-checkout-form" >
-    <form action="{{! checkout_url}}" method="get" novalidate id="shipping-form" class="myform" onclick="return Validate()">
-        <input name="site_id" class="form-control required" type="hidden" value="82">
-        <input name="cart_id" class="form-control required" type="hidden" value="{{! cart_id}}">
-        <input name="origin" class="form-control required" type="hidden" value="{{ site.name }}">
-        <input name="total" class="total-carro" type="hidden" value="{{! total }}">
-        <div class="form-group text-center">
-             <button type="submit" class="btn bn pagar-carro" style="background-color:rgba(0, 0, 0, 0.24);color: white;width: 31%;border-radius: 0px;height: 51px;font-weight: 400;float: right;" disabled>
-                PAGAR
-            </button>
-        </div>
-        <div class="">
-            <a class="modal-close volver" data-dismiss="modal" aria-hidden="true">VOLVER</a>
-        </div>
-    </form>
-</script>
+        <script type="text/x-template" id="shopping-cart-checkout-form" >
+            <form action="{{! checkout_url}}" method="get" novalidate id="shipping-form" class="myform" onclick="return Validate()">
+                <input name="site_id" class="form-control required" type="hidden" value="82">
+                <input name="cart_id" class="form-control required" type="hidden" value="{{! cart_id}}">
+                <input name="origin" class="form-control required" type="hidden" value="{{ site.name }}">
+                <input name="total" class="total-carro" type="hidden" value="{{! total }}">
+                <div class="form-group text-center">
+                     <button type="submit" class="btn bn pagar-carro" style="background-color:rgba(0, 0, 0, 0.24);color: white;width: 31%;border-radius: 0px;height: 51px;font-weight: 400;float: right;" disabled>
+                        PAGAR
+                    </button>
+                </div>
+                <div class="">
+                    <a class="modal-close volver" data-dismiss="modal" aria-hidden="true">VOLVER</a>
+                </div>
+            </form>
+        </script>
 
+        <!-- SCRIPT PARA BORRAR LA COOKIE DEL CARRO DE COMPRA -->
 
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function()
+            {
+                var datetime = new Date(new Date().setHours(0, 0, 0, 0));
+                var today = window.localStorage.getItem("date");
 
-    <!-- termino carrito de compra -->
+                if (today == null)
+                {
+                    createDateCookie();
+                }
 
+                if (datetime != today)
+                {
+                    deleteShoppingCart();
+                    createDateCookie();
+                }
+            });
+        </script>
 
-
-<!-- termino carrito de compra -->
+        <!-- termino carrito de compra -->
 
         {% block javascript %}{% end %}
         <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId: '348231912006000',
-                xfbml: true,
-                version: 'v2.1'
-            });
-        };
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId: '348231912006000',
+                    xfbml: true,
+                    version: 'v2.1'
+                });
+            };
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+                    return;
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
         </script>
 
         <!--ANALYTICS CODE-->
@@ -210,173 +227,134 @@
         </script>
 
         {% if is_admin %}
-        <script type="text/javascript">
-        var site_name="{{site.name}}";
-        </script>
-        <script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/header.js" ></script>
-        <script type="text/javascript" src="{{ site_base }}/common/js/contentmanager.js" ></script>
-
+            <script type="text/javascript">
+            var site_name="{{site.name}}";
+            </script>
+            <script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/header.js" ></script>
+            <script type="text/javascript" src="{{ site_base }}/common/js/contentmanager.js" ></script>
         {% end %}
 
         <script type="text/javascript" src"https://clouddelivery.textbox.io/1/getEditor?apiKey=1wugguwjiatkm69xmt7w1den1mpvqkxi75mwfmb49lz89o4r">
         </script>
 
 
+        <!-- Google Analytics Code -->
+
+        <script type="text/javascript">
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', '{{ get_config("analytics") }}', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+        <!-- End Google Analytics Code -->
+
+
+        <!-- Facebook Pixel Code -->
         <script>
-/*            $(document).ajaxComplete(function()
-            {
-                var hash = window.location.hash;
-                // window.location.href= hash;
-
-                if (hash !== "")
-                {
-                    $('html,body').animate({
-                        scrollTop: $(hash).offset().top
-                    });
-                }
-            });
-*/        </script>
-
-
-    <!-- Google Analytics Code -->
-
-    <script type="text/javascript">
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', '{{ get_config("analytics") }}', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-    <!-- End Google Analytics Code -->
-
-
-    <!-- Facebook Pixel Code -->
-        <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window,document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-         fbq('init', '156362471752324');
-        fbq('track', 'PageView');
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+             fbq('init', '156362471752324');
+            fbq('track', 'PageView');
         </script>
         <noscript>
-         <img height="1" width="1"
-        src="https://www.facebook.com/tr?id=156362471752324&ev=PageView
-        &noscript=1"/>
+             <img height="1" width="1"
+            src="https://www.facebook.com/tr?id=156362471752324&ev=PageView
+            &noscript=1"/>
         </noscript>
-    <!-- End Facebook Pixel Code -->
+        <!-- End Facebook Pixel Code -->
 
 
-    <script type="text/javascript">
-        $(document).ready(function()
-        {
-            $(document).on("click", "#open-cart", function()
+        <script type="text/javascript">
+            $(document).ready(function()
             {
-                if($(".total-carro").val() > 0)
+                $(document).on("click", "#open-cart", function()
                 {
-                    $(".pagar-carro").attr("disabled", false);
-                }
+                    if($(".total-carro").val() > 0)
+                    {
+                        $(".pagar-carro").attr("disabled", false);
+                    }
+                });
+
+                $(document).on("click", ".add-one", function()
+                {
+                  setTimeout(function()
+                  {
+                    if($(".total-carro").val() > 0)
+                    {
+                      $(".pagar-carro").attr("disabled", false);
+                    }
+                  },1);
+                });
+
+                $(document).on("click", ".remove-one", function()
+                {
+                  setTimeout(function()
+                  {
+                    if($(".total-carro").val() > 0)
+                    {
+                      $(".pagar-carro").attr("disabled", false);
+                    }
+                  },1);
+                });
+
+                $(document).on("click", ".remove-from-cart", function()
+                {
+                  setTimeout(function()
+                  {
+                    if($(".total-carro").val() > 0)
+                    {
+                      $(".pagar-carro").attr("disabled", false);
+                    }
+                  },1);
+                });
             });
+        </script>
 
-            $(document).on("click", ".add-one", function()
+        <script type="text/javascript">
+            $(document).ready(function()
             {
-              setTimeout(function()
-              {
-                if($(".total-carro").val() > 0)
+                $(document).on("click", ".img-lupa", function()
                 {
-                  $(".pagar-carro").attr("disabled", false);
-                }
-              },1);
+                    if($(".form-search").hasClass("hidden"))
+                    {
+                        $(".form-search").removeClass("hidden");
+                        $(".img-lupa").css("width","15%");
+                        $(".img-lupa").css("left","177px");
+                        $(".img-lupa").css("top","-25px");
+                        $(".buscador").css("right","60px");
+                        $(".buscador").css("top","-2px");
+                        $(".buscador").css("left","-105px");
+                        $(".texto-b").addClass("hidden");
+                    }
+                    else
+                    {
+                        $(".form-search").addClass("hidden");
+                        $(".img-lupa").css("width","18%");
+                        $(".img-lupa").css("left","40px");
+                        $(".img-lupa").css("top","-20px");
+                        $(".buscador").css("left","0px");
+                        $(".buscador").css("top","0px");
+                        $(".texto-b").removeClass("hidden");
+                    }
+                });
             });
-
-            $(document).on("click", ".remove-one", function()
-            {
-              setTimeout(function()
-              {
-                if($(".total-carro").val() > 0)
-                {
-                  $(".pagar-carro").attr("disabled", false);
-                }
-              },1);
-            });
-
-            $(document).on("click", ".remove-from-cart", function()
-            {
-              setTimeout(function()
-              {
-                if($(".total-carro").val() > 0)
-                {
-                  $(".pagar-carro").attr("disabled", false);
-                }
-              },1);
-            });
-        });
-    </script>
-
-    <script type="text/javascript">
-        $(document).ready(function()
-        {
-            $(document).on("click", ".img-lupa", function()
-            {
-                if($(".form-search").hasClass("hidden"))
-                {
-                    $(".form-search").removeClass("hidden");
-                    $(".img-lupa").css("width","15%");
-                    $(".img-lupa").css("left","177px");
-                    $(".img-lupa").css("top","-25px");
-                    $(".buscador").css("right","60px");
-                    $(".buscador").css("top","-2px");
-                    $(".buscador").css("left","-105px");
-                    $(".texto-b").addClass("hidden");
-                }
-                else
-                {
-                    $(".form-search").addClass("hidden");
-                    $(".img-lupa").css("width","18%");
-                    $(".img-lupa").css("left","40px");
-                    $(".img-lupa").css("top","-20px");
-                    $(".buscador").css("left","0px");
-                    $(".buscador").css("top","0px");
-                    $(".texto-b").removeClass("hidden");
-                }
-            });
-        });
-    </script>
-
-    <!-- SCRIPT PARA BORRAR LA COOKIE DEL CARRO DE COMPRA -->
-
-    <script type="text/javascript">
-        $(document).ready(function()
-        {
-            var datetime = new Date(new Date().setHours(0, 0, 0, 0));
-            var today = getCookie("Date");
-
-            if (today == '')
-            {
-                createDateCookie();
-            }
-
-            if (datetime != today)
-            {
-                deleteShoppingCart();
-                createDateCookie();
-            }
-        });
-    </script>
-
+        </script>
     </body>
 </html>

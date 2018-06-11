@@ -21,10 +21,19 @@ function getCookie(cname)
 function createDateCookie()
 {
     var datetime = new Date(new Date().setHours(0, 0, 0, 0));
-    document.cookie = "Date= " + datetime + ";path=/";
+    window.localStorage.setItem("date", datetime);
+}
+
+function eraseCookie(cname, cvalue, exMins)
+{
+    var d = new Date();
+    d.setTime(d.getTime() + (exMins*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    document.cookie = cname + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
 function deleteShoppingCart()
 {
-    document.cookie = 'shopping-cart=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    eraseCookie("shopping-cart", '', 0);
 }

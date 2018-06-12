@@ -137,7 +137,8 @@ outline-offset: -2px;
     left: 480px;
 }
 
-.logo {
+.logo
+{
     width: 100%;
     position: absolute;
     display: block;
@@ -147,6 +148,13 @@ outline-offset: -2px;
     top: 43px;
     left: 5px;
     margin-top: 2px;
+    margin-right: 10px;
+    padding: 0;
+}
+
+.navbar-collapse.collapse
+{
+    height: 70px;
 }
 
 .head-menu{
@@ -443,10 +451,20 @@ ul.w3-ul{list-style-type:none;padding:0;margin:0}ul.w3-ul li{padding:6px 2px 6px
         border-top: 1px solid transparent;
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
     }
-    .navbar-collapse.collapse {
-        display: none!important;
+    .navbar-collapse.collapse
+    {
+        display: none;
     }
-    .navbar-nav {
+
+    .nabar-brand
+    {
+        padding: 0px;
+        position: relative;
+        top: -31px;
+    }
+
+    .navbar-nav
+    {
         float: none!important;
         margin: 7.5px -15px;
     }
@@ -458,10 +476,13 @@ ul.w3-ul{list-style-type:none;padding:0;margin:0}ul.w3-ul li{padding:6px 2px 6px
         padding-bottom: 10px;
     }
 
-   .navbar-collapse.collapse.in {  /* NEW */
-        display: block!important; 
+   .navbar-collapse.collapse.in
+   {
+        display: block;
         max-height: 800px;
+        height: 300px;
     }
+
     .img-bolsa {    
         width: 5%;
         position: relative;

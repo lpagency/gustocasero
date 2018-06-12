@@ -3,12 +3,6 @@
 
 $(document).ready(function(){
 
-	$(".button-nav-toggle").click(function(){
-		$(".main").toggleClass("");
-		$(".menu").toggleClass("open");
-		$(".button-nav-toggle").toggleClass("open-2");
-	});
-
 	$(".nav-main li:has(ul)").addClass("has-sub-nav").prepend("<div class=\"sub-toggle\"></div>");
 
 	$(".has-sub-nav a").click(function(){
@@ -22,13 +16,3 @@ $(document).ready(function(){
 	});
 
 });
-
-/*
-$(document).on('click', ".main.open", function () {
-	var mainOffset = $(this).css("right").replace('px', '');
-	if (mainOffset > 0) {
-		$(".main").removeClass("open");
-		$(".menu").removeClass("open");
-	};
-});
-*/

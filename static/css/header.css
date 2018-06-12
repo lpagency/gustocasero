@@ -484,7 +484,8 @@ ul.w3-ul{list-style-type:none;padding:0;margin:0}ul.w3-ul li{padding:6px 2px 6px
         height: 300px;
     }
 
-    .img-bolsa {    
+    .img-bolsa
+    {
         width: 5%;
         position: relative;
         left: -1%;

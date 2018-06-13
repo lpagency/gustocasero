@@ -165,6 +165,7 @@ li.bolsa
 .logo 
 {
     width: 100%;
+    max-height: 65px;
     position: absolute;
     display: block;
     margin: 0 auto;
@@ -976,6 +977,7 @@ ul.w3-ul li:last-child
     {
         left: 0px;
     }
+
     li.bolsa 
     {
         float: right;
@@ -986,6 +988,7 @@ ul.w3-ul li:last-child
         padding-left: 6px;
         top: 18px;
     }
+
     .head-menu 
     {
         width: 102.7%;
@@ -1021,6 +1024,7 @@ ul.w3-ul li:last-child
         left: 5px;
         margin-top: 2px;
     }
+
     .img-pide-online 
     {
         width: 15%;
@@ -1030,10 +1034,12 @@ ul.w3-ul li:last-child
     {
         float: none;
     }
+
     .navbar-toggle 
     {
         display: block;
     }
+
     .navbar-collapse 
     {
         border-top: 1px solid transparent;
@@ -1243,6 +1249,7 @@ ul.w3-ul li:last-child
     {
         width: 100%;
     }
+
     .insta-rrss 
     {
         float: inherit !important;
@@ -1306,6 +1313,7 @@ ul.w3-ul li:last-child
         cursor: pointer;
         float: right;
     }
+
     .img-lupa 
     {
         width: 9%;
@@ -1370,6 +1378,7 @@ ul.w3-ul li:last-child
         margin-right: 0;
         top: -5px;
     }
+
     .logo 
     {
         width: 120px;
@@ -1381,6 +1390,7 @@ ul.w3-ul li:last-child
         object-fit: scale-down;
         margin-top: 20px;
     }
+
     .carousel-inner 
     {
         height: 100px;

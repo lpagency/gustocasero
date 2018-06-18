@@ -30,13 +30,7 @@
                         </a>
                     </div>
                     <div class="w3-dropdown-hover">
-                        <div class="w3-btn w3-red" id="{{ site.name + '_img_menu_1' }}" data-toggle="dropdown" tag="colecciones" onclick="window.location.href='{{ read_link(site.name + '_img_menu_1') }}'">{{ read_text(site.name + '_menu_1') }}</div>
-                    </div>
-                    <div class="w3-dropdown-hover">
-                        <div class="w3-btn w3-red" id="{{ site.name + '_img_menu_2' }}" data-toggle="dropdown" tag="colecciones" onclick="window.location.href='{{ read_link(site.name + '_img_menu_2') }}'">{{ read_text(site.name + '_menu_2') }}</div>
-                    </div>
-                    <div class="w3-dropdown-hover">
-                        <div class="w3-btn w3-red" id="{{ site.name + '_img_menu_3' }}" data-toggle="dropdown" tag="colecciones" onclick="window.location.href='{{ read_link(site.name + '_img_menu_3') }}'">{{ read_text(site.name + '_menu_3') }}</div>
+                        <div class="w3-btn w3-red" data-toggle="dropdown" tag="colecciones" onclick="window.location.href='{{ site_base }}/listado_productos?tag=cat2_menu_del_dia'">Ve el menu de hoy</div>
                     </div>
                     <div class="w3-dropdown-hover">
                         <div class="w3-btn w3-red" data-toggle="dropdown" tag="colecciones" onclick="window.location.href='{{ site_base }}/listado_productos?tag=extras'">Extras</div>
@@ -88,14 +82,8 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li onclick="window.location.href='{{ read_link(site.name + '_img_menu_1') }}'">
-                        <a class="text-header dropdown-toggle" id="{{ site.name + '_img_menu_1' }}" data-toggle="dropdown" tag="colecciones">{{ read_text(site.name +  '_menu_1') }}</a>
-                    </li>
-                    <li onclick="window.location.href='{{ read_link(site.name + '_img_menu_2') }}'">
-                        <a class="text-header dropdown-toggle" id="{{ site.name + '_img_menu_2' }}" data-toggle="dropdown" tag="colecciones">{{ read_text(site.name +  '_menu_2') }}</a>
-                    </li>
-                    <li onclick="window.location.href='{{ read_link(site.name + '_img_menu_3') }}'">
-                        <a class="text-header dropdown-toggle" id="{{ site.name + '_img_menu_3' }}" data-toggle="dropdown" tag="colecciones">{{ read_text(site.name +  '_menu_3') }}</a>
+                    <li>
+                        <a tabindex="-1" class="text-header dropdown-toggle" href="{{ site_base }}/listado_productos?tag=cat2_menu_del_dia">Ve el menu de hoy</a>
                     </li>
                     <li>
                         <a tabindex="-1" class="text-header dropdown-toggle" href="{{ site_base }}/listado_productos?tag=extras">Extras</a>

@@ -335,7 +335,7 @@ li.bolsa
     background-color: white;
     text-align: center;
     cursor: pointer;
-    width: 141px;
+    width: 202px;
     height: 58px;
     font-weight: 400;
     font-size: 16px;
@@ -1005,7 +1005,7 @@ ul.w3-ul li:last-child
     .w3-btn,
     .w3-btn-block 
     {
-        width: 115px;
+        width: 175px;
     }
 }
 
@@ -1076,7 +1076,7 @@ ul.w3-ul li:last-child
     {
         display: block;
         max-height: 800px;
-        height: 300px;
+        height: 200px;
     }
 
     .img-bolsa 

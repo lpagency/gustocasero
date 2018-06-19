@@ -139,7 +139,7 @@ li.bolsa
 
 .base-logo 
 {
-    width: 170px;
+    width: 412px;
     height: 97px;
     background: transparent;
     -moz-border-radius: 100px / 50px;
@@ -335,7 +335,7 @@ li.bolsa
     background-color: white;
     text-align: center;
     cursor: pointer;
-    width: 202px;
+    width: 150px;
     height: 58px;
     font-weight: 400;
     font-size: 16px;
@@ -1005,7 +1005,7 @@ ul.w3-ul li:last-child
     .w3-btn,
     .w3-btn-block 
     {
-        width: 175px;
+        width: 125px;
     }
 }
 
@@ -1076,7 +1076,7 @@ ul.w3-ul li:last-child
     {
         display: block;
         max-height: 800px;
-        height: 200px;
+        height: 180px;
     }
 
     .img-bolsa 

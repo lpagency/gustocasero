@@ -11,7 +11,7 @@
 
 .ul-1
 {
-    color: black;
+    color: white;
     margin-top: 0px;
     font-size: 15px;
     font-weight: 500;
@@ -19,8 +19,8 @@
 
 .logo-footer
 {
-    position: relative;
-    top: 20px;
+    position: absolute;
+    bottom: 10%;
 }
 
 .webpay
@@ -37,6 +37,7 @@
     top: -21px;
     padding-top: 25px;
     width: 1095px;
+    background-repeat: no-repeat;
 }
 
 .footer-logo-rrss
@@ -67,7 +68,8 @@
 
 .firma
 {
-    position: relative;
+    position: absolute;
+    bottom: 7%;
     text-align: center;
     font-size: 12px;
 }
@@ -142,7 +144,7 @@ img#vitrineate_img_logo_footer
    color: black;
 }
 
-.a-footer
+a.a-footer
 {
     position: relative;
     left: 13px;
@@ -303,9 +305,8 @@ img#vitrineate_img_logo_footer
        position: relative;
     }
 
-    .a-footer
+    a.a-footer
     {
-        color: white;
         position: relative;
         right: 0px;
     }

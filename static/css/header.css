@@ -1244,12 +1244,6 @@ ul.w3-ul li:last-child
 
 @media (max-width: 414px) 
 {
-
-    .logo-footer-div 
-    {
-        width: 100%;
-    }
-
     .insta-rrss 
     {
         float: inherit !important;

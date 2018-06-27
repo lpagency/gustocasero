@@ -42,41 +42,18 @@
                 <div class="product-detail text-left">
                     <p>{{ product["description"] }}</p>
                 </div>
-                <!-- <form  action="product1.html" method="POST" class="myform">
-                    <div class="form-group clearfix">
-                        <label class="control-label">Size</label>
-                        
-                        <select class="form-control _select _select-1" id="size" sku="">
-                            
-                            <option value=""></option>
-                            
-                        </select>
-                        <select class="form-control _select _select-2 margin-top-1" id="quantity">
-                        </select>
-                    </div>
-                    
-                </form>-->
                 <button type="button" class="btn add-to-cart" style="float: left;">COMPRAR</button>
             </div>
-            <!-- <ul class="product-colors">
-                <li class="selected"><a class="white" style="background-color:#FFF"> </a></li>
-                <li class=""><a style="background-color:#000"> </a></li>
-                <li class=""><a style="background-color:#49A3F1"> </a></li>
-                <li class=""><a style="background-color:#FF6279"> </a></li>
-            </ul> -->
         </div>
-        
-
-
     </div>
     <div class="container-fluid productlist">
-            <article>
-                <header>
-                    <h1 style="text-align:left;">Contenido Relacionado</h1>
-                </header>
-            </article>
-            <div class="row cont-rel">
-                {{ content }}
-            </div>
+        <article>
+            <header>
+                <h1 style="text-align:left;">Contenido Relacionado</h1>
+            </header>
+        </article>
+        <div class="row cont-rel">
+            {{ content }}
         </div>
-    {% end %}
+    </div>
+{% end %}

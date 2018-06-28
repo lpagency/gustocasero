@@ -927,6 +927,11 @@ hr.detalle
 /* iPhone 6/7/8 plus */
 @media (max-width:436px)
 {
+    .art-hi
+    {
+        max-height: none;
+    }
+
     .fufi
     {
         height: 210px;
@@ -949,7 +954,6 @@ hr.detalle
 
     .fufi-index
     {
-        height: 210px;
         margin-bottom: 50px;
     }
 
@@ -1010,6 +1014,12 @@ hr.detalle
     {
         position: relative;
         top: 35px;
+    }
+
+    .btn-success.comprar.menu-btn-comprar
+    {
+        right: 38%;
+        bottom: 5%;
     }
 }
 

@@ -511,6 +511,11 @@ hr.detalle
     color: #9a1f31;
 }
 
+.btn-success.comprar.detail-btn-comprar
+{
+    right: 30%;
+}
+
 .product-price-2
 {
     position: relative;

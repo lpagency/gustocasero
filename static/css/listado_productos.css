@@ -715,6 +715,11 @@ hr.detalle
         -moz-osx-font-smoothing: grayscale;
         height: 50px;
     }
+
+    .btn-success.comprar.menu-btn-comprar
+    {
+        right: 30%;
+    }
 }
 
 @media (max-width:767px)

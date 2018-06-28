@@ -1208,7 +1208,7 @@ hr.detalle
 
 }
 
-/* iPhone 4, iPhone 5/SE*/
+/* iPhone 4, iPhone 5/SE */
 @media (max-width:320px)
 {
     .letreros-detalle
@@ -1225,7 +1225,7 @@ hr.detalle
 
     .art-hi
     {
-        height: 260px;
+        height: 330px;
     }
 
     .img_prod_little
@@ -1379,4 +1379,9 @@ hr.detalle
         top: 86px;
     }
 
+    .btn-success.comprar.menu-btn-comprar
+    {
+        right: 33%;
+        bottom: 5%;
+    }
 }

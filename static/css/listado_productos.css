@@ -1411,4 +1411,10 @@ hr.detalle
         right: 33%;
         bottom: 5%;
     }
+
+    .btn-success.comprar.detail-btn-comprar
+    {
+        right: 5%;
+        bottom: 10%;
+    }
 }

@@ -1032,6 +1032,17 @@ hr.detalle
         right: 38%;
         bottom: 5%;
     }
+
+    .fufi.detail-btn-comprar
+    {
+        height: 250px;
+    }
+
+    .btn-success.comprar.detail-btn-comprar
+    {
+        right: 20%;
+        bottom: 5%;
+    }
 }
 
 /* Pixel 2 XL */

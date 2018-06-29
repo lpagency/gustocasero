@@ -728,7 +728,7 @@ hr.detalle
 
     .btn-success.comprar.detail-btn-comprar
     {
-        right: 13%;
+        right: 17%;
         bottom: 5%;
     }
 }
@@ -1040,7 +1040,7 @@ hr.detalle
 
     .btn-success.comprar.detail-btn-comprar
     {
-        right: 20%;
+        right: 23%;
         bottom: 5%;
     }
 }
@@ -1207,6 +1207,10 @@ hr.detalle
         top: 35px;
     }
 
+    .btn-success.comprar.detail-btn-comprar
+    {
+        right: 12%;
+    }
 }
 
 /* Galaxy S5 */

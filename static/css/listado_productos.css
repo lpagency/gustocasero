@@ -1114,7 +1114,6 @@ hr.detalle
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
-
 }
 
 /* iPhone 6/7/8 */
@@ -1128,6 +1127,12 @@ hr.detalle
     .btn-success.comprar.menu-btn-comprar
     {
         right: 36%;
+        bottom: 5%;
+    }
+
+    .btn-success.comprar.detail-btn-comprar
+    {
+        right: 15%;
         bottom: 5%;
     }
 }

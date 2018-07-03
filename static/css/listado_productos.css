@@ -840,14 +840,11 @@ hr.detalle
     .inf
     {
         position: relative;
-        width: 91%;
+        width: 100%;
         text-align: center;
-        left: 0px;
         color: #262626;
         font-size: 15px;
-        font-weight: 400;
         margin-bottom: 0px;
-        bottom: 15px;
         height: 45px;
     }
 

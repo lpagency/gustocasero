@@ -733,34 +733,13 @@ hr.detalle
     }
 }
 
-@media (max-width:575px)
+/* iPhone 6/7/8 plus */
+@media (max-width:436px)
 {
-    .art-hi
+    #mainImage
     {
-        max-height: 260px;
-    }
-
-    .product-detail
-    {
-        margin-top: 0px;
-    }
-
-    .titulo-prou
-    {
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        bottom: 0px;
-        margin-bottom: 50px;
-        color: white;
-        font-size: 20px;
-        font-weight: 400;
-    }
-
-    .margin-movil-prod
-    {
-        position: relative;
-        bottom: 60px;
+        right: 0px;
+        height: 235px;
     }
 
     .texto-hu-2
@@ -775,58 +754,6 @@ hr.detalle
         font-weight: 400;
         width: 80%;
         left: 20px;
-    }
-
-    .img-pro
-    {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        margin-bottom: 25px;
-        padding-left: 0px;
-        opacity: 1;
-        display: block;
-        transition: .5s ease;
-        backface-visibility: hidden;
-        margin: 15px auto;
-    }
-
-    .img-pro-index
-    {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        margin-bottom: 25px;
-        padding-left: 0px;
-        opacity: 1;
-        display: block;
-        transition: .5s ease;
-        backface-visibility: hidden;
-        margin: 15px auto;
-    }
-
-    .overlay
-    {
-        height: 73% !important;
-    }
-
-    .fufi
-    {
-        position: relative;
-        width: 150px;
-        margin: auto;
-    }
-
-    .overlay-index
-    {
-        height: 100% !important;
-    }
-
-    .fufi-index
-    {
-        position: relative;
-        width: 100%;
-        margin: auto;
     }
 
     .text
@@ -857,15 +784,18 @@ hr.detalle
         transition: all 0.5s ease;
     }
 
-}
-
-/* iPhone 6/7/8 plus */
-@media (max-width:436px)
-{
-    #mainImage
+    .img-pro-index
     {
-        right: 0px;
-        height: 235px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-bottom: 25px;
+        padding-left: 0px;
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        margin: 15px auto;
     }
 
     .art-hi
@@ -873,28 +803,11 @@ hr.detalle
         max-height: none;
     }
 
-    .fufi
-    {
-        height: 210px;
-        margin-bottom: 50px;
-    }
-
-    .overlay
-    {
-        position: absolute;
-        top: 0px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 58.5%;
-        width: 150px;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: rgba(0, 0, 0, 0.36);
-    }
-
     .fufi-index
     {
+        position: relative;
+        width: 100%;
+        margin: auto;
         margin-bottom: 50px;
     }
 
@@ -905,7 +818,7 @@ hr.detalle
         bottom: 0;
         left: 0;
         right: 0;
-        height: 58.5%;
+        height: 100% !important;
         width: 100%;
         opacity: 0;
         transition: .5s ease;
@@ -936,6 +849,11 @@ hr.detalle
         margin-bottom: 0px;
         bottom: 15px;
         height: 45px;
+    }
+
+    .product-detail
+    {
+        margin-top: 0px;
     }
 
     .product-price-3

@@ -269,17 +269,6 @@
         margin-left: 45px;
     }
 
-    .img-ambos
-    {
-        top: -77px !important;
-    }
-
-    .mobile-search
-    {
-        border: solid 1px #757575;
-        width: 95%;
-    }
-
     .btn-success.comprar.menu-btn-comprar
     {
         height: auto;
@@ -288,12 +277,7 @@
 
 /* iPad Mini, iPad */
 @media (max-width:991px)
-{
-    .img-ambos
-    {
-        top: -59px !important;
-    }
-
+{    
     .letreros-detalle
     {
         position: relative;

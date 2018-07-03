@@ -427,7 +427,7 @@
 
     .overlay-index
     {
-        height: 73%;
+        height: 77%;
     }
 
     .inf
@@ -487,6 +487,11 @@
 /* Pixel 2 XL */
 @media (max-width:414px)
 {
+    .overlay-index
+    {
+        height: 233px;
+    }
+
     .banner-movil
     {
         height: 95px !important;
@@ -524,6 +529,11 @@
 /* iPhone 6/7/8, iPhone x*/
 @media (max-width:400px)
 {
+    .overlay-index
+    {
+        height: 210px;
+    }
+
     .btn-success.comprar.menu-btn-comprar
     {
         right: 36%;
@@ -540,6 +550,11 @@
 /* Galaxy S5 */
 @media (max-width:360px)
 {
+    .overlay-index
+    {
+        height: 200px;
+    }
+
     .descr_prod_detail
     {
         font-size: 12px;

@@ -1,105 +1,6 @@
-div.image-upload.part1
-{
-    position: absolute;
-    right: 20px;
-    top: 89px;
-    z-index: 100000;
-}
-
-.overlay-rel
-{
-    position: absolute;
-    top: 0px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 68%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgba(0, 0, 0, 0.36);
-}
-
-.fufi:hover .overlay-rel
+.fufi-index:hover
 {
     opacity: 1;
-}
-
-.fufi-index:hover .overlay-rel
-{
-    opacity: 1;
-}
-
-.stock-product
-{
-    margin-bottom: 30px;
-    font-size: 12px;
-}
-
-.title-stock
-{
-    font-size: 12px;
-    margin-bottom: 10px;
-}
-
-.size-item.active
-{
-    color: white;
-    left: 0px;
-    position: relative;
-    float: left;
-    border-radius: 48px;
-    padding: 15px 0px;
-    margin-bottom: 11px;
-    width: 50px;
-    height: 50px;
-    margin-left: 9px;
-    font-size: 13px;
-    border-radius: 48px !important;
-    border: 2px solid rgba(91, 81, 83, 0.37);
-    background-color: rgba(91, 81, 83, 0.37);
-    font-weight: 600;
-}
-
-.size-item
-{
-    padding: 15px 0px;
-    margin-bottom: 11px;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    float: left;
-    left: 0px;
-    position: relative;
-    margin-left: 9px;
-    font-size: 13px;
-    border-radius: 48px !important;
-    border: 2px solid #282c3f;
-    font-weight: 600;
-}
-
-.size-item strike
-{
-    color: white;
-}
-
-.variant-value.active
-{
-    background-color: #000;
-}
-
-.variant-value.btn-disabled
-{
-    background: transparent;
-}
-
-.variant-value.active>div
-{
-    color: white;
-}
-
-.num-tal:hover
-{
-    color: white;
 }
 
 .mover
@@ -107,64 +8,6 @@ div.image-upload.part1
     position: relative;
     right: 20px;
     margin-bottom: 15px;
-}
-
-.num-tal
-{
-    color: #282c3f;
-    left: 0;
-    width: 100%;
-    padding-top: 16px;
-    position: relative;
-    bottom: 17px;
-    margin-bottom: 11px;
-    width: 50px;
-    height: 50px;
-    font-size: 13px;
-    font-weight: 600;
-    text-align: center;
-}
-
-.size-item:hover
-{
-    color: white;
-    left: 0px;
-    position: relative;
-    float: left;
-    border-radius: 48px !important;
-    border: 2px solid rgba(91, 81, 83, 0.37);
-    padding: 15px 0px;
-    margin-bottom: 11px;
-    width: 50px;
-    height: 50px;
-    margin-left: 9px;
-    font-size: 13px;
-    font-weight: 600;
-    background-color: #000;
-}
-
-.reli
-{
-    font-size: 20px;
-    margin-top: 67px;
-    margin-bottom: 46px;
-    font-weight: 400;
-    color: black;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.img-pro-rel
-{
-    width: 100%;
-    height: 268px;
-    object-fit: cover;
-    margin-bottom: 22px;
-    padding-left: 0px;
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-    backface-visibility: hidden;
 }
 
 .product-price-3
@@ -177,21 +20,6 @@ div.image-upload.part1
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
-}
-
-.titulo-prou
-{
-    position: absolute;
-    text-align: center;
-    width: 94%;
-    bottom: 0px;
-    margin-bottom: 50px;
-    color: white;
-    font-size: 24px;
-    font-weight: 400;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 .inf
@@ -236,28 +64,6 @@ div.image-upload.part1
     position: relative;
 }
 
-.img_prod_detail
-{
-    position: relative;
-    top: 11px;/* width: auto; */
-
-    /*   height: 140px;*/
-    max-width: 360px;
-}
-
-.img_prod_little
-{
-    width: 15%;
-    height: 65px;
-    margin-bottom: 2px;
-    position: relative;
-    object-fit: scale-down;
-    top: 0px;
-    border: 1px solid rgba(128, 128, 128, 0.25);
-    left: 0px;
-    margin-left: 0px;
-}
-
 .name_prod_detail
 {
     position: relative;
@@ -286,40 +92,6 @@ div.image-upload.part1
     font-weight: 400;
 }
 
-.fin
-{
-    position: relative;
-    top: -134px;
-    margin-bottom: 90px;
-    font-size: 28px;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.66);
-    width: 50%;
-    margin-top: -5px;
-}
-
-hr.len
-{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid gray;
-    width: 58%;
-    position: relative;
-    top: -212px;
-}
-
-.fin-2
-{
-    position: relative;
-    top: -203px;
-    margin-bottom: 20px;
-    font-size: 22px;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.66);
-    width: 72%;
-}
-
 .art-hi
 {
     overflow: hidden;
@@ -339,25 +111,6 @@ hr.len
     transition: all 0.5s linear;
 }
 
-/*.img-container img
-{
-width:100px;
-height:100px;
-}*/
-.img-pro
-{
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    margin-bottom: 22px;
-    padding-left: 0px;
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    margin: 11px auto;
-}
-
 .img-pro-index
 {
     width: 100%;
@@ -370,14 +123,6 @@ height:100px;
     transition: .5s ease;
     backface-visibility: hidden;
     margin: 11px auto;
-}
-
-.fufi
-{
-    position: relative;
-    width: 220px;
-    margin: auto;
-    height: 351px;
 }
 
 .fufi-index
@@ -399,25 +144,6 @@ height:100px;
     opacity: 0;
     transition: .5s ease;
     background-color: rgba(0, 0, 0, 0.36);
-}
-
-.overlay
-{
-    position: absolute;
-    top: 0px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 63%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgba(0, 0, 0, 0.36);
-}
-
-.fufi:hover .overlay
-{
-    opacity: 1;
 }
 
 .fufi-index:hover .overlay-index
@@ -451,18 +177,6 @@ height:100px;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-}
-
-hr.detalle
-{
-    margin-top: 0px;
-    margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid black;
-    width: 103%;
-    top: 0px;
-    position: relative;
-    right: 15px;
 }
 
 .btn-success.comprar
@@ -613,18 +327,6 @@ hr.detalle
         margin-top: 80px;
     }
 
-    .fin
-    {
-        position: relative;
-        top: -134px;
-        margin-bottom: 90px;
-        font-size: 28px;
-        font-weight: 400;
-        color: rgba(0, 0, 0, 0.66);
-        width: 50%;
-        margin-top: 72px;
-    }
-
     .product-detail
     {
         margin-top: 70px;
@@ -633,20 +335,6 @@ hr.detalle
     .variants-container
     {
         margin-bottom: 150px;
-    }
-
-    .img-pro
-    {
-        width: 180px;
-        height: 180px;
-        object-fit: cover;
-        margin-bottom: 25px;
-        padding-left: 0px;
-        opacity: 1;
-        display: block;
-        transition: .5s ease;
-        backface-visibility: hidden;
-        margin: 13px auto;
     }
 
     .img-pro-index
@@ -663,32 +351,11 @@ hr.detalle
         margin: 15px auto;
     }
 
-    .fufi
-    {
-        position: relative;
-        width: 180px;
-        margin: auto;
-    }
-
     .fufi-index
     {
         position: relative;
         width: 100%;
         margin: auto;
-    }
-
-    .overlay
-    {
-        position: absolute;
-        top: 0px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 52%;
-        width: 180px;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: rgba(0, 0, 0, 0.36);
     }
 
     .overlay-index
@@ -825,18 +492,6 @@ hr.detalle
         background-color: rgba(0, 0, 0, 0.36);
     }
 
-    .titulo-prou
-    {
-        position: absolute;
-        text-align: center;
-        width: 95%;
-        bottom: 0px;
-        margin-bottom: 0px;
-        color: white;
-        font-size: 17px;
-        font-weight: 400;
-    }
-
     .inf
     {
         position: relative;
@@ -897,29 +552,6 @@ hr.detalle
     .letreros-detalle
     {
         left: -106px;
-    }
-
-    .img_prod_little
-    {
-        width: 20%;
-        height: 66px;
-        margin-bottom: 2px;
-        position: relative;
-        object-fit: scale-down;
-        top: 0px;
-        border: 1px solid rgba(128, 128, 128, 0.25);
-        left: 0px;
-        padding: 0;
-    }
-
-    .overlay
-    {
-        height: 72%;
-    }
-
-    .overlay-rel
-    {
-        height: 70%;
     }
 
     .banner-movil
@@ -986,16 +618,6 @@ hr.detalle
 /* Galaxy S5 */
 @media (max-width:360px)
 {
-    .img_prod_little
-    {
-        left: 69px;
-    }
-
-    .fin
-    {
-        width: 80%;
-    }
-
     .descr_prod_detail
     {
         font-size: 12px;
@@ -1019,13 +641,6 @@ hr.detalle
     {
         top: 30px;
         left: 0px;
-    }
-
-    .img_prod_little
-    {
-        top: 0px;
-        left: 0px;
-        padding: 0px;
     }
 
     .main-img-container
@@ -1072,17 +687,6 @@ hr.detalle
     {
         font-size: 13px;
     }
-
-    .title-stock
-    {
-        font-size: 11px;
-    }
-
-    .stock-product
-    {
-        font-size: 11px;
-    }
-
 }
 
 /* iPhone 4, iPhone 5/SE */
@@ -1094,35 +698,9 @@ hr.detalle
         top: 24px;
     }
 
-    .overlay
-    {
-        height: 77% !important;
-        width: 100%;
-    }
-
     .art-hi
     {
         height: 330px;
-    }
-
-    .img_prod_little
-    {
-        top: -172px;
-        left: 62px;
-    }
-
-    .fin
-    {
-        position: relative;
-        top: -134px;
-        width: 80%;
-        margin-top: 96px;
-    }
-
-    .fufi
-    {
-        height: 375px;
-        margin-bottom: 40px;
     }
 
     .fufi-index
@@ -1155,15 +733,6 @@ hr.detalle
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-weight: 400;
-    }
-
-    .fufi
-    {
-        position: relative;
-        width: 130px;
-        margin: auto;
-        height: 200px;
-        margin-bottom: 40px;
     }
 
     .fufi-index
@@ -1222,13 +791,6 @@ hr.detalle
     {
         top: 30px;
         left: 0px;
-    }
-
-    .img_prod_little
-    {
-        top: 0px;
-        left: 0px;
-        padding: 0px;
     }
 
     .main-img-container

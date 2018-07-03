@@ -277,30 +277,7 @@
 
 /* iPad Mini, iPad */
 @media (max-width:991px)
-{    
-    .letreros-detalle
-    {
-        position: relative;
-        left: -129px;
-        top: 100px;
-    }
-
-    .letrero-sale-detail
-    {
-        width: 40%;
-    }
-
-    .letrero-new-detail
-    {
-        width: 40%;
-    }
-
-    .image_little
-    {
-        margin-bottom: -30px;
-        left: 19px;
-    }
-
+{
     .img-ppal-movil
     {
         margin-left: 30px;
@@ -314,11 +291,6 @@
     .product-detail
     {
         margin-top: 70px;
-    }
-
-    .variants-container
-    {
-        margin-bottom: 150px;
     }
 
     .img-pro-index
@@ -533,22 +505,11 @@
 /* Pixel 2 XL */
 @media (max-width:414px)
 {
-    .letreros-detalle
-    {
-        left: -106px;
-    }
-
     .banner-movil
     {
         height: 95px !important;
         margin-top: 40px !important;
         margin-bottom: -5px !important;
-    }
-
-    .image_little
-    {
-        top: 30px;
-        left: 0px;
     }
 
     .descr_prod_detail
@@ -581,11 +542,6 @@
 /* iPhone 6/7/8 */
 @media (max-width:400px)
 {
-    .letreros-detalle
-    {
-        left: -95px;
-    }
-
     .btn-success.comprar.menu-btn-comprar
     {
         right: 36%;
@@ -619,12 +575,6 @@
         height: auto;
         top: 30px;
         margin-bottom: 13%;
-    }
-
-    .image_little
-    {
-        top: 30px;
-        left: 0px;
     }
 
     .main-img-container
@@ -676,12 +626,6 @@
 /* iPhone 4, iPhone 5/SE */
 @media (max-width:320px)
 {
-    .letreros-detalle
-    {
-        left: -56px;
-        top: 24px;
-    }
-
     .art-hi
     {
         height: 330px;
@@ -769,12 +713,6 @@
         height: auto;
         top: 30px;
         margin-bottom: 13%;
-    }
-
-    .image_little
-    {
-        top: 30px;
-        left: 0px;
     }
 
     .main-img-container

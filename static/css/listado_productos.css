@@ -321,18 +321,10 @@
 
     .inf
     {
-        position: relative;
-        bottom: 11px;
         width: 97%;
-        text-align: center;
-        left: 0%;
-        color: black;
         font-size: 18px;
         font-weight: 400;
         margin-bottom: 40px;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        height: 50px;
     }
 
     .btn-success.comprar.menu-btn-comprar
@@ -432,10 +424,7 @@
 
     .inf
     {
-        position: relative;
         width: 100%;
-        text-align: center;
-        color: #262626;
         font-size: 17px;
         margin-bottom: 0px;
         height: auto;
@@ -634,19 +623,6 @@
         margin-bottom: 40px;
     }
 
-    .inf
-    {
-        position: relative;
-        width: 100%;
-        text-align: center;
-        left: 0px;
-        color: #262626;
-        font-size: 17px;
-        font-weight: 400;
-        margin-bottom: 0px;
-        bottom: 20px;
-    }
-
     .product-price-3
     {
         position: relative;
@@ -667,19 +643,6 @@
         margin: auto;
         height: 200px;
         margin-bottom: 40px;
-    }
-
-    .inf
-    {
-        position: relative;
-        width: 96%;
-        text-align: center;
-        left: 0px;
-        color: #262626;
-        font-size: 17px;
-        font-weight: 400;
-        margin-bottom: 0px;
-        bottom: 20px;
     }
 
     .product-price-3

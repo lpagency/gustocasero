@@ -363,6 +363,11 @@ div.image-upload.par1
     -moz-osx-font-smoothing: grayscale;
 }
 
+.texto-one.texto-one-detail
+{
+    margin-top: -23px;
+}
+
 .box-chic
 {
     max-width: 250px;
@@ -1422,6 +1427,11 @@ hr.page-contact
     .temporal
     {
         padding-left: 7px;
+    }
+
+    .texto-one
+    {
+        margin-top: 4%;
     }
 }
 

@@ -437,15 +437,8 @@
 
     .product-price-3
     {
-        position: relative;
         bottom: 10px;
         top: inherit;
-        font-size: 15px;
-        color: #262626;
-        text-align: center;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-weight: 400;
     }
 
     .img-ppal-movil
@@ -623,19 +616,6 @@
         margin-bottom: 40px;
     }
 
-    .product-price-3
-    {
-        position: relative;
-        bottom: 45px;
-        top: inherit;
-        font-size: 15px;
-        color: #262626;
-        text-align: center;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-weight: 400;
-    }
-
     .fufi-index
     {
         position: relative;
@@ -643,19 +623,6 @@
         margin: auto;
         height: 200px;
         margin-bottom: 40px;
-    }
-
-    .product-price-3
-    {
-        position: relative;
-        bottom: 10px;
-        top: inherit;
-        font-size: 15px;
-        color: #262626;
-        text-align: center;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-weight: 400;
     }
 
     .banner-movil

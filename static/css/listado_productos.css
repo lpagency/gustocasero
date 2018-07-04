@@ -28,11 +28,6 @@
     transition: all 0.5s ease;
 }
 
-.btn-success.comprar.detail-btn-comprar
-{
-    right: 30%;
-}
-
 .btn-success.comprar.menu-btn-comprar
 {
     position: absolute;
@@ -260,12 +255,6 @@
 /* iPad Mini, iPad */
 @media (max-width:991px)
 {
-    .btn-success.comprar.detail-btn-comprar
-    {
-        right: 17%;
-        bottom: 5%;
-    }
-
     .btn-success.comprar.menu-btn-comprar
     {
         right: 30%;
@@ -314,12 +303,6 @@
         max-height: none;
     }
 
-    .btn-success.comprar.detail-btn-comprar
-    {
-        right: 23%;
-        bottom: 5%;
-    }
-
     .btn-success.comprar.menu-btn-comprar
     {
         right: 38%;
@@ -329,11 +312,6 @@
     .fufi-index
     {
         margin-bottom: 50px;
-    }
-
-    .fufi-index.detail-btn-comprar
-    {
-        height: 250px;
     }
 
     .img-ppal-movil
@@ -438,12 +416,6 @@
 /* iPhone 6/7/8, iPhone x*/
 @media (max-width:400px)
 {
-    .btn-success.comprar.detail-btn-comprar
-    {
-        right: 15%;
-        bottom: 5%;
-    }
-
     .btn-success.comprar.menu-btn-comprar
     {
         right: 36%;
@@ -459,11 +431,6 @@
 /* Galaxy S5 */
 @media (max-width:360px)
 {
-    .btn-success.comprar.detail-btn-comprar
-    {
-        right: 12%;
-    }
-
     .descr_prod_detail
     {
         font-size: 13px;
@@ -494,22 +461,11 @@
 /* iPhone 4, iPhone 5/SE */
 @media (max-width:320px)
 {
-    .art-hi
-    {
-        height: 330px;
-    }
-
     .banner-movil
     {
         height: 75px !important;
         margin-top: 42px !important;
         margin-bottom: -3px !important;
-    }
-
-    .btn-success.comprar.detail-btn-comprar
-    {
-        right: 5%;
-        bottom: 10%;
     }
 
     .btn-success.comprar.menu-btn-comprar

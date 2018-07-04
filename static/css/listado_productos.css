@@ -244,6 +244,16 @@
         margin-left: 45px;
     }
 
+    .overlay-index
+    {
+        height: 61%;
+    }
+
+    .overlay-index.overlay-detail
+    {
+        height: 60%;
+    }
+
     #mainImage
     {
         height: 500px;
@@ -426,6 +436,11 @@
     {
         height: 210px;
     }
+
+    .overlay-index.overlay-detail
+    {
+        height: 190px;
+    }
 }
 
 /* Galaxy S5 */
@@ -448,6 +463,11 @@
     .overlay-index
     {
         height: 200px;
+    }
+
+    .overlay-index.overlay-detail
+    {
+        height: 182px;
     }
 
     #mainImage
@@ -493,5 +513,10 @@
     .overlay-index
     {
         height: 175px;
+    }
+
+    .overlay-index.overlay-detail
+    {
+        height: 154px;
     }
 }

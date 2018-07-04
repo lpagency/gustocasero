@@ -1,182 +1,8 @@
-.fufi-index:hover
-{
-    opacity: 1;
-}
-
-.mover
-{
-    position: relative;
-    right: 20px;
-    margin-bottom: 15px;
-}
-
-.product-price-3
-{
-    position: relative;
-    top: -48px;
-    font-size: 15px;
-    color: black;
-    text-align: center;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-}
-
-.inf
-{
-    position: relative;
-    bottom: 11px;
-    width: 100%;
-    margin-top: 25px;
-    text-align: center;
-    left: 0%;
-    color: black;
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 35px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    height: 50px;
-}
-
-.clearfix-dos
-{
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.main-img-container
-{
-    position: relative;
-    top: 30px;
-}
-
-.fondo-detalle
-{
-    width: 100%;
-    height: 400px;
-    object-fit: scale-down;
-    filter: grayscale(0%) brightness(100%);
-    -webkit-filter: grayscale(0%) brightness(100%);
-    -moz-filter: grayscale(0%) brightness(100%);
-    -ms-filter: grayscale(0%) brightness(100%);
-    -o-filter: grayscale(0%) brightness(100%);
-    position: relative;
-}
-
-.name_prod_detail
-{
-    position: relative;
-    top: 6px;
-    font-size: 20px;
-    color: black;
-    text-align: left;
-    height: 54px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    font-weight: bold;
-}
-
-.descr_prod_detail
-{
-    position: relative;
-    font-size: 15px;
-    width: 88%;
-    text-align: left;
-    height: 100%;
-    top: -16px;
-    color: black;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-}
-
 .art-hi
 {
     overflow: hidden;
     padding: 0px 10px;
     max-height: 351px;
-}
-
-#mainImage
-{
-    width: 100%;
-    height: 400px;
-    object-fit: scale-down;
-    top: -34px;
-    right: 16px;
-    position: relative;
-    -webkit-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-}
-
-.img-pro-index
-{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 22px;
-    padding-left: 0px;
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    margin: 11px auto;
-}
-
-.fufi-index
-{
-    position: relative;
-    width: 100%;
-    margin: auto;
-}
-
-.overlay-index
-{
-    position: absolute;
-    top: 0px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 63%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgba(0, 0, 0, 0.36);
-}
-
-.fufi-index:hover .overlay-index
-{
-    opacity: 1;
-}
-
-.text
-{
-    color: white;
-    font-size: 16px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.text:hover
-{
-    background-color: rgba(128, 128, 128, 0.8);
-    color: white;
-    font-size: 14px;
-    padding: 10px 32px;
-    border: 2px solid white;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
 }
 
 .btn-success.comprar
@@ -210,6 +36,11 @@
     transition: all 0.5s ease;
 }
 
+.btn-success.comprar.detail-btn-comprar
+{
+    right: 30%;
+}
+
 .btn-success.comprar.menu-btn-comprar
 {
     position: absolute;
@@ -225,9 +56,131 @@
     color: #9a1f31;
 }
 
-.btn-success.comprar.detail-btn-comprar
+.clearfix-dos
 {
-    right: 30%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.descr_prod_detail
+{
+    position: relative;
+    font-size: 15px;
+    width: 88%;
+    text-align: left;
+    height: 100%;
+    top: -16px;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+}
+
+.fondo-detalle
+{
+    width: 100%;
+    height: 400px;
+    object-fit: scale-down;
+    filter: grayscale(0%) brightness(100%);
+    -webkit-filter: grayscale(0%) brightness(100%);
+    -moz-filter: grayscale(0%) brightness(100%);
+    -ms-filter: grayscale(0%) brightness(100%);
+    -o-filter: grayscale(0%) brightness(100%);
+    position: relative;
+}
+
+.fufi-index
+{
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.fufi-index:hover
+{
+    opacity: 1;
+}
+
+.fufi-index:hover .overlay-index
+{
+    opacity: 1;
+}
+
+.img-pro-index
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 22px;
+    padding-left: 0px;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    margin: 11px auto;
+}
+
+.inf
+{
+    position: relative;
+    bottom: 11px;
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+    left: 0%;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 50px;
+}
+
+.main-img-container
+{
+    position: relative;
+    top: 30px;
+}
+
+.mover
+{
+    position: relative;
+    right: 20px;
+    margin-bottom: 15px;
+}
+
+.name_prod_detail
+{
+    position: relative;
+    top: 6px;
+    font-size: 20px;
+    color: black;
+    text-align: left;
+    height: 54px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-weight: bold;
+}
+
+.overlay-index
+{
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 63%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.36);
+}
+
+.product-detail
+{
+    margin-top: 50px;
 }
 
 .product-price-2
@@ -243,15 +196,72 @@
     font-weight: 400;
 }
 
-.product-detail
+.product-price-3
 {
-    margin-top: 50px;
+    position: relative;
+    top: -48px;
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+}
+
+.text
+{
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.text:hover
+{
+    background-color: rgba(128, 128, 128, 0.8);
+    color: white;
+    font-size: 14px;
+    padding: 10px 32px;
+    border: 2px solid white;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#mainImage
+{
+    width: 100%;
+    height: 400px;
+    object-fit: scale-down;
+    top: -34px;
+    right: 16px;
+    position: relative;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
 }
 
 /*----------------------------------------------------Responsive----------------------------------------------*/
 /* iPad Pro */
 @media (max-width:1024px)
 {
+    .btn-success.comprar.menu-btn-comprar
+    {
+        height: auto;
+    }
+
+    .img-ppal-movil
+    {
+        margin-left: 45px;
+    }
+
     #mainImage
     {
         width: 100%;
@@ -263,34 +273,32 @@
         -webkit-transition: all 0.5s linear;
         transition: all 0.5s linear;
     }
-
-    .img-ppal-movil
-    {
-        margin-left: 45px;
-    }
-
-    .btn-success.comprar.menu-btn-comprar
-    {
-        height: auto;
-    }
 }
 
 /* iPad Mini, iPad */
 @media (max-width:991px)
 {
+    .btn-success.comprar.detail-btn-comprar
+    {
+        right: 17%;
+        bottom: 5%;
+    }
+
+    .btn-success.comprar.menu-btn-comprar
+    {
+        right: 30%;
+    }
+
+    .fufi-index
+    {
+        position: relative;
+        width: 100%;
+        margin: auto;
+    }
+
     .img-ppal-movil
     {
         margin-left: 30px;
-    }
-
-    .text-prod-desk
-    {
-        margin-top: 80px;
-    }
-
-    .product-detail
-    {
-        margin-top: 70px;
     }
 
     .img-pro-index
@@ -307,18 +315,6 @@
         margin: 15px auto;
     }
 
-    .fufi-index
-    {
-        position: relative;
-        width: 100%;
-        margin: auto;
-    }
-
-    .overlay-index
-    {
-        height: 52%;
-    }
-
     .inf
     {
         width: 97%;
@@ -327,39 +323,98 @@
         margin-bottom: 40px;
     }
 
-    .btn-success.comprar.menu-btn-comprar
+    .overlay-index
     {
-        right: 30%;
+        height: 52%;
     }
 
-    .btn-success.comprar.detail-btn-comprar
+    .product-detail
     {
-        right: 17%;
-        bottom: 5%;
+        margin-top: 70px;
+    }
+
+    .text-prod-desk
+    {
+        margin-top: 80px;
     }
 }
 
 /* iPhone 6/7/8 plus */
 @media (max-width:436px)
 {
-    #mainImage
+    .art-hi
     {
-        right: 0px;
-        height: 235px;
+        max-height: none;
     }
 
-    .texto-hu-2
+    .btn-success.comprar.detail-btn-comprar
     {
-        position: absolute;
-        bottom: 70px;
-        color: white;
-        text-align: left;
-        padding-left: 13px;
-        padding-right: 13px;
-        font-size: 22px;
-        font-weight: 400;
-        width: 80%;
-        left: 20px;
+        right: 23%;
+        bottom: 5%;
+    }
+
+    .btn-success.comprar.menu-btn-comprar
+    {
+        right: 38%;
+        bottom: 5%;
+    }
+
+    .fufi-index
+    {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    .fufi-index.detail-btn-comprar
+    {
+        height: 250px;
+    }
+
+    .img-ppal-movil
+    {
+        position: relative;
+        top: 35px;
+        margin-left: inherit;
+    }
+
+    .img-pro-index
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-bottom: 25px;
+        padding-left: 0px;
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        margin: 15px auto;
+    }
+
+    .inf
+    {
+        width: 100%;
+        font-size: 17px;
+        margin-bottom: 0px;
+        height: auto;
+    }
+
+    .overlay-index
+    {
+        height: 77%;
+    }
+
+    .product-detail
+    {
+        margin-top: 0px;
+    }
+
+    .product-price-3
+    {
+        bottom: 10px;
+        top: inherit;
     }
 
     .text
@@ -390,90 +445,30 @@
         transition: all 0.5s ease;
     }
 
-    .img-pro-index
+    .texto-hu-2
     {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        margin-bottom: 25px;
-        padding-left: 0px;
-        opacity: 1;
-        display: block;
-        transition: .5s ease;
-        backface-visibility: hidden;
-        margin: 15px auto;
+        position: absolute;
+        bottom: 70px;
+        color: white;
+        text-align: left;
+        padding-left: 13px;
+        padding-right: 13px;
+        font-size: 22px;
+        font-weight: 400;
+        width: 80%;
+        left: 20px;
     }
 
-    .art-hi
+    #mainImage
     {
-        max-height: none;
-    }
-
-    .fufi-index
-    {
-        position: relative;
-        width: 100%;
-        margin: auto;
-        margin-bottom: 50px;
-    }
-
-    .overlay-index
-    {
-        height: 77%;
-    }
-
-    .inf
-    {
-        width: 100%;
-        font-size: 17px;
-        margin-bottom: 0px;
-        height: auto;
-    }
-
-    .product-detail
-    {
-        margin-top: 0px;
-    }
-
-    .product-price-3
-    {
-        bottom: 10px;
-        top: inherit;
-    }
-
-    .img-ppal-movil
-    {
-        position: relative;
-        top: 35px;
-        margin-left: inherit;
-    }
-
-    .btn-success.comprar.menu-btn-comprar
-    {
-        right: 38%;
-        bottom: 5%;
-    }
-
-    .fufi-index.detail-btn-comprar
-    {
-        height: 250px;
-    }
-
-    .btn-success.comprar.detail-btn-comprar
-    {
-        right: 23%;
-        bottom: 5%;
+        right: 0px;
+        height: 235px;
     }
 }
 
 /* Pixel 2 XL */
 @media (max-width:414px)
 {
-    .overlay-index
-    {
-        height: 233px;
-    }
-
     .banner-movil
     {
         height: 95px !important;
@@ -506,14 +501,20 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+
+    .overlay-index
+    {
+        height: 233px;
+    }
 }
 
 /* iPhone 6/7/8, iPhone x*/
 @media (max-width:400px)
 {
-    .overlay-index
+    .btn-success.comprar.detail-btn-comprar
     {
-        height: 210px;
+        right: 15%;
+        bottom: 5%;
     }
 
     .btn-success.comprar.menu-btn-comprar
@@ -522,28 +523,18 @@
         bottom: 5%;
     }
 
-    .btn-success.comprar.detail-btn-comprar
+    .overlay-index
     {
-        right: 15%;
-        bottom: 5%;
+        height: 210px;
     }
 }
 
 /* Galaxy S5 */
 @media (max-width:360px)
 {
-    .overlay-index
+    .btn-success.comprar.detail-btn-comprar
     {
-        height: 200px;
-    }
-
-    .descr_prod_detail
-    {
-        font-size: 12px;
-        width: 100%;
-        text-align: right;
-        height: 260px;
-        top: -670px;
+        right: 12%;
     }
 
     .descr_prod_detail
@@ -556,10 +547,21 @@
         margin-bottom: 13%;
     }
 
+    .img-ppal-movil
+    {
+        position: relative;
+        top: 35px;
+    }
+
     .main-img-container
     {
         position: relative;
         top: 0px;
+    }
+
+    .overlay-index
+    {
+        height: 200px;
     }
 
     #mainImage
@@ -574,31 +576,20 @@
         -webkit-transition: all 0.5s linear;
         transition: all 0.5s linear;
     }
-
-    .img-ppal-movil
-    {
-        position: relative;
-        top: 35px;
-    }
-
-    .btn-success.comprar.detail-btn-comprar
-    {
-        right: 12%;
-    }
 }
 
 /* Galaxy S5 */
 @media only screen and (max-width:370px)
 {
+    .descr_prod_detail
+    {
+        font-size: 13px;
+    }
+
     .img-ppal-movil
     {
         position: relative;
         top: 53px;
-    }
-
-    .descr_prod_detail
-    {
-        font-size: 13px;
     }
 }
 
@@ -608,6 +599,35 @@
     .art-hi
     {
         height: 330px;
+    }
+
+    .banner-movil
+    {
+        height: 75px !important;
+        margin-top: 42px !important;
+        margin-bottom: -3px !important;
+    }
+
+    .btn-success.comprar.detail-btn-comprar
+    {
+        right: 5%;
+        bottom: 10%;
+    }
+
+    .btn-success.comprar.menu-btn-comprar
+    {
+        right: 33%;
+        bottom: 5%;
+    }
+
+    .descr_prod_detail
+    {
+        font-size: 12px;
+        width: 100%;
+        text-align: left;
+        height: auto;
+        top: 30px;
+        margin-bottom: 13%;
     }
 
     .fufi-index
@@ -625,27 +645,16 @@
         margin-bottom: 40px;
     }
 
-    .banner-movil
-    {
-        height: 75px !important;
-        margin-top: 42px !important;
-        margin-bottom: -3px !important;
-    }
-
-    .descr_prod_detail
-    {
-        font-size: 12px;
-        width: 100%;
-        text-align: left;
-        height: auto;
-        top: 30px;
-        margin-bottom: 13%;
-    }
-
     .main-img-container
     {
         position: relative;
         top: 0px;
+    }
+
+    .img-ppal-movil
+    {
+        position: relative;
+        top: 86px;
     }
 
     #mainImage
@@ -659,23 +668,5 @@
         position: relative;
         -webkit-transition: all 0.5s linear;
         transition: all 0.5s linear;
-    }
-
-    .img-ppal-movil
-    {
-        position: relative;
-        top: 86px;
-    }
-
-    .btn-success.comprar.menu-btn-comprar
-    {
-        right: 33%;
-        bottom: 5%;
-    }
-
-    .btn-success.comprar.detail-btn-comprar
-    {
-        right: 5%;
-        bottom: 10%;
     }
 }

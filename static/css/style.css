@@ -1373,16 +1373,6 @@ hr.page-contact
         padding-right: 0;
     }
 
-    .texto-one
-    {
-        position: relative;
-        font-size: 20px;
-        font-weight: 400;
-        color: #333;
-        margin-bottom: 4%;
-        margin-top: 10px;
-    }
-
     .carousel-inner
     {
         height: 126px;
@@ -1433,7 +1423,6 @@ hr.page-contact
     {
         padding-left: 7px;
     }
-
 }
 
 @media (max-width:414px)

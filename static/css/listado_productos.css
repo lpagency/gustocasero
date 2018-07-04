@@ -533,4 +533,9 @@
         position: relative;
         top: 86px;
     }
+
+    .overlay-index
+    {
+        height: 175px;
+    }
 }

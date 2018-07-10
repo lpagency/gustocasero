@@ -20,6 +20,7 @@
     margin-top: 0px;
     font-size: 15px;
     font-weight: 500;
+    word-break: break-all;
 }
 
 .logo-footer 
@@ -146,6 +147,7 @@
 .gun 
 {
     color: black;
+    word-break: break-all;
 }
 
 .base-logo-footer 

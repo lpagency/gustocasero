@@ -45,13 +45,6 @@ a:hover
     top: 73px;
 }
 
-.l-footer-rrss
-{
-    max-height: 94%;
-    width: 52%;
-    object-fit: contain;
-}
-
 .listado-texto
 {
     margin-top: 30px;
@@ -835,7 +828,6 @@ div.upload input, div.image-upload input
     font-size: 17px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    width: 100%;
     margin-top: 57px;
 }
 

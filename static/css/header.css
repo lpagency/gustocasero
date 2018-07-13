@@ -1010,7 +1010,6 @@ ul.w3-ul li:last-child
 
 @media (max-width: 991px)
 {
-
     .logo
     {
         width: 130px;
@@ -1044,6 +1043,7 @@ ul.w3-ul li:last-child
         border-top: 1px solid transparent;
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
+
     .navbar-collapse.collapse
     {
         display: none;
@@ -1061,19 +1061,28 @@ ul.w3-ul li:last-child
         float: none!important;
         margin: 7.5px -15px;
     }
+
     .navbar-nav>li
     {
         float: none;
     }
+
     .navbar-nav>li>a
     {
         padding-top: 10px;
         padding-bottom: 10px;
     }
 
-    .navbar-collapse.collapse.in
+    /* forzar collapse para esta resolucion */
+    .navbar-collapse.collapse
     {
-        display: block;
+        display: none!important;
+    }
+
+    /* forzar collapse para esta resolucion */
+    .navbar-collapse.collapse.in 
+    {
+        display: block!important;
         max-height: 800px;
         height: 180px;
     }
@@ -1087,6 +1096,7 @@ ul.w3-ul li:last-child
         float: right;
         cursor: pointer;
     }
+
     .container
     {
         width: 100%;
@@ -1106,6 +1116,7 @@ ul.w3-ul li:last-child
         margin-top: 7px;
         margin-right: 40px;
     }
+
     .dropdown-menu
     {
         position: static;
@@ -1125,6 +1136,7 @@ ul.w3-ul li:last-child
         width: 90%;
         left: 14px;
     }
+
     .img-lupa
     {
         width: 4%;
@@ -1149,10 +1161,12 @@ ul.w3-ul li:last-child
         -webkit-box-shadow: none;
         box-shadow: none;
     }
+
     .img-pide-online
     {
         width: 25%;
     }
+
     .base-logo
     {
         width: 130px;
@@ -1224,6 +1238,7 @@ ul.w3-ul li:last-child
         position: relative;
         left: 1%;
     }
+
     .navbar-default .navbar-collapse,
     .navbar-default .navbar-form
     {
@@ -1243,7 +1258,6 @@ ul.w3-ul li:last-child
 
 @media (max-width: 414px)
 {
-
     .logo-footer-div
     {
         width: 100%;

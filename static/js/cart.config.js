@@ -39,7 +39,7 @@ String.prototype.replaceAll = function(search, replacement) {
     return target.split(search).join(replacement);
 };
 
-$(document).ready(function() 
+$(document).ready(function()
 {
     var params = getIncludeParameters();
     var tag = '';
@@ -60,16 +60,16 @@ $(document).ready(function()
         $("#todos").addClass("active");
     }
         var base_url = $.environmentVar(
-          /*'https://apibodegas.ondev.today/',*    <- para poder probar en ondev*/ 
+          /*'https://apibodegas.ondev.today/',*    <- para poder probar en ondev*/
           'https://apibodegas.loadingplay.com/',
           'https://apibodegas.ondev.today/',
           'https://apibodegas.loadingplay.com/');
         var checkout_url = $.environmentVar(
-          /*'https://lpcheckout.ondev.today/',    <- para poder probar en ondev*/ 
+          /*'https://lpcheckout.ondev.today/',    <- para poder probar en ondev*/
           'https://pay.loadingplay.com',
           'https://lpcheckout.ondev.today',
           'https://pay.loadingplay.com');
-        var app_public = $.environmentVar(82,82,82);
+        var app_public = $.environmentVar('gustocasero','gustocasero','gustocasero');
         var site_name = $.environmentVar('gustocasero', 'gustocasero', 'gustocasero');
 
     var random_seed = 'random('+ Math.random() +')';
@@ -80,18 +80,18 @@ $(document).ready(function()
 
         'app_public': app_public,
         'base_url': base_url,
-        'products_per_page' : 8, 
+        'products_per_page' : 8,
         'tag': tag,
         'ignore_stock': true,
         'infinite_scroll': false,
         //'maxProducts': 150,
-        'checkout_url': checkout_url, 
+        'checkout_url': checkout_url,
         'operator' :'or',
         'site_name': site_name,
         'column': 'position',
         'direction' : 'asc',
         'templateOrigin': '#product_template_index',
-        'onLoad': function(products) 
+        'onLoad': function(products)
         {
             banners(tag);
 

@@ -7,7 +7,7 @@
 
 
 {% block javascript %}
-<script async defer 
+<script async defer
  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6EMDzcxYGCZ_8r-PUoUAFP06IA87KhGI&callback=initMap"
  type="text/javascript"></script>
 <script type="text/javascript">
@@ -28,7 +28,7 @@
                 var asunto = $("#itComentario").val();
 
                 var error_count = 0;
- 
+
                 // --- Condicionales anidados ----
                 //Si nombre está vacío
                 //Muestra el mensaje
@@ -74,7 +74,7 @@
                 {
                     return false;
                 }
- 
+
             });//click
         });//ready
 </script>
@@ -94,7 +94,7 @@
         'https://pay.loadingplay.com',
         'https://pay.loadingplay.com',
         'https://pay.loadingplay.com');
-    var app_public = $.environmentVar(54,54,54);
+    var app_public = $.environmentVar('loake','loake','loake');
         var config = {
             'app_public' : app_public,
             'base_url' : base_url,
@@ -118,7 +118,7 @@
         //     'products_per_page' : 9
         // });
 
-        
+
 
         // destacado categoria 2
         // config.tag = 'destacado_categoria2';
@@ -160,10 +160,10 @@
 </div>
 
     <!-- fin editar imagen -->
-            
+
             <div class="container contact product text-left  fondo-contact" style="display: inherit;">
                 <div class="col-md-12 col-sm-12 col-xs-12" style="padding:0px;">
-                <div class="row">       
+                <div class="row">
 
                 <div class="container">
 
@@ -172,7 +172,7 @@
                         </div>
                          <div class="titulo-claro {{editabletext}}" text-id="{{ site.name + '_h_contact_2' }}"> {{ read_text(site.name +  '_h_contact_2') }}
                         </div>
-                    </div>  
+                    </div>
                     <div class="col-xs-12 col-md-8 col-sm-12 align-form-contact fondo-contact">
 
                         <div>
@@ -194,8 +194,8 @@
                                         </div>
                                         <span id="helpBlock3" class="hidden help-block help-mail">Email</span>
                                     </div>
-                                </div>  
-                            </div>  
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label class="control-label">Mensaje</label>
                                 <div class="controls">
@@ -205,11 +205,11 @@
                             </div>
                             <p><button name="submit" id="bEnviar" type="submit" class="btn btn-store btn-block contact" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Email Sent">Enviar mensaje </button></p>
                             <input type="hidden" name="submitted" id="submitted3" value="true">
-                        </form> 
+                        </form>
                         </div>
                      </div>
-                    </div>      
-                </div>  
+                    </div>
+                </div>
             </div>
     </div>
 
@@ -222,7 +222,7 @@
         </div>
 
         <!-- *****primera tienda****** -->
-       <div class="col-md-6 col-sm-6 col-xs-12"> 
+       <div class="col-md-6 col-sm-6 col-xs-12">
          <div class="texto-tienda {{editabletext}}" text-id="{{ site.name + '_tienda_1' }}"> {{ read_text(site.name +  '_tienda_1') }}</div>
            <div style="position:relative;">
               {% if is_admin %}
@@ -244,7 +244,7 @@
 
  </div>
 
-    <div class="col-md-6 col-sm-6 col-xs-12"> 
+    <div class="col-md-6 col-sm-6 col-xs-12">
 
         <iframe class="map-mo" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.585841992567!2d-70.5713066417047!3d-33.40796769062131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cedef2f1a7eb%3A0x25101fbc578d2bc1!2sRestaurante+Gusto+Casero!5e0!3m2!1ses!2scl!4v1520445936271"width="556" height="435" frameborder="0" style="border:0;height: 435px;bottom: 36px;position: relative;" allowfullscreen></iframe>
     </div>
@@ -252,5 +252,5 @@
 </div>
 
 
-{% include '../home/footer.html' %}     
+{% include '../home/footer.html' %}
 {% end %}

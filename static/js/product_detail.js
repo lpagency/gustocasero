@@ -1,24 +1,24 @@
 /* global $ */
 'use strict';
 
-$(document).ready(function() 
+$(document).ready(function()
 {
         var base_url = $.environmentVar(
-          /*'https://apibodegas.ondev.today/',*    <- para poder probar en ondev*/ 
+          /*'https://apibodegas.ondev.today/',*    <- para poder probar en ondev*/
           'https://apibodegas.loadingplay.com/',
           'https://apibodegas.ondev.today/',
           'https://apibodegas.loadingplay.com/');
         var checkout_url = $.environmentVar(
-          /*'https://lpcheckout.ondev.today/',    <- para poder probar en ondev*/ 
+          /*'https://lpcheckout.ondev.today/',    <- para poder probar en ondev*/
           'https://pay.loadingplay.com',
           'https://lpcheckout.ondev.today',
           'https://pay.loadingplay.com');
-        var app_public = $.environmentVar(69,69,69);
+        var app_public = $.environmentVar('vitrineate','vitrineate','vitrineate');
         var site_name = $.environmentVar('vitrineate', 'vitrineate', 'vitrineate');
 
-    // functions 
+    // functions
     // productos relacionados
-    var related = function(tag) 
+    var related = function(tag)
     {
         var config = {
             'app_public': app_public,
@@ -32,7 +32,7 @@ $(document).ready(function()
         $('.product-related').ecommerce('product_box', config);
     };
 
-    //cambia imagenes pequeñas en detalle de producto 
+    //cambia imagenes pequeñas en detalle de producto
     $(document).on("click", '.little', function(){
         $("#img_detail").attr("src", $(this).attr('src'));
     });

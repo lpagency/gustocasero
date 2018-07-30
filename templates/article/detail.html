@@ -22,7 +22,7 @@
         .ol{
           visibility: hidden;
         }
-      
+
         .franja-color{
             background: transparent;
         }
@@ -40,18 +40,18 @@
 
       $("#OpenAlert").click();
 
-        
+
         var base_url = $.environmentVar(
-          /*'https://apibodegas.ondev.today/',*    <- para poder probar en ondev*/ 
+          /*'https://apibodegas.ondev.today/',*    <- para poder probar en ondev*/
           'https://apibodegas.loadingplay.com/',
           'https://apibodegas.loadingplay.com/',
           'https://apibodegas.loadingplay.com/');
         var checkout_url = $.environmentVar(
-          /*'https://lpcheckout.ondev.today/',    <- para poder probar en ondev*/ 
+          /*'https://lpcheckout.ondev.today/',    <- para poder probar en ondev*/
           'https://pay.loadingplay.com',
           'https://pay.loadingplay.com',
           'https://pay.loadingplay.com');
-        var app_public = $.environmentVar(69,69,69);
+        var app_public = $.environmentVar('vitrineate','vitrineate','vitrineate');
         var site_name = $.environmentVar('vitrineate', 'vitrineate', 'vitrineate');
         var config = {
             'app_public' : app_public,
@@ -85,13 +85,13 @@
 {% block body %}
 
         <!-- registration -->
-        
-<div class="container min">        
+
+<div class="container min">
 <section>
-      <div class="banner-movil-det-art mobile-det" style="background:url('{{ article['thumb_500'] }}'); height:400px; background-position: 
+      <div class="banner-movil-det-art mobile-det" style="background:url('{{ article['thumb_500'] }}'); height:400px; background-position:
       center; background-size:cover; margin-top: -1px;  filter: grayscale(0%) brightness(70%);-webkit-filter: grayscale(0%) brightness(70%);
     -moz-filter: grayscale(0%) brightness(70%);-ms-filter: grayscale(0%) brightness(70%);-o-filter: grayscale(0%) brightness(70%);">
-       
+
         <img class="fondo-articulo hidden" src="{{ article["thumb_500"] }}" class="img-responsive lazy" data-original="{{ article["url"] }}" alt="item">
        </div>
 </section>
@@ -116,15 +116,15 @@
                         <div class="content articulo-text" style="text-align:center; float:left; width: 100%">
                             <div class="col-sm-12 especial">
                                 <h2 class="h2-art til-ban-2">{{ article["caption"] }}
-                             
+
                                 </h2>
                             </div>
-                            
+
                             <div align="center">
                                 <div class="col-md-12 content-picture">
                                 </div>
                             </div>
-                            
+
                            <!--  <div class="col-sm-12 especial"> -->
                            <div align="center">
                                <div class="col-sm-12">
@@ -148,8 +148,8 @@
                     </div>
                 </div>
           <!--   </div> -->
-            
-            
+
+
             <!-- row 4 -->
         </div>
 
